@@ -1,0 +1,28 @@
+{
+  "name": "spire",
+  "version": "1.0.0",
+  "description": "Semantic JavaScript project management",
+  "main": "index.js",
+  "repository": "https://github.com/researchgate/spire",
+  "author": "Sergey Bekrin <sergey@bekrin.me>",
+  "license": "MIT",
+  "bin": {
+    "spire": "./bin/spire.js"
+  },
+  "engines": {
+    "node": ">=8.3"
+  },
+  "scripts": {
+    "postinstall": "npx spire hook postinstall",
+    "preuninstall": "npx spire hook preuninstall"
+  },
+  "dependencies": {
+    "cosmiconfig": "^5.0.6",
+    "fs-extra": "^7.0.0",
+    "invariant": "^2.2.4",
+    "pretty-format": "^23.6.0",
+    "signale": "^1.3.0",
+    "spire-config-default": "^1.0.0",
+    "yargs": "^12.0.2"
+  }
+}
