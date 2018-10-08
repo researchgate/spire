@@ -1,4 +1,4 @@
-function hook({ setCommand, getCommand, setState }) {
+function hook({ setCommand, getCommand }) {
   return {
     name: 'spire-hook-support',
     async setup({ cli }) {
@@ -15,7 +15,7 @@ function hook({ setCommand, getCommand, setState }) {
         argv => setCommand(Symbol.for(argv.name))
       );
     },
-    async run(context) {
+    async teardown(context) {
       const command = getCommand();
       switch (command) {
         case Symbol.for('postinstall'):
@@ -23,7 +23,6 @@ function hook({ setCommand, getCommand, setState }) {
         case Symbol.for('precommit'):
         case Symbol.for('postmerge'): {
           const hook = Symbol.keyFor(command);
-          setState({ hook });
           for (const plugin of context.config.plugins) {
             if (plugin[hook]) {
               await plugin[hook](context);

@@ -43,9 +43,7 @@ function createFlattener(spire) {
       }
       return config;
     };
-    const pre = { plugins: [init] };
-    const post = { plugins: [hook, git] };
-    return traverse(merge(merge(pre, rootConfig), post));
+    return traverse(merge({ plugins: [init, hook, git] }, rootConfig));
   };
 }
 

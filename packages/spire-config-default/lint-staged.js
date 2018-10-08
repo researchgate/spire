@@ -1,5 +1,6 @@
-const prettyFormat = require('pretty-format');
 const execa = require('execa');
+const prettyFormat = require('pretty-format');
+const SpireError = require('spire/error');
 
 function spireLintersToLintStaged(/** @type Array<{}> */ linters) {
   const result = {};
@@ -20,7 +21,7 @@ function spireLintersToLintStaged(/** @type Array<{}> */ linters) {
 function lintStaged(
   { hasFile, hasPackageProp, setState, getState },
   {
-    lintStagedConfig = 'spire-config-default/config/lint-staged',
+    lintStagedConfig: defaultLintStagedConfig = 'spire-config-default/config/lint-staged',
     allowCustomConfig = true,
   }
 ) {
@@ -35,8 +36,14 @@ function lintStaged(
         lintStagedArgs:
           allowCustomConfig && hasUserConfig
             ? []
-            : ['--config', lintStagedConfig],
+            : ['--config', defaultLintStagedConfig],
       });
+      // Inform user about disallowed overrides
+      if (hasUserConfig && !allowCustomConfig) {
+        throw new SpireError(
+          `Custom lint-staged config is not allowed, using ${defaultLintStagedConfig} instead`
+        );
+      }
     },
     async precommit({ cwd, logger }) {
       const { lintStagedArgs, linters: spireLinters } = getState();

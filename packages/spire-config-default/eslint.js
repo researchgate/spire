@@ -32,7 +32,6 @@ function eslint(
         },
         () => setCommand(LINT_COMMAND)
       );
-      // Resolve eslint config
       const hasCustomConfig =
         argv.includes('--config') ||
         (await hasFile('.eslintrc')) ||
@@ -42,7 +41,6 @@ function eslint(
         allowCustomConfig && hasCustomConfig
           ? []
           : ['--config', defaultEslintConfig];
-      // Resolve eslint ignore
       const hasCustomIgnore =
         argv.includes('--ignore-path') ||
         (await hasFile('.eslintignore')) ||
@@ -53,7 +51,6 @@ function eslint(
           : (await hasFile(defaultEslintIgnore))
             ? ['--ignore-path', defaultEslintIgnore]
             : [];
-      // Pass args futher
       setState({
         eslintArgs: [...eslintConfig, ...eslintIgnore],
       });

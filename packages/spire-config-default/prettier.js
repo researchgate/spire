@@ -1,7 +1,7 @@
 const execa = require('execa');
 const SpireError = require('spire/error');
 
-const FormatCommand = Symbol.for('format');
+const FORMAT_COMMAND = Symbol.for('format');
 
 function prettier(
   { hasFile, hasPackageProp, setCommand, getCommand, setState, getState },
@@ -29,9 +29,8 @@ function prettier(
             type: 'string',
           });
         },
-        () => setCommand(FormatCommand)
+        () => setCommand(FORMAT_COMMAND)
       );
-      // Resolve prettier config
       const hasCustomConfig =
         (await hasFile('.prettierrc')) ||
         (await hasFile('.prettierrc.js')) ||
@@ -45,13 +44,15 @@ function prettier(
         allowCustomConfig && hasCustomConfig
           ? []
           : ['--config', defaultPrettierConfig];
-      // Resolve .prettierignore
       const hasCustomIgnore =
         argv.includes('--ignore-path') || (await hasFile('.prettierignore'));
       const prettierIgnore =
         hasCustomIgnore && allowCustomIgnore
           ? []
           : ['--ignore-path', defaultPrettierIgnore];
+      setState({
+        prettierArgs: [...prettierConfig, ...prettierIgnore, '--write'],
+      });
       // Inform user about disallowed overrides
       if (hasCustomConfig && !allowCustomConfig) {
         throw new SpireError(
@@ -63,10 +64,6 @@ function prettier(
           `Custom .prettierignore is not allowed, using ${defaultPrettierIgnore} instead`
         );
       }
-      // Pass args futher
-      setState({
-        prettierArgs: [...prettierConfig, ...prettierIgnore, '--write'],
-      });
     },
     async precommit() {
       setState(prev => ({
@@ -79,7 +76,7 @@ function prettier(
       }));
     },
     async run({ options, logger, cwd }) {
-      if (getCommand() !== FormatCommand) {
+      if (getCommand() !== FORMAT_COMMAND) {
         return;
       }
       const { prettierArgs } = getState();

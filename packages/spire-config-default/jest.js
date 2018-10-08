@@ -29,7 +29,6 @@ function jest(
         },
         () => setCommand(TEST_COMMAND)
       );
-      // Resolve jest config
       const hasCustomConfig =
         hasFile('jest.config.js') ||
         hasFile('jest.config.json') ||
@@ -38,7 +37,6 @@ function jest(
         allowCustomConfig && hasCustomConfig
           ? []
           : ['--config', defaultJestConfig];
-      // Pass jest args futher
       setState({
         jestArgs: [...jestConfig, '--passWithNoTests'],
       });

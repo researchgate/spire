@@ -1,10 +1,14 @@
-function doctoc({ setState }, { linterGlob = '{readme,contributing}.md' }) {
+function doctoc(
+  { setState },
+  {
+    doctocArgs: defaultDoctocArgs = ['--maxlevel 3', '--notitle'],
+    linterGlob = '{readme,contributing}.md',
+  }
+) {
   return {
     name: 'spire-config-default/doctoc',
     async setup() {
-      setState({
-        doctocArgs: ['--maxlevel 3', '--notitle'],
-      });
+      setState({ doctocArgs: defaultDoctocArgs });
     },
     async precommit() {
       setState(state => ({

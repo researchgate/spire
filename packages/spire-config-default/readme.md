@@ -5,6 +5,7 @@ Default config preset for [spire].
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
 - [Quick Start](#quick-start)
 - [Commands](#commands)
   - [`npx spire clean`](#npx-spire-clean)
@@ -85,6 +86,8 @@ Runs [jest] on specified regex.
   - `setup` Prepares [doctoc] arguments.
   - `precommit` Adds [doctoc] linter.
 - Options
+  - `doctocArgs` \<Array\<string\>\> Default arguments for [doctoc]. Defaults to
+    `['--maxlevel 3', '--notitle']`.
   - `linterGlob` \<string\> Glob pattern to generate ToC for. Defaults to
     `{readme,contributing}.md`.
 
