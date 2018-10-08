@@ -5,13 +5,13 @@ Default config preset for [spire].
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Quick Start](#quick-start)
 - [Commands](#commands)
   - [`npx spire clean`](#npx-spire-clean)
   - [`npx spire format [glob]`](#npx-spire-format-glob)
   - [`npx spire lint [glob]`](#npx-spire-lint-glob)
   - [`npx spire test [regex]`](#npx-spire-test-regex)
+- [Preset](#preset)
 - [Plugins](#plugins)
   - [`spire-config-default/verify`](#spire-config-defaultverify)
   - [`spire-config-default/clean`](#spire-config-defaultclean)
@@ -62,6 +62,31 @@ Runs [jest] on specified regex.
 
 - `[regex]` \<string\> Regex of test files. Defaults to `defaultRegex` plugin's
   option.
+
+## Preset
+
+This preset allows to override options or completly disable specific plugins via
+config options:
+
+```json
+{
+  "spire": {
+    "extends": [
+      [
+        "spire-config-default",
+        {
+          "jest": {
+            "jestConfig": "jest-preset-acme"
+          },
+          "doctoc": false
+        }
+      ]
+    ]
+  }
+}
+```
+
+Each key maps to [plugin](#plugins) name without scope.
 
 ## Plugins
 
