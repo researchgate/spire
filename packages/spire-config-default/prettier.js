@@ -17,7 +17,7 @@ function prettier(
   }
 ) {
   return {
-    name: 'default-plugin-prettier',
+    name: 'spire-config-default/prettier',
     async setup({ argv, cli }) {
       cli.command(
         'format [glob]',

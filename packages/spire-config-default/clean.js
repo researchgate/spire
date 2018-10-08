@@ -16,7 +16,7 @@ function clean(
   }
 ) {
   return {
-    name: 'default-plugin-clean',
+    name: 'spire-config-default/clean',
     async setup({ cli }) {
       cli.command(
         'clean',

@@ -18,7 +18,7 @@ function eslint(
   }
 ) {
   return {
-    name: 'default-plugin-eslint',
+    name: 'spire-config-default/eslint',
     async setup({ cli, argv }) {
       cli.command(
         'lint [glob]',

@@ -3,7 +3,7 @@ const execa = require('execa');
 
 function verify({ setState }) {
   return {
-    name: 'default-plugin-verify',
+    name: 'spire-config-default/verify',
     async setup() {
       // Make sure project is a Git repo
       try {
