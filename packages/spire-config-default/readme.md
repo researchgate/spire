@@ -5,12 +5,14 @@ Default config preset for [spire].
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
 - [Quick Start](#quick-start)
 - [Commands](#commands)
   - [`npx spire clean`](#npx-spire-clean)
   - [`npx spire format [glob]`](#npx-spire-format-glob)
   - [`npx spire lint [glob]`](#npx-spire-lint-glob)
   - [`npx spire test [regex]`](#npx-spire-test-regex)
+  - [`npx spire release`](#npx-spire-release)
 - [Preset](#preset)
 - [Plugins](#plugins)
   - [`spire-config-default/verify`](#spire-config-defaultverify)
@@ -20,6 +22,7 @@ Default config preset for [spire].
   - [`spire-config-default/eslint`](#spire-config-defaulteslint)
   - [`spire-config-default/jest`](#spire-config-defaultjest)
   - [`spire-config-default/lint-staged`](#spire-config-defaultlint-staged)
+  - [`spire-config-default/semantic-release`](#spire-config-defaultsemantic-release)
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -62,6 +65,10 @@ Runs [jest] on specified regex.
 
 - `[regex]` \<string\> Regex of test files. Defaults to `defaultRegex` plugin's
   option.
+
+### `npx spire release`
+
+Runs [semantic-release].
 
 ## Preset
 
@@ -190,6 +197,26 @@ Each key maps to [plugin](#plugins) name without scope.
     this option is `false` and there's custom lint-staged config found it will
     throw an error. Defaults to `true`.
 
+### `spire-config-default/semantic-release`
+
+- Hooks
+  - `setup` Adds [`release` command](#npx-spire-release) and prepares
+    [semantic-release] arguments.
+  - `run` Runs [`release` command](#npx-spire-release).
+- Options
+  - `semanticReleaseConfig` \<string\> Default [semantic-release] configuration.
+    Defaults to
+    [`spire-config-default/config/semantic-release`](./config/semantic-release.js).
+  - `allowCustomConfig` \<boolean\> Whether to allow user-provided config. If
+    this option is `false` and there's custom semantic-release config found it
+    will throw an error. Defaults to `true`.
+  - `changelogName` \<string\> Case-sensitive changelog name. Defaults to
+    `changelog.md`.
+  - `gitAuthorName` \<string\> Git author and commiter name. Defaults to
+    `undefined`, which falls back to default value of [semantic-release].
+  - `gitAuthorEmail` \<string\> Git author and commiter email. Defaults to
+    `undefined`, which falls back to default value of [semantic-release].
+
 ## License
 
 MIT &copy; [ResearchGate](https://github.com/researchgate)
@@ -200,3 +227,4 @@ MIT &copy; [ResearchGate](https://github.com/researchgate)
 [doctoc]: https://github.com/thlorenz/doctoc
 [jest]: https://jestjs.io/
 [lint-staged]: https://github.com/okonet/lint-staged
+[semantic-release]: https://github.com/semantic-release/semantic-release

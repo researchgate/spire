@@ -9,7 +9,7 @@ const lintStaged = require('./lint-staged');
 
 // Skip disabled plugins
 function shouldKeepPlugin(entry) {
-  const [_, options] = entry;
+  const [, options] = entry;
   return options === false ? false : true;
 }
 
