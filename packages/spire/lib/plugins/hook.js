@@ -4,7 +4,7 @@ function hook({ setCommand, getCommand }) {
     async setup({ cli }) {
       cli.command(
         'hook <name>',
-        'Runs plugin hooks',
+        'run plugin hooks',
         yargs => {
           yargs.positional('name', {
             describe: 'Hook name',
@@ -25,6 +25,7 @@ function hook({ setCommand, getCommand }) {
           const hook = Symbol.keyFor(command);
           for (const plugin of context.config.plugins) {
             if (plugin[hook]) {
+              context.logger.debug(`Running ${plugin.name}.${hook}`);
               await plugin[hook](context);
             }
           }

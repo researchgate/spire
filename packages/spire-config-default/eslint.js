@@ -12,7 +12,6 @@ function eslint(
     allowCustomConfig = true,
     eslintIgnore: defaultEslintIgnore = '.gitignore',
     allowCustomIgnore = true,
-    allowCustomArgs = true,
     defaultGlob = '.',
     linterGlob = '*.js',
   }
@@ -21,15 +20,9 @@ function eslint(
     name: 'spire-config-default/eslint',
     async setup({ cli, argv }) {
       cli.command(
-        'lint [glob]',
-        'Lints files with ESLint',
-        yargs => {
-          yargs.positional('glob', {
-            describe: 'Glob of files to lint',
-            default: defaultGlob,
-            type: 'string',
-          });
-        },
+        'lint',
+        'lint files with ESLint',
+        () => {},
         () => setCommand(LINT_COMMAND)
       );
       const hasCustomConfig =
@@ -79,9 +72,11 @@ function eslint(
         return;
       }
       const { eslintArgs } = getState();
-      const fullEslintArgs = allowCustomArgs
-        ? [...eslintArgs, options.glob]
-        : eslintArgs;
+      const userProvidedArgs = options._.slice(1);
+      const fullEslintArgs = [
+        ...eslintArgs,
+        ...(userProvidedArgs.length ? userProvidedArgs : [defaultGlob]),
+      ];
       logger.debug('Using eslint arguments: %s', fullEslintArgs.join(' '));
       await execa('eslint', fullEslintArgs, { cwd, stdio: 'inherit' });
     },

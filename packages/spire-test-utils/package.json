@@ -1,0 +1,13 @@
+{
+  "name": "spire-test-utils",
+  "version": "1.0.0",
+  "description": "Test utilities for Spire",
+  "main": "index.js",
+  "repository": "researchgate/spire",
+  "author": "Sergey Bekrin <sergey@bekrin.me>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "fs-extra": "^7.0.0"
+  }
+}

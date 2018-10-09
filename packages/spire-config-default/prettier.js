@@ -20,15 +20,9 @@ function prettier(
     name: 'spire-config-default/prettier',
     async setup({ argv, cli }) {
       cli.command(
-        'format [glob]',
-        'Formats files with Prettier',
-        yargs => {
-          yargs.positional('glob', {
-            describe: 'Glob of files to format',
-            default: defaultGlob,
-            type: 'string',
-          });
-        },
+        'format',
+        'format files with Prettier',
+        () => {},
         () => setCommand(FORMAT_COMMAND)
       );
       const hasCustomConfig =
@@ -80,7 +74,11 @@ function prettier(
         return;
       }
       const { prettierArgs } = getState();
-      const finalPrettierArgs = [...prettierArgs, options.glob];
+      const userProvidedArgs = options._.slice(1);
+      const finalPrettierArgs = [
+        ...prettierArgs,
+        ...(userProvidedArgs.length ? userProvidedArgs : [defaultGlob]),
+      ];
       logger.debug('Using prettier arguments: %s', finalPrettierArgs.join(' '));
       await execa('prettier', finalPrettierArgs, { cwd, stdio: 'inherit' });
     },

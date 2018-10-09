@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Spire config for ResearchGate projects",
   "main": "index.js",
-  "repository": "https://github.com/researchgate/spire",
+  "repository": "researchgate/spire",
   "author": "Sergey Bekrin <sergey@bekrin.me>",
   "license": "MIT",
   "dependencies": {

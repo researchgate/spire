@@ -20,7 +20,7 @@ function clean(
     async setup({ cli }) {
       cli.command(
         'clean',
-        'Cleans files matching .gitignore',
+        'clean files matching .gitignore',
         yargs => {
           yargs
             .option('keeplist', {

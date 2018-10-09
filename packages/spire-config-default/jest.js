@@ -10,7 +10,6 @@ function jest(
       'spire-config-default/config/jest'
     ),
     allowCustomConfig = true,
-    defaultTestRegex = '',
     linterGlob = '*.js',
   }
 ) {
@@ -18,21 +17,15 @@ function jest(
     name: 'spire-config-default/jest',
     async setup({ cli }) {
       cli.command(
-        'test [regex]',
-        'Runs tests with Jest',
-        yargs => {
-          yargs.positional('regex', {
-            describe: 'Regex of test files to run',
-            default: defaultTestRegex,
-            type: 'string',
-          });
-        },
+        'test',
+        'run tests with Jest',
+        () => {},
         () => setCommand(TEST_COMMAND)
       );
       const hasCustomConfig =
-        hasFile('jest.config.js') ||
-        hasFile('jest.config.json') ||
-        hasPackageProp('jest');
+        (await hasFile('jest.config.js')) ||
+        (await hasFile('jest.config.json')) ||
+        (await hasPackageProp('jest'));
       const jestConfig =
         allowCustomConfig && hasCustomConfig
           ? []
@@ -67,9 +60,11 @@ function jest(
         return;
       }
       const { jestArgs } = getState();
-      const fullJestArgs = [...jestArgs, options.regex];
+      const userProvidedArgs = options._.slice(1);
+      const fullJestArgs = [...jestArgs, ...userProvidedArgs];
       logger.debug('Using jest arguments: %s', fullJestArgs.join(' '));
-      await execa('jest', fullJestArgs, { cwd, stdio: 'inherit' });
+      const env = { SPIRE_ROOT_DIR: cwd };
+      await execa('jest', fullJestArgs, { cwd, env, stdio: 'inherit' });
     },
   };
 }

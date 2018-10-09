@@ -37,7 +37,7 @@ function createFlattener(spire) {
       }
       if (config.extends) {
         return config.extends.reduce(
-          (prev, current) => merge(prev, traverse(resolve(current))),
+          (prev, current) => merge(prev, traverse(normilise(resolve(current)))),
           config
         );
       }

@@ -20,7 +20,7 @@ function semanticRelease(
     async setup({ cli }) {
       cli.command(
         'release',
-        'Runs semantic-release',
+        'run semantic-release',
         () => {},
         () => setCommand(RELEASE_COMMAND)
       );
@@ -42,14 +42,19 @@ function semanticRelease(
         );
       }
     },
-    async run({ cwd, logger }) {
+    async run({ options, cwd, logger }) {
       if (getCommand() !== RELEASE_COMMAND) {
         return;
       }
       const { semanticReleaseArgs } = getState();
+      const userProvidedArgs = options._.slice(1);
+      const finalSemanticReleaseArgs = [
+        ...semanticReleaseArgs,
+        ...userProvidedArgs,
+      ];
       logger.debug(
         'Using semantic-release arguments: %s',
-        semanticReleaseArgs.join(' ')
+        finalSemanticReleaseArgs.join(' ')
       );
       const env = {
         SPIRE_CHANGELOG_NAME: changelogName,
@@ -58,7 +63,7 @@ function semanticRelease(
         GIT_COMMITTER_NAME: gitAuthorName,
         GIT_COMMITTER_EMAIL: gitAuthorEmail,
       };
-      await execa('semantic-release', semanticReleaseArgs, {
+      await execa('semantic-release', finalSemanticReleaseArgs, {
         env,
         cwd,
         stdio: 'inherit',

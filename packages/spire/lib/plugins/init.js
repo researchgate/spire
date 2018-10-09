@@ -3,7 +3,7 @@ function init() {
     name: 'spire-init',
     async setup({ cli }) {
       cli
-        .usage('Usage: $0 <cmd> [options]')
+        .usage('Usage: $0 [options] <cmd>')
         .option('h', { alias: 'help', group: 'Options' })
         .option('v', { alias: 'version', group: 'Options' })
         .option('debug', {
@@ -11,7 +11,8 @@ function init() {
           type: 'boolean',
           group: 'Options',
         })
-        .strict(true)
+        .strict(false)
+        .completion()
         .demandCommand()
         .exitProcess(false);
     },

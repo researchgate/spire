@@ -3,6 +3,10 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "lint": "lerna exec --parallel spire lint",
+    "test": "lerna exec --parallel spire test"
+  },
   "devDependencies": {
     "lerna": "^3.4.1"
   }

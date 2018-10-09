@@ -1,14 +1,11 @@
 {
   "name": "spire-config-default",
   "version": "1.0.0",
-  "description": "Default config for Spire",
+  "description": "Default config preset for Spire",
   "main": "index.js",
-  "repository": "https://github.com/researchgate/spire",
+  "repository": "researchgate/spire",
   "author": "Sergey Bekrin <sergey@bekrin.me>",
   "license": "MIT",
-  "peerDependencies": {
-    "spire": "^1.0.0"
-  },
   "dependencies": {
     "@semantic-release/changelog": "^3.0.0",
     "@semantic-release/commit-analyzer": "^6.0.1",
@@ -28,5 +25,8 @@
     "prettier": "^1.14.3",
     "pretty-format": "^23.6.0",
     "semantic-release": "^15.9.17"
+  },
+  "peerDependencies": {
+    "spire": "^1.0.0"
   }
 }
