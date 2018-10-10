@@ -4,7 +4,7 @@
   "description": "Spire config for ResearchGate projects",
   "main": "index.js",
   "repository": "researchgate/spire",
-  "author": "Sergey Bekrin <sergey@bekrin.me>",
+  "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
   "license": "MIT",
   "dependencies": {
     "@researchgate/eslint-config-rg-react": "^5.0.1",

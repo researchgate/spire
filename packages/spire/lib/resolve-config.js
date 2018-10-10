@@ -28,8 +28,8 @@ function merge(rawLeft, rawRight) {
   };
 }
 
-function createFlattener(spire) {
-  const resolve = createResolver(spire);
+function createFlattener(context, core) {
+  const resolve = createResolver(context, core);
   return rootConfig => {
     const traverse = config => {
       if (config.plugins) {
@@ -43,18 +43,20 @@ function createFlattener(spire) {
       }
       return config;
     };
-    return traverse(merge({ plugins: [init, hook, git] }, rootConfig));
+    const essentials = { plugins: [init, hook, git] };
+    return traverse(merge(essentials, rootConfig));
   };
 }
 
-async function resolveConfig(spire) {
+async function resolveConfig(context, core) {
   const result = await explorer.search();
-  const config = (result && result.config) || {};
-  const flatten = createFlattener(spire);
-  return flatten({
-    extends: 'spire-config-default',
-    ...config,
-  });
+  const flatten = createFlattener(context, core);
+  if (result) {
+    context.logger.debug('Found config at %s', result.filepath);
+    return flatten(result.config);
+  }
+  context.logger.debug('Using default config');
+  return flatten({ extends: 'spire-config-default' });
 }
 
 module.exports = resolveConfig;

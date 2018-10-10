@@ -20,9 +20,9 @@ async function spire({
   const context = { argv, cli, cwd, env, logger };
   const state = createState();
   const core = createCore(context, state);
-  const config = await resolveConfig(core);
+  const config = await resolveConfig(context, core);
   context.config = config;
-  logger.debug('Using config:\n%s', prettyFormat(config));
+  logger.debug('Using resolved config:\n%s', prettyFormat(config));
   // Run setup hooks
   for (const plugin of config.plugins) {
     if (plugin.setup) {

@@ -1,0 +1,15 @@
+{
+  "name": "create-spire-app",
+  "version": "1.0.0",
+  "description": "Scaffolding tool for Spire",
+  "main": "index.js",
+  "repository": "researchgate/spire",
+  "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
+  "license": "MIT",
+  "bin": {
+    "create-spire-app": "./bin/create-spire-app.js"
+  },
+  "engines": {
+    "node": ">=8.3"
+  }
+}

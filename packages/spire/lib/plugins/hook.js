@@ -4,7 +4,7 @@ function hook({ setCommand, getCommand }) {
     async setup({ cli }) {
       cli.command(
         'hook <name>',
-        'run plugin hooks',
+        false,
         yargs => {
           yargs.positional('name', {
             describe: 'Hook name',

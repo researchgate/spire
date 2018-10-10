@@ -5,7 +5,9 @@
   ],
   "scripts": {
     "lint": "lerna exec --parallel spire lint",
-    "test": "lerna exec --parallel spire test"
+    "test": "lerna exec --parallel spire test",
+    "prerelease": "yarn lint && yarn test",
+    "release": "lerna publish --conventional-commits --allow-branch master"
   },
   "devDependencies": {
     "lerna": "^3.4.1"

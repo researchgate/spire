@@ -12,7 +12,6 @@ function init() {
           group: 'Options',
         })
         .strict(false)
-        .completion()
         .demandCommand()
         .exitProcess(false);
     },

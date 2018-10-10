@@ -4,7 +4,7 @@
   "description": "Extensible CLI toolkit managment tool",
   "main": "index.js",
   "repository": "researchgate/spire",
-  "author": "Sergey Bekrin <sergey@bekrin.me>",
+  "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
   "license": "MIT",
   "bin": {
     "spire": "./bin/spire.js"

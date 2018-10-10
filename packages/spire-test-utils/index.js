@@ -1,7 +1,7 @@
-const createDirFixture = require('./lib/create-dir-fixture');
 const configToString = require('./lib/config-to-string');
+const createFixture = require('./lib/create-fixture');
 
 module.exports = {
-  createDirFixture,
   configToString,
+  createFixture,
 };

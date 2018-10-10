@@ -1,12 +1,8 @@
-const { join } = require('path');
-const execa = require('execa');
-const { createDirFixture, configToString } = require('spire-test-utils');
-const fixturesDir = join(__dirname, '__fixtures__');
+const { createFixture, configToString } = require('spire-test-utils');
 
-describe('Config', () => {
+describe('spire', () => {
   it('resolves extended configs', async () => {
-    const cwd = join(fixturesDir, 'config');
-    const cleanup = await createDirFixture(cwd, {
+    const fixture = await createFixture({
       'spire-config-foo.js': configToString(() => ({
         plugins: [
           () => ({
@@ -42,21 +38,20 @@ describe('Config', () => {
       'package.json': JSON.stringify({
         name: 'spire-test-config',
         spire: {
-          extends: join(cwd, './spire-config-baz'),
+          extends: '<rootDir>/spire-config-baz.js',
         },
       }),
     });
-    const output = await execa.stdout('spire', ['--debug'], {
+    const { stdout } = await fixture.run('spire', ['--debug'], {
       reject: false,
-      cwd,
     });
-    expect(output).toMatch(/Using config:/);
-    expect(output).toMatch(/config\/spire-config-baz/);
-    expect(output).toMatch(/config\/spire-config-bar/);
-    expect(output).toMatch(/config\/spire-config-foo/);
-    expect(output).toMatch(/Running baz\.setup/);
-    expect(output).toMatch(/Running bar\.setup/);
-    expect(output).toMatch(/Running foo\.setup/);
-    await cleanup();
+    expect(stdout).toMatch(/Using resolved config:/);
+    expect(stdout).toMatch(/spire-config-baz/);
+    expect(stdout).toMatch(/spire-config-bar/);
+    expect(stdout).toMatch(/spire-config-foo/);
+    expect(stdout).toMatch(/Running baz\.setup/);
+    expect(stdout).toMatch(/Running bar\.setup/);
+    expect(stdout).toMatch(/Running foo\.setup/);
+    await fixture.clean();
   });
 });

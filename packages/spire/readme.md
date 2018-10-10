@@ -63,10 +63,21 @@ spire configuration (preferable in `package.json#spire`):
   "spire": {
     "extends": "spire-config-acme",
     "plugins": [
-      ["./custom-acme-plugin.js", {
-        "foo": 42
+      ["<rootDir>/spire-custom-plugin.js", {
+        "answer": 42
       }]
     ]
+  }
+}
+```
+
+Configs can be referenced as modules or by absolute path. You can also use
+`<rootDir>` placeholder to look configs relative to current project:
+
+```json
+{
+  "spire": {
+    "extends": "<rootDir>/local-spire-config.js"
   }
 }
 ```
@@ -106,6 +117,10 @@ module.exports = customAcmePlugin;
 By default there's [3 system plugins](./lib/plugins/) to enable core
 functionality. It's recommended to keep one plugin for one feature or tool.
 
+Like config presets, plugins can be referenced as modules or by absolute path.
+`<rootDir>` placeholder is also available to reference plugin relative to
+current project.
+
 ### CLI Options
 
 Each plugin is able to extend list of commands and their options. Below is a
@@ -115,8 +130,9 @@ list of common ones:
 - `npx spire --version` Prints current version of `spire`.
 - `npx spire <cmd>` Runs specific command defined by plugins.
 - `npx spire <cmd> --debug` Outputs additional debug information.
-- `npx spire hook <name>` Runs specific git or npm hook. Available hooks are
-  `postinstall`, `preuninstall`, `precommit` and `postmerge`.
+- _(hidden)_ `npx spire hook <name>` Runs specific git or npm hook in plugins.
+  Available hooks are `postinstall`, `preuninstall`, `precommit` and
+  `postmerge`.
 
 ## References
 

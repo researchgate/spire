@@ -4,7 +4,7 @@
   "description": "Default config preset for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",
-  "author": "Sergey Bekrin <sergey@bekrin.me>",
+  "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
   "license": "MIT",
   "dependencies": {
     "@semantic-release/changelog": "^3.0.0",
