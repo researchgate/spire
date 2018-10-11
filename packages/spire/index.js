@@ -35,22 +35,34 @@ async function spire({
       }
     }
   }
-  // Parse cli options
   const setupHasFailed = errors.length > 0;
-  try {
-    const { help, version, ...options } = cli.parse(argv);
-    context.options = options;
-    // Exit if help or version needs to be printed
-    if (Boolean(help) || Boolean(version)) {
-      return 0;
-    }
-  } catch (error) {
-    // Intentionally do not report YError "Unknown argument" errors
-    return 1;
-  }
   if (!setupHasFailed) {
+    // Parse cli options
+    try {
+      const { help, version, ...options } = cli.parse(argv);
+      context.options = options;
+      // Exit if help or version needs to be printed
+      if (Boolean(help) || Boolean(version)) {
+        return 0;
+      }
+    } catch (error) {
+      // Intentionally do not report YError "Unknown argument" errors
+      return 1;
+    }
     // Run main hooks
     for (const plugin of config.plugins) {
+      if (plugin.skip) {
+        try {
+          await validatePlugin(plugin.skip);
+          // Skip plugin if needed
+          if (await plugin.skip(context)) {
+            logger.debug('Skipping %s.run', plugin.name);
+            continue;
+          }
+        } catch (error) {
+          errors.push(error);
+        }
+      }
       if (plugin.run) {
         try {
           logger.debug('Running %s.run', plugin.name);

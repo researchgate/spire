@@ -42,10 +42,10 @@ function semanticRelease(
         );
       }
     },
+    async skip() {
+      return getCommand() !== RELEASE_COMMAND;
+    },
     async run({ options, cwd, logger }) {
-      if (getCommand() !== RELEASE_COMMAND) {
-        return;
-      }
       const { semanticReleaseArgs } = getState();
       const userProvidedArgs = options._.slice(1);
       const finalSemanticReleaseArgs = [

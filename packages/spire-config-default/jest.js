@@ -55,10 +55,10 @@ function jest(
         ],
       }));
     },
+    async skip() {
+      return getCommand() !== TEST_COMMAND;
+    },
     async run({ options, logger, cwd }) {
-      if (getCommand() !== TEST_COMMAND) {
-        return;
-      }
       const { jestArgs } = getState();
       const userProvidedArgs = options._.slice(1);
       const fullJestArgs = [...jestArgs, ...userProvidedArgs];

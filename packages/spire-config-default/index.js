@@ -1,4 +1,3 @@
-const verify = require('./verify');
 const clean = require('./clean');
 const doctoc = require('./doctoc');
 const prettier = require('./prettier');
@@ -16,7 +15,6 @@ function shouldKeepPlugin(entry) {
 module.exports = (
   spire,
   {
-    verify: verifyOpts = {},
     clean: cleanOpts = {},
     doctoc: doctocOpts = {},
     prettier: formatOpts = {},
@@ -27,7 +25,6 @@ module.exports = (
   }
 ) => ({
   plugins: [
-    [verify, verifyOpts],
     [clean, cleanOpts],
     [doctoc, doctocOpts],
     [prettier, formatOpts],

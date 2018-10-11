@@ -15,7 +15,7 @@ ${command}
 }
 
 function git(
-  { getCommand },
+  { getCommand, setState, getState },
   {
     gitHooks = {
       'pre-commit': 'npx spire hook precommit',
@@ -25,15 +25,24 @@ function git(
 ) {
   return {
     name: 'spire-git-support',
-    async run({ logger }) {
-      if (isCI) {
-        logger.debug('Skipping installing hooks on CI');
-        return;
+    async setup({ cwd }) {
+      // Make sure project is a Git repo
+      try {
+        setState({
+          root: await execa.stdout('git', ['rev-parse', '--show-toplevel'], {
+            cwd,
+          }),
+        });
+      } catch (reason) {
+        throw new SpireError('Project needs to be in a Git repository');
       }
-      const gitRoot = await execa.stdout('git', [
-        'rev-parse',
-        '--show-toplevel',
-      ]);
+    },
+    async skip({ logger }) {
+      logger.debug('Skipping installing hooks on CI');
+      return isCI;
+    },
+    async run() {
+      const gitRoot = getState().root;
       switch (getCommand()) {
         case Symbol.for('postinstall'):
           for (const hook of Object.keys(gitHooks)) {

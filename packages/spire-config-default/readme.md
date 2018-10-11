@@ -14,7 +14,6 @@ Default config preset for [spire].
   - [`npx spire release`](#npx-spire-release)
 - [Preset](#preset)
 - [Plugins](#plugins)
-  - [`spire-config-default/verify`](#spire-config-defaultverify)
   - [`spire-config-default/clean`](#spire-config-defaultclean)
   - [`spire-config-default/doctoc`](#spire-config-defaultdoctoc)
   - [`spire-config-default/prettier`](#spire-config-defaultprettier)
@@ -90,12 +89,6 @@ config options:
 Each key maps to [plugin](#plugins) name without scope.
 
 ## Plugins
-
-### `spire-config-default/verify`
-
-- Hooks
-  - `setup` Checks if project is a Git repository and sets `root` state property
-    with absolute git root path.
 
 ### `spire-config-default/clean`
 

@@ -14,8 +14,9 @@ describe('spire-config-default/clean', () => {
     const fixture = await createFixture({
       'package.json': configWithCleanPlugin,
     });
-    const { stdout } = await fixture.run('spire', ['--help']);
-    expect(stdout).toMatch(/Commands:\s+spire clean/);
+    await expect(fixture.run('spire', ['--help'])).resolves.toMatchObject({
+      stdout: /Commands:\s+spire clean/,
+    });
     await fixture.clean();
   });
 
@@ -25,7 +26,6 @@ describe('spire-config-default/clean', () => {
       '.gitignore': 'remove.me',
       'remove.me': 'hi',
     });
-    await fixture.run('git', ['init']);
     expect(await pathExists(join(fixture.cwd, 'remove.me'))).toBe(true);
     const { stdout } = await fixture.run('spire', ['clean']);
     expect(stdout).toMatch(/Cleaning remove\.me/);
@@ -40,9 +40,11 @@ describe('spire-config-default/clean', () => {
       '.gitignore': 'remove.me',
       'remove.me': 'hi',
     });
-    await fixture.run('git', ['init']);
-    const { stdout } = await fixture.run('spire', ['clean', '--dry-run']);
-    expect(stdout).toMatch(/Next paths are to be cleaned up: remove.me/);
+    await expect(
+      fixture.run('spire', ['clean', '--dry-run'])
+    ).resolves.toMatchObject({
+      stdout: /Next paths are to be cleaned up: remove\.me/,
+    });
     expect(await pathExists(join(fixture.cwd, 'remove.me'))).toBe(true);
     await fixture.clean();
   });
@@ -53,13 +55,11 @@ describe('spire-config-default/clean', () => {
       '.gitignore': 'keep.me',
       'keep.me': 'hi',
     });
-    await fixture.run('git', ['init']);
-    const { stdout } = await fixture.run('spire', [
-      'clean',
-      '--keeplist',
-      'keep.me',
-    ]);
-    expect(stdout).toMatch(/No paths needs to be cleand up/);
+    await expect(
+      fixture.run('spire', ['clean', '--keeplist', 'keep.me'])
+    ).resolves.toMatchObject({
+      stdout: /No paths needs to be cleand up/,
+    });
     await fixture.clean();
   });
 
@@ -69,7 +69,6 @@ describe('spire-config-default/clean', () => {
       '.gitignore': 'keep.me',
       'keep.me': 'hi',
     });
-    await fixture.run('git', ['init']);
     const { stdout } = await fixture.run('spire', [
       'clean',
       '--ignore-keeplist',

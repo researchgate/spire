@@ -22,14 +22,12 @@ describe('spire-config-default/doctoc', () => {
 ### Third
       `,
     });
-    await fixture.run('git', ['init']);
     await fixture.run('git', ['add', 'readme.md']);
-    const { stdout } = await fixture.run('spire', [
-      'hook',
-      'precommit',
-      '--debug',
-    ]);
-    expect(stdout).toMatch(/Running spire-config-default\/doctoc\.precommit/);
+    await expect(
+      fixture.run('spire', ['hook', 'precommit', '--debug'])
+    ).resolves.toMatchObject({
+      stdout: /Running spire-config-default\/doctoc\.precommit/,
+    });
     expect(
       await readFile(join(fixture.cwd, 'readme.md'), 'utf8')
     ).toMatchSnapshot();

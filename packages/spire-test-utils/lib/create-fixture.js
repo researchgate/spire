@@ -12,6 +12,7 @@ async function createFixture(
   await Promise.all(
     files.map(file => outputFile(join(cwd, file), structure[file], 'utf8'))
   );
+  await execa('git', ['init'], { cwd });
   return {
     get cwd() {
       return cwd;

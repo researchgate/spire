@@ -44,10 +44,10 @@ function clean(
         () => setCommand(CLEAN_COMMAND)
       );
     },
+    async skip() {
+      return getCommand() !== CLEAN_COMMAND;
+    },
     async run({ options, logger }) {
-      if (getCommand() !== CLEAN_COMMAND) {
-        return;
-      }
       const keeplist = options.ignorekeeplist
         ? []
         : options.keeplist || keeplist || [];

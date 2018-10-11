@@ -1,0 +1,6 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`spire-config-default/prettier runs prettier and adds linter 1`] = `
+"foo();
+"
+`;

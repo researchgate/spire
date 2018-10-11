@@ -85,7 +85,7 @@ Configs can be referenced as modules or by absolute path. You can also use
 ### Plugins
 
 Each plugin added to your configuration can extend any aspect of your toolkit.
-In general, there are 7 lifecycle methods to keep your setup organized:
+In general, there are 8 lifecycle methods to keep your setup organized:
 
 ```js
 function customAcmePlugin(spire, options) {
@@ -99,6 +99,8 @@ function customAcmePlugin(spire, options) {
     // Runs before each `npx spire`
     // Use it to prepare arguments or config for your tools
     async setup(context) {},
+    // Whether to skip `run` method or not
+    async skip(contextWithOptions) {},
     // Runs on each `npx spire`
     // This method also recevies `context.options` with parsed yargs options
     // Use it for main logic, e.g. to run cli tool

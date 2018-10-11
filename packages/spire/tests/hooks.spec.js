@@ -1,6 +1,6 @@
 const { createFixture, configToString } = require('spire-test-utils');
 
-describe('spire hook', () => {
+describe('spire', () => {
   test.each(['precommit', 'postmerge', 'postinstall', 'preuninstall'])(
     'calls %s plugin hooks',
     async hook => {
@@ -31,7 +31,6 @@ describe('spire hook', () => {
           },
         }),
       });
-      await fixture.run('git', ['init']);
       const { stdout } = await fixture.run('spire', ['hook', hook, '--debug']);
       expect(stdout).toMatch(new RegExp(`Running hooks\.${hook}`));
       await fixture.clean();

@@ -67,10 +67,10 @@ function eslint(
         ],
       }));
     },
+    async skip() {
+      return getCommand() !== LINT_COMMAND;
+    },
     async run({ options, logger, cwd }) {
-      if (getCommand() !== LINT_COMMAND) {
-        return;
-      }
       const { eslintArgs } = getState();
       const userProvidedArgs = options._.slice(1);
       const fullEslintArgs = [

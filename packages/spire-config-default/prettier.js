@@ -69,10 +69,10 @@ function prettier(
         ],
       }));
     },
+    async skip() {
+      return getCommand() !== FORMAT_COMMAND;
+    },
     async run({ options, logger, cwd }) {
-      if (getCommand() !== FORMAT_COMMAND) {
-        return;
-      }
       const { prettierArgs } = getState();
       const userProvidedArgs = options._.slice(1);
       const finalPrettierArgs = [
