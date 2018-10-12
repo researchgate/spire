@@ -1,17 +1,19 @@
-library 'voyager@v1'
+library 'researchgate@v1'
 
-voyager {
-  stage('Prepare') {
-    sh 'node --version'
-    sh 'yarn --version'
-    sh 'yarn'
-  }
+withDocker('node:8') {
+  withNotifications('Stargazer Kind of Internal But Not Really') {
+    stage('Prepare') {
+      sh 'node --version'
+      sh 'yarn --version'
+      sh 'yarn'
+    }
 
-  stage('Lint') {
-    sh 'yarn lint'
-  }
+    stage('Lint') {
+      sh 'yarn lint'
+    }
 
-  stage('Test') {
-    sh 'yarn test'
+    stage('Test') {
+      sh 'yarn test'
+    }
   }
 }
