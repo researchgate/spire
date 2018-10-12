@@ -1,7 +1,7 @@
 library 'researchgate@v1'
 
 withDocker('node:8') {
-  withNotifications('Stargazer Kind of Internal But Not Really') {
+  withNotifications('Team Stargazer') {
     stage('Prepare') {
       sh 'node --version'
       sh 'yarn --version'
