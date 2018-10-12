@@ -2,11 +2,9 @@ const { tmpdir } = require('os');
 const { join } = require('path');
 const { outputFile, remove } = require('fs-extra');
 const execa = require('execa');
+const shortid = require('shortid');
 
-async function createFixture(
-  structure = {},
-  identifier = (+new Date()).toString(36)
-) {
+async function createFixture(structure = {}, identifier = shortid.generate()) {
   const cwd = join(tmpdir(), identifier);
   const files = Object.keys(structure);
   await Promise.all(
