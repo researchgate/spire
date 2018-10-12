@@ -10,7 +10,7 @@ function semanticRelease(
       'spire-config-default/config/semantic-release'
     ),
     allowCustomConfig = true,
-    changelogName = 'changelog.md',
+    changelogName = 'CHANGELOG.md',
     gitAuthorName = undefined,
     gitAuthorEmail = undefined,
   }
