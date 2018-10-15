@@ -1,3 +1,9 @@
 {
-  "name": "spire"
+  "name": "spire",
+  "additionalJenkinsPipelines": {
+    "spire-release": {
+      "jenkinsPipelineFilePath": "Jenkinsfile_release",
+      "pollScm": false
+    }
+  }
 }
