@@ -7,10 +7,13 @@
     "lint": "lerna exec --parallel spire lint",
     "test": "lerna exec --parallel spire test",
     "prerelease": "yarn lint && yarn test",
-    "release": "lerna publish --conventional-commits --allow-branch master --yes --registry https://nexus3.rgoffice.net/repository/npm-internal/",
+    "release": "lerna publish --no-verify-access --conventional-commits --allow-branch master --yes --registry https://nexus3.rgoffice.net/repository/npm-internal/",
     "release-next": "yarn release --npm-tag next --no-git-tag-version --no-push --registry https://nexus3.rgoffice.net/repository/npm-internal/"
   },
   "devDependencies": {
     "lerna": "^3.4.3"
+  },
+  "resolutions": {
+    "@lerna/publish": "3.2.1"
   }
 }
