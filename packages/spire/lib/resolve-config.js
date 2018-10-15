@@ -56,7 +56,7 @@ async function resolveConfig(context, core) {
     return flatten(result.config);
   }
   context.logger.debug('Using default config');
-  return flatten({ extends: 'spire-config-default' });
+  return flatten({ extends: '@rg/spire-config-default' });
 }
 
 module.exports = resolveConfig;

@@ -1,13 +1,13 @@
 const { join } = require('path');
 const { readFile } = require('fs-extra');
-const { createFixture } = require('spire-test-utils');
+const { createFixture } = require('@rg/spire-test-utils');
 
 const configWithPrettierPlugin = JSON.stringify({
   name: 'spire-config-default-test-prettier',
   spire: {
     plugins: [
-      'spire-config-default/prettier',
-      'spire-config-default/lint-staged',
+      '@rg/spire-config-default/prettier',
+      '@rg/spire-config-default/lint-staged',
     ],
   },
 });

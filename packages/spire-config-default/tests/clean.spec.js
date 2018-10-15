@@ -1,11 +1,11 @@
 const { join } = require('path');
 const { pathExists } = require('fs-extra');
-const { createFixture } = require('spire-test-utils');
+const { createFixture } = require('@rg/spire-test-utils');
 
 const configWithCleanPlugin = JSON.stringify({
   name: 'spire-config-default-test-clean',
   spire: {
-    plugins: ['spire-config-default/clean'],
+    plugins: ['@rg/spire-config-default/clean'],
   },
 });
 

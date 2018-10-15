@@ -1,5 +1,5 @@
 const execa = require('execa');
-const SpireError = require('spire/error');
+const SpireError = require('@rg/spire/error');
 
 const FORMAT_COMMAND = Symbol.for('format');
 
@@ -7,7 +7,7 @@ function prettier(
   { hasFile, hasPackageProp, setCommand, getCommand, setState, getState },
   {
     prettierConfig: defaultPrettierConfig = require.resolve(
-      'spire-config-default/config/prettier'
+      '@rg/spire-config-default/config/prettier'
     ),
     allowCustomConfig = true,
     prettierIgnore: defaultPrettierIgnore = '.gitignore',

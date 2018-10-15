@@ -1,5 +1,5 @@
 const execa = require('execa');
-const SpireError = require('spire/error');
+const SpireError = require('@rg/spire/error');
 
 const RELEASE_COMMAND = Symbol.for('release');
 
@@ -7,7 +7,7 @@ function semanticRelease(
   { setCommand, getCommand, setState, getState, hasFile, hasPackageProp },
   {
     semanticReleaseConfig: defaultSemanticReleaseConfig = require.resolve(
-      'spire-config-default/config/semantic-release'
+      '@rg/spire-config-default/config/semantic-release'
     ),
     allowCustomConfig = true,
     changelogName = 'CHANGELOG.md',

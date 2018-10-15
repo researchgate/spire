@@ -1,5 +1,5 @@
 const execa = require('execa');
-const SpireError = require('spire/error');
+const SpireError = require('@rg/spire/error');
 
 const TEST_COMMAND = Symbol.for('test');
 
@@ -7,7 +7,7 @@ function jest(
   { setCommand, getCommand, setState, getState, hasFile, hasPackageProp },
   {
     jestConfig: defaultJestConfig = require.resolve(
-      'spire-config-default/config/jest'
+      '@rg/spire-config-default/config/jest'
     ),
     allowCustomConfig = true,
     linterGlob = '*.js',

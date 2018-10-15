@@ -1,4 +1,4 @@
-const { createFixture, configToString } = require('spire-test-utils');
+const { createFixture, configToString } = require('@rg/spire-test-utils');
 
 describe('spire', () => {
   it('resolves extended configs', async () => {

@@ -1,11 +1,11 @@
-const { createFixture } = require('spire-test-utils');
+const { createFixture } = require('@rg/spire-test-utils');
 
 const configWithEslintPlugin = JSON.stringify({
   name: 'spire-config-default-test-eslint',
   spire: {
     plugins: [
-      'spire-config-default/eslint',
-      'spire-config-default/lint-staged',
+      '@rg/spire-config-default/eslint',
+      '@rg/spire-config-default/lint-staged',
     ],
   },
 });

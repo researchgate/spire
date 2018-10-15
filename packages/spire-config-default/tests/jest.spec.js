@@ -1,9 +1,12 @@
-const { createFixture } = require('spire-test-utils');
+const { createFixture } = require('@rg/spire-test-utils');
 
 const configWithJestPlugin = JSON.stringify({
   name: 'spire-config-default-test-jest',
   spire: {
-    plugins: ['spire-config-default/jest', 'spire-config-default/lint-staged'],
+    plugins: [
+      '@rg/spire-config-default/jest',
+      '@rg/spire-config-default/lint-staged',
+    ],
   },
 });
 

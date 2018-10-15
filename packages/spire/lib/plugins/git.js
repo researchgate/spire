@@ -2,7 +2,7 @@ const isCI = require('is-ci');
 const { join } = require('path');
 const execa = require('execa');
 const { pathExists, readFile, outputFile, chmod, remove } = require('fs-extra');
-const SpireError = require('spire/error');
+const SpireError = require('@rg/spire/error');
 
 const SPIRE_COMMENT_MARK = '# spire';
 

@@ -1,9 +1,9 @@
-const { createFixture } = require('spire-test-utils');
+const { createFixture } = require('@rg/spire-test-utils');
 
 const configWithLintStagedPlugin = JSON.stringify({
   name: 'spire-config-default-test-lint-staged',
   spire: {
-    plugins: ['spire-config-default/lint-staged'],
+    plugins: ['@rg/spire-config-default/lint-staged'],
   },
 });
 

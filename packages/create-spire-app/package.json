@@ -1,5 +1,5 @@
 {
-  "name": "create-spire-app",
+  "name": "@rg/create-spire-app",
   "version": "1.0.0",
   "description": "Scaffolding tool for Spire",
   "main": "index.js",
@@ -11,5 +11,8 @@
   },
   "engines": {
     "node": ">=8.3"
+  },
+  "publishConfig": {
+    "registry": "https://nexus3.rgoffice.net/repository/npm-internal/"
   }
 }

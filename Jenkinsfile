@@ -1,3 +1,4 @@
+#!/usr/bin/env groovy
 library 'researchgate@v1'
 
 withDocker('node:8') {

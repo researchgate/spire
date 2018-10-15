@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const spire = require('spire');
+const spire = require('@rg/spire');
 
 async function main() {
   try {

@@ -1,6 +1,6 @@
 const execa = require('execa');
 const prettyFormat = require('pretty-format');
-const SpireError = require('spire/error');
+const SpireError = require('@rg/spire/error');
 
 function spireLintersToLintStaged(/** @type Array<{}> */ linters) {
   const result = {};
@@ -21,7 +21,7 @@ function spireLintersToLintStaged(/** @type Array<{}> */ linters) {
 function lintStaged(
   { hasFile, hasPackageProp, setState, getState },
   {
-    lintStagedConfig: defaultLintStagedConfig = 'spire-config-default/config/lint-staged',
+    lintStagedConfig: defaultLintStagedConfig = '@rg/spire-config-default/config/lint-staged',
     allowCustomConfig = true,
   }
 ) {

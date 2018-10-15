@@ -1,13 +1,13 @@
 const { join } = require('path');
 const { readFile } = require('fs-extra');
-const { createFixture } = require('spire-test-utils');
+const { createFixture } = require('@rg/spire-test-utils');
 
 const configWithDoctocPlugin = JSON.stringify({
   name: 'spire-config-default-test-doctoc',
   spire: {
     plugins: [
-      'spire-config-default/doctoc',
-      'spire-config-default/lint-staged',
+      '@rg/spire-config-default/doctoc',
+      '@rg/spire-config-default/lint-staged',
     ],
   },
 });

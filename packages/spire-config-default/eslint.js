@@ -1,5 +1,5 @@
 const execa = require('execa');
-const SpireError = require('spire/error');
+const SpireError = require('@rg/spire/error');
 
 const LINT_COMMAND = Symbol.for('lint');
 
@@ -7,7 +7,7 @@ function eslint(
   { setCommand, getCommand, setState, getState, hasFile, hasPackageProp },
   {
     eslintConfig: defaultEslintConfig = require.resolve(
-      'spire-config-default/config/eslint'
+      '@rg/spire-config-default/config/eslint'
     ),
     allowCustomConfig = true,
     eslintIgnore: defaultEslintIgnore = '.gitignore',

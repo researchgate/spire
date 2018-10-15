@@ -1,5 +1,5 @@
 {
-  "name": "spire",
+  "name": "@rg/spire",
   "version": "1.0.0",
   "description": "Extensible CLI toolkit managment tool",
   "main": "index.js",
@@ -17,15 +17,18 @@
     "preuninstall": "npx spire hook preuninstall"
   },
   "dependencies": {
+    "@rg/spire-config-default": "^1.0.0",
     "cosmiconfig": "^5.0.6",
     "fs-extra": "^7.0.0",
     "invariant": "^2.2.4",
     "pretty-format": "^23.6.0",
     "signale": "^1.3.0",
-    "spire-config-default": "^1.0.0",
     "yargs": "^12.0.2"
   },
   "devDependencies": {
-    "spire-test-utils": "^1.0.0"
+    "@rg/spire-test-utils": "^1.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://nexus3.rgoffice.net/repository/npm-internal/"
   }
 }

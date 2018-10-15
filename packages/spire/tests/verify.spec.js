@@ -1,4 +1,4 @@
-const { createFixture } = require('spire-test-utils');
+const { createFixture } = require('@rg/spire-test-utils');
 
 describe('spire', () => {
   it('verifies git repository', async () => {

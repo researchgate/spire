@@ -1,5 +1,5 @@
 {
-  "name": "spire-test-utils",
+  "name": "@rg/spire-test-utils",
   "version": "1.0.0",
   "description": "Test utilities for Spire",
   "main": "index.js",
@@ -9,5 +9,8 @@
   "dependencies": {
     "fs-extra": "^7.0.0",
     "shortid": "^2.2.13"
+  },
+  "publishConfig": {
+    "registry": "https://nexus3.rgoffice.net/repository/npm-internal/"
   }
 }
