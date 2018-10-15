@@ -2,19 +2,16 @@
 library 'researchgate@v1'
 
 withDocker('node:8') {
-  withNotifications('Team Stargazer') {
+  // withNotifications('Team Stargazer') {
     stage('Prepare') {
+      sh 'echo "//nexus3.rgoffice.net/repository/npm-internal/:_authToken=$NPM_TOKEN" >> ~/.npmrc'
       sh 'node --version'
       sh 'yarn --version'
       sh 'yarn'
     }
 
-    stage('Lint') {
-      sh 'yarn lint'
+    stage('Release as @next') {
+      sh 'yarn release-next'
     }
-
-    stage('Test') {
-      sh 'yarn test'
-    }
-  }
+  // }
 }
