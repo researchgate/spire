@@ -1,6 +1,6 @@
 {
   "name": "@rg/create-spire-app",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Scaffolding tool for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",
