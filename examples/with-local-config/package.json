@@ -1,0 +1,14 @@
+{
+  "name": "spire-example-with-custom-config",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "ping": "spire ping"
+  },
+  "devDependencies": {
+    "spire": "^1.1.2"
+  },
+  "spire": {
+    "extends": "<rootDir>/spire-config.js"
+  }
+}

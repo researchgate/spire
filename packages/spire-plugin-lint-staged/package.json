@@ -1,0 +1,19 @@
+{
+  "name": "spire-plugin-lint-staged",
+  "version": "1.2.5",
+  "description": "lint-staged plugin for Spire",
+  "main": "index.js",
+  "repository": "researchgate/spire",
+  "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
+  "license": "MIT",
+  "dependencies": {
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.2"
+  },
+  "devDependencies": {
+    "spire-test-utils": "^1.2.5"
+  },
+  "peerDependencies": {
+    "spire": "^1.0.0"
+  }
+}

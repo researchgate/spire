@@ -1,0 +1,11 @@
+{
+  "name": "spire-example-with-default-config",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "lint": "spire lint"
+  },
+  "devDependencies": {
+    "spire": "^1.1.2"
+  }
+}

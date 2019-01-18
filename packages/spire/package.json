@@ -1,0 +1,31 @@
+{
+  "name": "spire",
+  "version": "1.2.5",
+  "description": "Extensible CLI toolkit managment tool",
+  "main": "index.js",
+  "repository": "researchgate/spire",
+  "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
+  "license": "MIT",
+  "bin": {
+    "spire": "./bin/spire.js"
+  },
+  "engines": {
+    "node": ">=8.3"
+  },
+  "scripts": {
+    "postinstall": "./bin/spire.js hook postinstall",
+    "preuninstall": "./bin/spire.js hook preuninstall"
+  },
+  "dependencies": {
+    "spire-config-default": "^1.2.5",
+    "cosmiconfig": "^5.0.7",
+    "fs-extra": "^7.0.1",
+    "invariant": "^2.2.4",
+    "pretty-format": "^23.6.0",
+    "signale": "^1.3.0",
+    "yargs": "^12.0.5"
+  },
+  "devDependencies": {
+    "spire-test-utils": "^1.2.5"
+  }
+}

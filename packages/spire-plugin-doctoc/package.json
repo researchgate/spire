@@ -1,0 +1,18 @@
+{
+  "name": "spire-plugin-doctoc",
+  "version": "1.2.5",
+  "description": "doctoc plugin for Spire",
+  "main": "index.js",
+  "repository": "researchgate/spire",
+  "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
+  "license": "MIT",
+  "dependencies": {
+    "doctoc": "^1.4.0"
+  },
+  "devDependencies": {
+    "spire-test-utils": "^1.2.5"
+  },
+  "peerDependencies": {
+    "spire": "^1.0.0"
+  }
+}
