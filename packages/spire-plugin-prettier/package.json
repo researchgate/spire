@@ -8,7 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "execa": "^1.0.0",
-    "prettier": "^1.15.2"
+    "prettier": "^1.16.4"
   },
   "devDependencies": {
     "spire-test-utils": "^1.3.0"

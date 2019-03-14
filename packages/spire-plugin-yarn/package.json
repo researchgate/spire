@@ -1,14 +1,15 @@
 {
-  "name": "spire-plugin-jest",
+  "name": "spire-plugin-yarn",
   "version": "1.3.0",
-  "description": "Jest plugin for Spire",
+  "description": "Yarn plugin for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",
   "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
   "license": "MIT",
   "dependencies": {
     "execa": "^1.0.0",
-    "jest": "^24.5.0"
+    "use-yarn": "^2.2.0",
+    "yarn-deduplicate": "^1.1.1"
   },
   "devDependencies": {
     "spire-test-utils": "^1.3.0"

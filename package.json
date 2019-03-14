@@ -11,9 +11,12 @@
     "release-next": "yarn release --npm-tag next --no-git-tag-version --no-push"
   },
   "devDependencies": {
-    "lerna": "^3.5.0"
+    "lerna": "^3.13.1"
   },
-  "eslintConfig": {
-    "extends": "./eslint.config.js"
+  "spire": {
+    "extends": "spire-config-default",
+    "plugins": [
+      "spire-plugin-yarn"
+    ]
   }
 }
