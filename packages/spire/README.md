@@ -5,7 +5,6 @@ Extensible JavaScript toolbox management.
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Motivation](#motivation)
 - [Quick Start](#quick-start)
 - [Configuration](#configuration)
@@ -61,6 +60,10 @@ yarn spire --help
    See [spire-config-default](./packages/spire-config-default/README.md) for a
    list of default tools and [configuration section](#configuration) for how to
    customise it.
+
+_Note: Using yarn in your projects? Consider installing
+[`spire-plugin-yarn`](../packages/spire-plugin-yarn/README.md) for few power
+features._
 
 ## Configuration
 
@@ -119,7 +122,7 @@ module.exports = {
 
 ### Using a Local Preset
 
-\_Note: It is recommended to enable Local Presets only for development.
+_Note: It is recommended to enable Local Presets only for development._
 
 You can reference a Local Preset or plugin using `<rootDir>` placeholder which
 points to the current project directory:
@@ -190,7 +193,9 @@ _Note: It is recommended to keep plugins scoped to a single feature or tool._
   - `options` \<[Object]\> User-provided plugin options.
 - returns: \<[Object]\>
   - `name` \<[string]\> Name of the plugin (recommended).
-  - `postinstall` \<[function]\([Context]\): [Promise]\> Executed on
+  - `preinstall` \<[function]\([Context]\): [Promise]\> Executed before
+    `yarn install` or `npm install`
+  - `postinstall` \<[function]\([Context]\): [Promise]\> Executed after
     `yarn install` or `npm install`.
   - `postmerge` \<[function]\([Context]\): [Promise]\> Executed on `git pull`.
   - `precommit` \<[function]\([Context]\): [Promise]\> Executed on `git commit`.
@@ -322,7 +327,7 @@ designed to be read-only. If you want to pass some data futher, consider using
 ## References
 
 This project is inspired by the great work of JavaScript open source community
-(in no particular order):
+(without particular order):
 
 - [Kent C. Dodds: Tools without config 🛠📦](https://blog.kentcdodds.com/automation-without-config-412ab5e47229)
 - [Dan Abramov: The Melting Pot of JavaScript](https://www.youtube.com/watch?v=nl30vWYKs9A)

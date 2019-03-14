@@ -10,7 +10,13 @@ function hook({ setCommand, getCommand, getState }) {
         yargs => {
           yargs.positional('name', {
             describe: 'Hook name',
-            choices: ['postinstall', 'preuninstall', 'precommit', 'postmerge'],
+            choices: [
+              'preinstall',
+              'postinstall',
+              'preuninstall',
+              'precommit',
+              'postmerge',
+            ],
             type: 'string',
           });
         },
@@ -20,6 +26,7 @@ function hook({ setCommand, getCommand, getState }) {
     async teardown(context) {
       const command = getCommand();
       switch (command) {
+        case Symbol.for('preinstall'):
         case Symbol.for('postinstall'):
         case Symbol.for('preuninstall'):
         case Symbol.for('precommit'):
