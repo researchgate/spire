@@ -5,7 +5,7 @@ const { createFixture } = require('spire-test-utils');
 const configWithCleanPlugin = JSON.stringify({
   name: 'spire-plugin-clean-test',
   spire: {
-    plugins: ['spire-plugin-clean'],
+    plugins: [require.resolve('spire-plugin-clean')],
   },
 });
 

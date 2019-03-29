@@ -6,7 +6,7 @@ describe('spire-plugin-doctoc', () => {
       'package.json': JSON.stringify({
         name: 'spire-plugin-doctoc-test',
         spire: {
-          plugins: ['spire-plugin-doctoc'],
+          plugins: [require.resolve('spire-plugin-doctoc')],
         },
       }),
     });

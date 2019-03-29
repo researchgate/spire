@@ -3,7 +3,7 @@ const { createFixture } = require('spire-test-utils');
 const configWithEslintPlugin = JSON.stringify({
   name: 'spire-plugin-eslint-test',
   spire: {
-    plugins: ['spire-plugin-eslint'],
+    plugins: [require.resolve('spire-plugin-eslint')],
   },
 });
 

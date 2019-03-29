@@ -3,7 +3,7 @@ const { createFixture } = require('spire-test-utils');
 const configWithSemanticReleasePlugin = JSON.stringify({
   name: 'spire-plugin-semantic-release-test',
   spire: {
-    plugins: ['spire-plugin-semantic-release'],
+    plugins: [require.resolve('spire-plugin-semantic-release')],
   },
 });
 

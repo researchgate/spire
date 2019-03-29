@@ -3,7 +3,7 @@ const { createFixture } = require('spire-test-utils');
 const configWithPrettierPlugin = JSON.stringify({
   name: 'spire-plugin-prettier-test',
   spire: {
-    plugins: ['spire-plugin-prettier'],
+    plugins: [require.resolve('spire-plugin-prettier')],
   },
 });
 

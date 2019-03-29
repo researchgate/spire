@@ -3,7 +3,7 @@ const { createFixture } = require('spire-test-utils');
 const configWithJestPlugin = JSON.stringify({
   name: 'spire-plugin-jest-test',
   spire: {
-    plugins: ['spire-plugin-jest'],
+    plugins: [require.resolve('spire-plugin-jest')],
   },
 });
 

@@ -1,3 +1,4 @@
+const requireFrom = require('import-from');
 const validatePlugin = require('./validate-plugin');
 
 function createResolver(context, core) {
@@ -6,7 +7,10 @@ function createResolver(context, core) {
     const [entryPathOrFn, options = {}] = normalised;
     const createEntry =
       typeof entryPathOrFn === 'string'
-        ? require(entryPathOrFn.replace(/<rootDir>/g, context.cwd))
+        ? requireFrom(
+            context.cwd,
+            entryPathOrFn.replace(/<rootDir>/g, context.cwd)
+          )
         : entryPathOrFn;
     validatePlugin(createEntry);
     return createEntry(core, options);

@@ -3,7 +3,7 @@ const { createFixture } = require('spire-test-utils');
 const configWithLintStagedPlugin = JSON.stringify({
   name: 'spire-plugin-lint-staged-test',
   spire: {
-    plugins: ['spire-plugin-lint-staged'],
+    plugins: [require.resolve('spire-plugin-lint-staged')],
   },
 });
 

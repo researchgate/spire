@@ -20,9 +20,16 @@ async function spire({
   const context = { argv, cli, cwd, env, logger };
   const state = createState();
   const core = createCore(context, state);
-  const config = await resolveConfig(context, core);
-  context.config = config;
-  logger.debug('Using resolved config:\n%s', prettyFormat(config));
+  // Resolve and flattern config
+  let config;
+  try {
+    config = await resolveConfig(context, core);
+    context.config = config;
+    logger.debug('Using resolved config:\n%s', prettyFormat(config));
+  } catch (reason) {
+    logger.fatal('Failed to load config: %s', reason.message);
+    return 1;
+  }
   // Run setup hooks
   for (const plugin of config.plugins) {
     if (plugin.setup) {
