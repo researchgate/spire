@@ -57,12 +57,11 @@ yarn spire --help
 ```
 
 3. Depending on your tech stack, you can start using Spire as zero-config tool.
-   See [spire-config-default](./packages/spire-config-default/README.md) for a
+   See [spire-config-default] for a
    list of default tools and [configuration section](#configuration) for how to
    customise it.
 
-_Note: Using yarn in your projects? Consider installing
-[`spire-plugin-yarn`](../packages/spire-plugin-yarn/README.md) for few power
+_Note: Using yarn? Consider installing [spire-plugin-yarn] for few power
 features._
 
 ## Configuration
@@ -71,7 +70,7 @@ Spire is based on config presets, which is the same concept for tools like
 [Babel](https://babeljs.io/) and [ESLint](https://eslint.org/). Configs are a
 set of predefined plugins and their options. Configs can also extend a chain of
 other configs. By default, Spire is shipped with
-[spire-config-default](./packages/spire-config-default/README.md).
+[spire-config-default].
 
 ### Using a Custom Preset
 
@@ -177,7 +176,7 @@ module.exports = (spire, options) => {
 
 You can dynamically change the behaviour of your preset based on `options` or
 `spire` APIs, but it's recommended to keep it explicit. Check
-[spire-config-default](./packages/spire-config-default/index.js) for a
+[spire-config-default](https://github.com/researchgate/spire/blob/master/packages/spire-config-default/index.js) for a
 reference.
 
 ### Writing a Plugin
@@ -238,10 +237,8 @@ module.exports = (spire, options) => {
 };
 ```
 
-Check [spire-plugin-clean](./packages/spire-plugin-clean/index.js),
-[spire-plugin-doctoc](./packages/spire-plugin-doctoc/index.js) and
-[spire-plugin-eslint](./packages/spire-plugin-eslint/index.js) for more plugin
-examples.
+Check [spire-plugin-clean], [spire-plugin-doctoc] and [spire-plugin-eslint] for
+more plugin examples.
 
 ### Migrating to Spire
 
@@ -342,6 +339,16 @@ This project is inspired by the great work of JavaScript open source community
 MIT &copy; [ResearchGate](https://github.com/researchgate)
 
 [context]: #context
+[spire-config-default]:
+  https://github.com/researchgate/spire/blob/master/packages/spire-config-default
+[spire-plugin-yarn]:
+  https://github.com/researchgate/spire/blob/master/packages/spire-plugin-yarn
+[spire-plugin-clean]:
+  https://github.com/researchgate/spire/blob/master/packages/spire-plugin-clean
+[spire-plugin-doctoc]:
+  https://github.com/researchgate/spire/blob/master/packages/spire-plugin-doctoc
+[spire-plugin-eslint]:
+  https://github.com/researchgate/spire/blob/master/packages/spire-plugin-eslint
 [boolean]:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type
 [string]:
