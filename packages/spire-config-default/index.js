@@ -6,7 +6,6 @@ module.exports = (
     eslint = {},
     jest = {},
     prettier = {},
-    'semantic-release': semanticRelease = {},
     'lint-staged': lintStaged = {},
   }
 ) => ({
@@ -16,7 +15,6 @@ module.exports = (
     ['spire-plugin-eslint', eslint],
     ['spire-plugin-jest', jest],
     ['spire-plugin-prettier', prettier],
-    ['spire-plugin-semantic-release', semanticRelease],
     ['spire-plugin-lint-staged', lintStaged],
   ]
     .filter(entry => {

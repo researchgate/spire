@@ -45,14 +45,13 @@ This preset includes next plugins with their default options:
 - [`spire-plugin-jest`](../spire-plugin-jest/README.md)
 - [`spire-plugin-lint-staged`](../spire-plugin-lint-staged/README.md)
 - [`spire-plugin-prettier`](../spire-plugin-prettier/README.md)
-- [`spire-plugin-semantic-release`](../spire-plugin-semantic-release/README.md)
 
 ## Options
 
 This preset allows to disable or override default options for plugins. To do so,
 pass an option object with desired plugin keys (`clean`, `doctoc`, `eslint`,
-`jest`, `lint-staged`, `prettier` or `semantic-release`). Setting option to
-`false` will disable that plugin.
+`jest`, `lint-staged` or `prettier`). Setting option to `false` will disable
+that plugin.
 
 ```js
 module.exports = () => ({

@@ -5,6 +5,7 @@ Extensible JavaScript toolbox management.
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
 - [Motivation](#motivation)
 - [Quick Start](#quick-start)
 - [Configuration](#configuration)
@@ -57,20 +58,21 @@ yarn spire --help
 ```
 
 3. Depending on your tech stack, you can start using Spire as zero-config tool.
-   See [spire-config-default] for a
-   list of default tools and [configuration section](#configuration) for how to
-   customise it.
+   See [spire-config-default] for a list of default tools and
+   [configuration section](#configuration) for how to customise it.
 
-_Note: Using yarn? Consider installing [spire-plugin-yarn] for few power
-features._
+- _Using yarn? Consider installing [spire-plugin-yarn] for few power features._
+
+- _Want to have automated release w/ changelog generation? Check out
+  [spire-plugin-semantic-release] and [spire-plugin-lerna-release] for lerna
+  monorepos._
 
 ## Configuration
 
 Spire is based on config presets, which is the same concept for tools like
 [Babel](https://babeljs.io/) and [ESLint](https://eslint.org/). Configs are a
 set of predefined plugins and their options. Configs can also extend a chain of
-other configs. By default, Spire is shipped with
-[spire-config-default].
+other configs. By default, Spire is shipped with [spire-config-default].
 
 ### Using a Custom Preset
 
@@ -176,8 +178,8 @@ module.exports = (spire, options) => {
 
 You can dynamically change the behaviour of your preset based on `options` or
 `spire` APIs, but it's recommended to keep it explicit. Check
-[spire-config-default](https://github.com/researchgate/spire/blob/master/packages/spire-config-default/index.js) for a
-reference.
+[spire-config-default](https://github.com/researchgate/spire/blob/master/packages/spire-config-default/index.js)
+for a reference.
 
 ### Writing a Plugin
 
@@ -349,6 +351,10 @@ MIT &copy; [ResearchGate](https://github.com/researchgate)
   https://github.com/researchgate/spire/blob/master/packages/spire-plugin-doctoc
 [spire-plugin-eslint]:
   https://github.com/researchgate/spire/blob/master/packages/spire-plugin-eslint
+[spire-plugin-semantic-release]:
+  https://github.com/researchgate/spire/blob/master/packages/spire-plugin-semantic-release
+[spire-plugin-lerna-release]:
+  https://github.com/researchgate/spire/blob/master/packages/spire-plugin-lerna-release
 [boolean]:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type
 [string]:

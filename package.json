@@ -6,17 +6,13 @@
   "scripts": {
     "lint": "spire lint",
     "test": "spire test",
-    "prerelease": "yarn lint && yarn test",
-    "release": "lerna publish --no-verify-access --conventional-commits --allow-branch master --yes",
-    "release-next": "yarn release --npm-tag next --no-git-tag-version --no-push"
-  },
-  "devDependencies": {
-    "lerna": "^3.13.1"
+    "release": "spire release"
   },
   "spire": {
     "extends": "spire-config-default",
     "plugins": [
-      "spire-plugin-yarn"
+      "spire-plugin-yarn",
+      "spire-plugin-lerna-release"
     ]
   }
 }

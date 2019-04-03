@@ -1,17 +1,12 @@
 {
-  "name": "spire-plugin-jest",
+  "name": "spire-plugin-lerna-release",
   "version": "1.4.1",
-  "description": "Jest plugin for Spire",
-  "main": "index.js",
+  "description": "Lerna publish plugin for Spire",
   "repository": "researchgate/spire",
   "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
   "license": "MIT",
   "dependencies": {
-    "execa": "^1.0.0",
-    "jest": "^24.7.0"
-  },
-  "devDependencies": {
-    "spire-test-utils": "^1.3.0"
+    "lerna": "^3.13.1"
   },
   "peerDependencies": {
     "spire": "^1.0.0"
