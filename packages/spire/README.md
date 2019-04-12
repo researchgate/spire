@@ -255,7 +255,7 @@ npm for individual tools and
 ecosystems and tech stacks. In case if there's no suitable option for your,
 check on how to [write a custom plugin](#writing-a-plugin).
 
-**Make your own preset**: If you find thatan existing or default preset works
+**Make your own preset**: If you find that an existing or default preset works
 for you, skip this step. If not, create a new module with a name matching
 `spire-config-*`. It can be specific for your personal projects, your company or
 a tech stack. Check [writing a config](#writing-a-config) for instructions on
