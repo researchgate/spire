@@ -5,7 +5,6 @@ Extensible JavaScript toolbox management.
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Motivation](#motivation)
 - [Quick Start](#quick-start)
 - [Configuration](#configuration)
@@ -16,6 +15,7 @@ Extensible JavaScript toolbox management.
   - [Writing a Config](#writing-a-config)
   - [Writing a Plugin](#writing-a-plugin)
   - [Migrating to Spire](#migrating-to-spire)
+  - [Using without Git](#using-without-git)
 - [API](#api)
   - [CLI](#cli)
   - [`spire`](#spire)
@@ -265,6 +265,14 @@ how to do this.
 projects and [setup Spire](#quick-start) with it. Make sure to delete the
 dependencies it replaces. At this point you're done!
 
+### Using without Git
+
+At the moment Spire has a hard dependency on a Git repository to resolve
+monorepo project root. This most likely to be reviewed in the future, but
+meanwhile it is part of the core, you can export `SKIP_PREFLIGHT_CHECK=true`
+environment variable to disable this check. The idea and name of this flag is
+borrowed from [create-react-app].
+
 ## API
 
 ### CLI
@@ -369,3 +377,4 @@ MIT &copy; [ResearchGate](https://github.com/researchgate)
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 [symbol]:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
+[create-react-app]: https://github.com/facebook/create-react-app

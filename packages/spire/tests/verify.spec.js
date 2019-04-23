@@ -8,8 +8,24 @@ describe('spire', () => {
       }),
     });
     await expect(fixture.run('spire', ['--debug'])).rejects.toMatchObject({
-      stderr: /Project needs to be in a Git repository/,
+      stderr: /Project is not in a Git repository\. Set `SKIP_PREFLIGHT_CHECK=true` to disable this check, but be advised that some plugins may fail\./,
     });
+    await fixture.clean();
+  });
+
+  it('allows to skip git check', async () => {
+    const fixture = await createFixture(
+      {
+        'package.json': JSON.stringify({
+          name: 'spire-verify',
+          spire: { extends: [] },
+        }),
+      },
+      { git: false }
+    );
+    await expect(
+      fixture.run('spire', ['--help'], { env: { SKIP_PREFLIGHT_CHECK: true } })
+    ).resolves.toBeDefined();
     await fixture.clean();
   });
 });

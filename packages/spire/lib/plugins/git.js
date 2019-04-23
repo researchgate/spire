@@ -25,8 +25,7 @@ function git(
 ) {
   return {
     name: 'spire-git-support',
-    async setup({ cwd }) {
-      // Make sure project is a Git repo
+    async setup({ cwd, env }) {
       try {
         setState({
           root: await execa.stdout('git', ['rev-parse', '--show-toplevel'], {
@@ -34,7 +33,17 @@ function git(
           }),
         });
       } catch (reason) {
-        throw new SpireError('Project needs to be in a Git repository');
+        if (Boolean(env.SKIP_PREFLIGHT_CHECK)) {
+          setState({ root: cwd });
+        } else {
+          throw new SpireError(
+            [
+              'Project is not in a Git repository.',
+              'Set `SKIP_PREFLIGHT_CHECK=true` to disable this check,',
+              'but be advised that some plugins may fail.',
+            ].join(' ')
+          );
+        }
       }
     },
     async skip({ logger }) {

@@ -4,13 +4,16 @@ const { outputFile, remove } = require('fs-extra');
 const execa = require('execa');
 const shortid = require('shortid');
 
-async function createFixture(structure = {}, identifier = shortid.generate()) {
+async function createFixture(
+  structure = {},
+  { identifier = shortid.generate(), git = true } = {}
+) {
   const cwd = join(tmpdir(), identifier);
   const files = Object.keys(structure);
   await Promise.all(
     files.map(file => outputFile(join(cwd, file), structure[file], 'utf8'))
   );
-  await execa('git', ['init'], { cwd });
+  if (git) await execa('git', ['init'], { cwd });
   return {
     get cwd() {
       return cwd;
