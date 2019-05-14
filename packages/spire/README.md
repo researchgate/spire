@@ -5,6 +5,7 @@ Extensible JavaScript toolbox management.
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
 - [Motivation](#motivation)
 - [Quick Start](#quick-start)
 - [Configuration](#configuration)
@@ -16,6 +17,7 @@ Extensible JavaScript toolbox management.
   - [Writing a Plugin](#writing-a-plugin)
   - [Migrating to Spire](#migrating-to-spire)
   - [Using without Git](#using-without-git)
+  - [Using in monorepos](#using-in-monorepos)
 - [API](#api)
   - [CLI](#cli)
   - [`spire`](#spire)
@@ -273,6 +275,22 @@ meanwhile it is part of the core, you can export `SKIP_PREFLIGHT_CHECK=true`
 environment variable to disable this check. The idea and name of this flag is
 borrowed from [create-react-app].
 
+### Using in monorepos
+
+It is recommended to install Spire on the root level of a monorepo and run all
+commands from there. The main motivation behind this is performance and
+consistency reasons. You can still though run commands in an indivudual package.
+Below is an example of how to run `spire lint` in a specific monorepo package:
+
+- With [yarn workspaces]:
+  ```sh
+  yarn workspace <pkg-name> spire lint
+  ```
+- With [lerna]:
+  ```sh
+  npx lerna --scope <pkg-name> exec spire lint
+  ```
+
 ## API
 
 ### CLI
@@ -378,3 +396,5 @@ MIT &copy; [ResearchGate](https://github.com/researchgate)
 [symbol]:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 [create-react-app]: https://github.com/facebook/create-react-app
+[yarn workspaces]: https://yarnpkg.com/lang/en/docs/workspaces/
+[lerna]: https://github.com/lerna/lerna
