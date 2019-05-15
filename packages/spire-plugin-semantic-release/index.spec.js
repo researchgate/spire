@@ -23,7 +23,7 @@ describe('spire-plugin-semantic-release', () => {
       'package.json': configWithSemanticReleasePlugin,
     });
     await expect(
-      fixture.run('spire', ['release', '--debug', '--', '--version'])
+      fixture.run('spire', ['--debug', 'release', '--version'])
     ).resolves.toMatchObject({
       stdout: /v\d\.\d\.\d/,
     });

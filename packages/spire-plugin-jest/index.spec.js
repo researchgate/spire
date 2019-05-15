@@ -37,7 +37,7 @@ describe('spire-plugin-jest', () => {
       'package.json': configWithJestPlugin,
     });
     await expect(
-      fixture.run('spire', ['test', '--', '--version'])
+      fixture.run('spire', ['test', '--version'])
     ).resolves.toMatchObject({
       stdout: /v\d\.\d\.\d/,
     });

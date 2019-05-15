@@ -71,7 +71,7 @@ function prettier(
     },
     async run({ options, logger, cwd }) {
       const { prettierArgs } = getState();
-      const userProvidedArgs = options._.slice(1);
+      const [, ...userProvidedArgs] = options._;
       const finalPrettierArgs = [
         ...prettierArgs,
         ...(userProvidedArgs.length ? userProvidedArgs : [glob]),

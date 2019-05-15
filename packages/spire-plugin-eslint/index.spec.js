@@ -37,7 +37,7 @@ describe('spire-plugin-eslint', () => {
       'package.json': configWithEslintPlugin,
     });
     await expect(
-      fixture.run('spire', ['lint', '--', '--version'])
+      fixture.run('spire', ['lint', '--version'])
     ).resolves.toMatchObject({
       stdout: /v\d\.\d\.\d/,
     });

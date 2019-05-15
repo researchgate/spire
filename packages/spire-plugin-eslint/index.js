@@ -69,13 +69,13 @@ function eslint(
     },
     async run({ options, logger, cwd }) {
       const { eslintArgs } = getState();
-      const userProvidedArgs = options._.slice(1);
-      const fullEslintArgs = [
+      const [, ...userProvidedArgs] = options._;
+      const finalEslintArgs = [
         ...eslintArgs,
         ...(userProvidedArgs.length ? userProvidedArgs : ['.']),
       ];
-      logger.debug('Using eslint arguments: %s', fullEslintArgs.join(' '));
-      await execa('eslint', fullEslintArgs, { cwd, stdio: 'inherit' });
+      logger.debug('Using eslint arguments: %s', finalEslintArgs.join(' '));
+      await execa('eslint', finalEslintArgs, { cwd, stdio: 'inherit' });
     },
   };
 }

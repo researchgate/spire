@@ -50,9 +50,7 @@ function lintStaged(
       const { lintStagedArgs, linters: spireLinters } = getState();
       const linters = spireLintersToLintStaged(spireLinters);
       logger.debug('Using lint-staged arguments: %s', lintStagedArgs.join(' '));
-      const env = {
-        SPIRE_LINTERS: JSON.stringify(linters),
-      };
+      const env = { SPIRE_LINTERS: JSON.stringify(linters) };
       await execa('lint-staged', lintStagedArgs, {
         cwd,
         env,

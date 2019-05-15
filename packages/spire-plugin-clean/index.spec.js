@@ -28,8 +28,7 @@ describe('spire-plugin-clean', () => {
     });
     expect(await pathExists(join(fixture.cwd, 'remove.me'))).toBe(true);
     const { stdout } = await fixture.run('spire', ['clean']);
-    expect(stdout).toMatch(/Cleaning remove\.me/);
-    expect(stdout).toMatch(/Cleaned 1 path\(s\)/);
+    expect(stdout).toMatch(/Removing remove\.me/);
     expect(await pathExists(join(fixture.cwd, 'remove.me'))).toBe(false);
     await fixture.clean();
   });
@@ -43,38 +42,9 @@ describe('spire-plugin-clean', () => {
     await expect(
       fixture.run('spire', ['clean', '--dry-run'])
     ).resolves.toMatchObject({
-      stdout: /Next paths are to be cleaned up: remove\.me/,
+      stdout: /Would remove remove\.me/,
     });
     expect(await pathExists(join(fixture.cwd, 'remove.me'))).toBe(true);
-    await fixture.clean();
-  });
-
-  it('supports keeplist', async () => {
-    const fixture = await createFixture({
-      'package.json': configWithCleanPlugin,
-      '.gitignore': 'keep.me',
-      'keep.me': 'hi',
-    });
-    await expect(
-      fixture.run('spire', ['clean', '--keeplist', 'keep.me'])
-    ).resolves.toMatchObject({
-      stdout: /No paths needs to be cleand up/,
-    });
-    await fixture.clean();
-  });
-
-  it('supports flag to ignore keeplist', async () => {
-    const fixture = await createFixture({
-      'package.json': configWithCleanPlugin,
-      '.gitignore': 'keep.me',
-      'keep.me': 'hi',
-    });
-    const { stdout } = await fixture.run('spire', [
-      'clean',
-      '--ignore-keeplist',
-    ]);
-    expect(stdout).toMatch(/Cleaning keep\.me/);
-    expect(stdout).toMatch(/Cleaned 1 path\(s\)/);
     await fixture.clean();
   });
 });

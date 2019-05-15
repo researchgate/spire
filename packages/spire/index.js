@@ -1,6 +1,6 @@
-const yargs = require('yargs');
 const prettyFormat = require('pretty-format');
 const resolveConfig = require('./lib/resolve-config');
+const createCli = require('./lib/create-cli');
 const createLogger = require('./lib/create-logger');
 const createState = require('./lib/create-state');
 const createCore = require('./lib/create-core');
@@ -15,8 +15,8 @@ async function spire({
 } = {}) {
   const startedAt = Date.now();
   const errors = [];
-  const cli = yargs;
   const logger = createLogger({ stdout, stderr, argv });
+  const cli = createCli();
   const context = { argv, cli, cwd, env, logger };
   const state = createState();
   const core = createCore(context, state);

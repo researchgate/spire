@@ -34,5 +34,5 @@
     found it will throw an error. Defaults to `true`.
   - `glob` \<string\> Linter glob to run on precommit. Defaults to `*.js`.
 
-- CLI `npx spire lint`
-  - Passes all arguments after `--` as-is to eslint.
+- CLI `npx spire lint [args]`
+  - Passes all arguments as-is to eslint.

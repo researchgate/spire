@@ -52,8 +52,8 @@ yarn add --dev spire-plugin-lerna-release
   - `extraArgs` \<[Array]\<[string]\>\> Array of extra argumnets to pass to
     `lerna publish`. Defaults to `[]`.
 
-- CLI `npx spire release`
-  - Passes all arguments after `--` as-is to lerna.
+- CLI `npx spire release [args]`
+  - Passes all arguments as-is to lerna.
 
 ## License
 

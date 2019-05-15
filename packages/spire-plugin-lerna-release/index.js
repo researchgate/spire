@@ -38,7 +38,7 @@ function lernaRelease(
     },
     async run({ options, cwd, logger }) {
       const { lernaPublishArgs } = getState();
-      const userProvidedArgs = options._.slice(1);
+      const [, ...userProvidedArgs] = options._;
       const finalLernaPublishArgs = [...lernaPublishArgs, ...userProvidedArgs];
       logger.debug(
         'Using lerna publish arguments: %s',
