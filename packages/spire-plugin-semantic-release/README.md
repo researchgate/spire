@@ -53,8 +53,8 @@ yarn add --dev spire-plugin-semantic-release
   - `gitAuthorEmail` \<[string]\> Git author and commiter email. Defaults to
     `undefined`, which falls back to default value of [semantic-release].
 
-- CLI `npx spire release`
-  - Passes all arguments after `--` as-is to semantic-release.
+- CLI `npx spire release [args]`
+  - Passes all arguments as-is to semantic-release.
 
 ## License
 

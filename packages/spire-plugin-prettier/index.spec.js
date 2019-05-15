@@ -37,7 +37,7 @@ describe('spire-plugin-prettier', () => {
       'package.json': configWithPrettierPlugin,
     });
     await expect(
-      fixture.run('spire', ['format', '--', '--version'])
+      fixture.run('spire', ['format', '--version'])
     ).resolves.toMatchObject({
       stdout: /v\d\.\d\.\d/,
     });

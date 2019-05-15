@@ -47,7 +47,7 @@ function semanticRelease(
     },
     async run({ options, cwd, logger }) {
       const { semanticReleaseArgs } = getState();
-      const userProvidedArgs = options._.slice(1);
+      const [, ...userProvidedArgs] = options._;
       const finalSemanticReleaseArgs = [
         ...semanticReleaseArgs,
         ...userProvidedArgs,

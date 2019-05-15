@@ -29,5 +29,5 @@
     error. Defaults to `true`.
   - `glob` \<string\> Linter glob to run on precommit. Defaults to `*.js`.
 
-- CLI `npx spire test`
-  - Passes all arguments after `--` as-is to jest.
+- CLI `npx spire test [args]`
+  - Passes all arguments as-is to jest.

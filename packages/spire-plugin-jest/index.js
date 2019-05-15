@@ -55,11 +55,11 @@ function jest(
     },
     async run({ options, logger, cwd }) {
       const { jestArgs } = getState();
-      const userProvidedArgs = options._.slice(1);
-      const fullJestArgs = [...jestArgs, ...userProvidedArgs];
-      logger.debug('Using jest arguments: %s', fullJestArgs.join(' '));
+      const [, ...userProvidedArgs] = options._;
+      const finalJestArgs = [...jestArgs, ...userProvidedArgs];
+      logger.debug('Using jest arguments: %s', finalJestArgs.join(' '));
       const env = { SPIRE_ROOT_DIR: cwd };
-      await execa('jest', fullJestArgs, { cwd, env, stdio: 'inherit' });
+      await execa('jest', finalJestArgs, { cwd, env, stdio: 'inherit' });
     },
   };
 }

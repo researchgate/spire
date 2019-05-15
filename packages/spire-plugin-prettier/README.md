@@ -35,5 +35,5 @@
   - `glob` \<string\> Default glob of files to write. Defaults to
     `**/*.+(js|json|less|css|ts|tsx|md)`.
 
-- CLI `npx spire format`
-  - Passes all arguments after `--` as-is to jest.
+- CLI `npx spire format [args]`
+  - Passes all arguments as-is to jest.

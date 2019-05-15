@@ -1,6 +1,5 @@
 const cosmiconfig = require('cosmiconfig');
 const createResolver = require('./create-resolver');
-const init = require('./plugins/init');
 const hook = require('./plugins/hook');
 const git = require('./plugins/git');
 const explorer = cosmiconfig('spire');
@@ -43,7 +42,7 @@ function createFlattener(context, core) {
       }
       return config;
     };
-    const essentials = { plugins: [init, hook, git] };
+    const essentials = { plugins: [hook, git] };
     return traverse(merge(essentials, rootConfig));
   };
 }

@@ -28,4 +28,16 @@ describe('spire', () => {
     ).resolves.toBeDefined();
     await fixture.clean();
   });
+
+  it('fails with unknown command', async () => {
+    const fixture = await createFixture({
+      'package.json': JSON.stringify({
+        name: 'spire-cli',
+        spire: { extends: [] },
+      }),
+    });
+    await expect(fixture.run('spire', ['nope'])).rejects.toMatchObject({
+      stderr: expect.stringMatching(/Unknown argument: nope/),
+    });
+  });
 });
