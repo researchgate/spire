@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "spire lint",
     "test": "spire test",
-    "release": "spire release"
+    "release": "spire release",
+    "prerelease": "lerna publish --no-git-reset --no-git-tag-version --canary --preid next --pre-dist-tag next"
   },
   "spire": {
     "extends": "spire-config-default",
