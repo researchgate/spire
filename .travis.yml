@@ -15,4 +15,4 @@ jobs:
       if: branch = master
       script:
         - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
-        - yarn prerelease
+        - yarn pre-release
