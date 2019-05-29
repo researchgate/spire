@@ -41,7 +41,7 @@ yarn add --dev spire-plugin-semantic-release
 
   - `command` \<[string]\> Command to run semantic-release on. Defaults to
     `release`.
-  - `semanticReleaseConfig` \<[string]\> Default [semantic-release]
+  - `config` \<[string]\> Default [semantic-release]
     configuration. Defaults to [`./config.js`](./config.js).
   - `allowCustomConfig` \<[boolean]\> Whether to allow user-provided config. If
     this option is `false` and there's custom semantic-release config found it
