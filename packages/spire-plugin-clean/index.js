@@ -1,7 +1,7 @@
 const execa = require('execa');
 
 function clean(
-  { setState, getState, setCommand, getCommand },
+  { setState, getState },
   {
     command = 'clean',
     keep = [
@@ -13,16 +13,11 @@ function clean(
     ],
   }
 ) {
-  const CLEAN_COMMAND = Symbol.for(command);
   return {
     name: 'spire-plugin-clean',
-    async setup({ cli }) {
-      cli.command(
-        command,
-        'remove files with git clean',
-        () => {},
-        () => setCommand(CLEAN_COMMAND)
-      );
+    command: command,
+    description: 'cleanup using git-clean',
+    async setup() {
       setState({
         gitCleanArgs: [
           '-X',
@@ -34,9 +29,6 @@ function clean(
           ),
         ],
       });
-    },
-    async skip() {
-      return getCommand() !== CLEAN_COMMAND;
     },
     async run({ options, logger, cwd }) {
       const { gitCleanArgs } = getState();

@@ -1,7 +1,7 @@
 const execa = require('execa');
 
 function lernaRelease(
-  { setCommand, getCommand, setState, getState },
+  { setState, getState },
   {
     command = 'release',
     gitAuthorName = undefined,
@@ -11,16 +11,11 @@ function lernaRelease(
     extraArgs = [],
   }
 ) {
-  const RELEASE_COMMAND = Symbol.for(`lerna-${command}`);
   return {
     name: 'spire-plugin-lerna-release',
-    async setup({ cli }) {
-      cli.command(
-        command,
-        'run lerna publish',
-        () => {},
-        () => setCommand(RELEASE_COMMAND)
-      );
+    command,
+    description: 'run lerna publish',
+    async setup() {
       setState({
         lernaPublishArgs: [
           '--conventional-commits',
@@ -32,9 +27,6 @@ function lernaRelease(
           ...extraArgs,
         ],
       });
-    },
-    async skip() {
-      return getCommand() !== RELEASE_COMMAND;
     },
     async run({ options, cwd, logger }) {
       const { lernaPublishArgs } = getState();

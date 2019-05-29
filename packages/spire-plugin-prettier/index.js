@@ -2,7 +2,7 @@ const execa = require('execa');
 const SpireError = require('spire/error');
 
 function prettier(
-  { hasFile, hasPackageProp, setCommand, getCommand, setState, getState },
+  { hasFile, hasPackageProp, setState, getState },
   {
     command = 'format',
     config: defaultPrettierConfig = require.resolve(
@@ -14,16 +14,11 @@ function prettier(
     glob = '**/*.+(js|json|less|css|ts|tsx|md)',
   }
 ) {
-  const FORMAT_COMMAND = Symbol.for(command);
   return {
     name: 'spire-plugin-prettier',
-    async setup({ argv, cli }) {
-      cli.command(
-        command,
-        'format files with Prettier',
-        () => {},
-        () => setCommand(FORMAT_COMMAND)
-      );
+    command,
+    description: 'format files with Prettier',
+    async setup({ argv }) {
       const hasCustomConfig =
         (await hasFile('.prettierrc')) ||
         (await hasFile('.prettierrc.js')) ||
@@ -65,9 +60,6 @@ function prettier(
           { [glob]: ['prettier', ...prev.prettierArgs] },
         ],
       }));
-    },
-    async skip() {
-      return getCommand() !== FORMAT_COMMAND;
     },
     async run({ options, logger, cwd }) {
       const { prettierArgs } = getState();

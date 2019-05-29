@@ -5,6 +5,7 @@ const createLogger = require('./lib/create-logger');
 const createState = require('./lib/create-state');
 const createCore = require('./lib/create-core');
 const validatePlugin = require('./lib/validate-plugin');
+const noop = () => {};
 
 async function spire({
   argv = process.argv.slice(2),
@@ -20,6 +21,7 @@ async function spire({
   const context = { argv, cli, cwd, env, logger };
   const state = createState();
   const core = createCore(context, state);
+  const running = [];
   // Resolve and flattern config
   let config;
   try {
@@ -42,12 +44,28 @@ async function spire({
       }
     }
   }
+  // Register plugin commands
+  for (const plugin of config.plugins) {
+    if (plugin.command) {
+      await validatePlugin(plugin.run);
+      cli.command(plugin.command, plugin.description, noop, async options => {
+        // Call the plugin command
+        try {
+          logger.debug('Running %s.run', plugin.name);
+          const promise = plugin.run({ options, ...context });
+          running.push(promise);
+          await promise;
+        } catch (error) {
+          errors.push(error);
+        }
+      });
+    }
+  }
   const setupHasFailed = errors.length > 0;
   if (!setupHasFailed) {
-    // Parse cli options
+    // Parse cli
     try {
-      const { help, version, ...options } = cli.parse(argv);
-      context.options = options;
+      const { help, version } = cli.parse(argv);
       // Exit if help or version needs to be printed
       if (Boolean(help) || Boolean(version)) {
         return 0;
@@ -56,35 +74,9 @@ async function spire({
       // Intentionally do not report YError "Unknown argument" errors
       return 1;
     }
-    // Run main hooks
-    for (const plugin of config.plugins) {
-      if (plugin.skip) {
-        try {
-          await validatePlugin(plugin.skip);
-          // Skip plugin if needed
-          if (await plugin.skip(context)) {
-            logger.debug('Skipping %s.run', plugin.name);
-            continue;
-          }
-        } catch (error) {
-          errors.push(error);
-        }
-      }
-      if (plugin.run) {
-        try {
-          logger.debug('Running %s.run', plugin.name);
-          await validatePlugin(plugin.run);
-          await plugin.run(context);
-          // Exit if plugin has stopped the execution
-          if (state.getState().stopped) {
-            break;
-          }
-        } catch (error) {
-          errors.push(error);
-        }
-      }
-    }
   }
+  // Wait for commands to finish
+  await Promise.all(running);
   // Run teardown hooks
   for (const plugin of config.plugins) {
     if (plugin.teardown) {
