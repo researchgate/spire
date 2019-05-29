@@ -7,7 +7,7 @@
     "lint": "spire lint",
     "test": "spire test",
     "release": "spire release",
-    "pre-release": "lerna publish --no-git-reset --no-git-tag-version --canary --preid next --pre-dist-tag next"
+    "pre-release": "lerna publish --no-git-reset --no-git-tag-version --canary --preid next --pre-dist-tag next --yes"
   },
   "spire": {
     "extends": "spire-config-default",
