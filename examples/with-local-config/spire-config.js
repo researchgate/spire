@@ -1,19 +1,9 @@
 module.exports = () => ({
   plugins: [
-    function ping({ setCommand, getCommand }) {
-      const command = Symbol.for('ping');
+    function ping() {
       return {
-        async setup({ cli }) {
-          cli.command(
-            'ping',
-            'replies with pong',
-            () => {},
-            () => setCommand(command)
-          );
-        },
-        async skip() {
-          return getCommand() !== command;
-        },
+        command: 'ping',
+        description: 'replies with pong',
         async run({ logger }) {
           logger.log('pong');
         },

@@ -2,7 +2,7 @@ const execa = require('execa');
 const SpireError = require('spire/error');
 
 function jest(
-  { setCommand, getCommand, setState, getState, hasFile, hasPackageProp },
+  { setState, getState, hasFile, hasPackageProp },
   {
     command = 'test',
     config: defaultJestConfig = require.resolve(
@@ -12,16 +12,11 @@ function jest(
     glob = '*.js',
   }
 ) {
-  const TEST_COMMAND = Symbol.for(command);
   return {
     name: 'spire-plugin-jest',
+    command,
+    description: 'run tests with Jest',
     async setup({ cli }) {
-      cli.command(
-        command,
-        'run tests with Jest',
-        () => {},
-        () => setCommand(TEST_COMMAND)
-      );
       const hasCustomConfig =
         (await hasFile('jest.config.js')) ||
         (await hasFile('jest.config.json')) ||
@@ -49,9 +44,6 @@ function jest(
           },
         ],
       }));
-    },
-    async skip() {
-      return getCommand() !== TEST_COMMAND;
     },
     async run({ options, logger, cwd }) {
       const { jestArgs } = getState();

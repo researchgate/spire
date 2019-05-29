@@ -2,7 +2,7 @@ const execa = require('execa');
 const SpireError = require('spire/error');
 
 function semanticRelease(
-  { setCommand, getCommand, setState, getState, hasFile, hasPackageProp },
+  { setState, getState, hasFile, hasPackageProp },
   {
     command = 'release',
     config: defaultSemanticReleaseConfig = require.resolve(
@@ -14,16 +14,11 @@ function semanticRelease(
     gitAuthorEmail = undefined,
   }
 ) {
-  const RELEASE_COMMAND = Symbol.for(command);
   return {
     name: 'spire-plugin-semantic-release',
-    async setup({ cli }) {
-      cli.command(
-        command,
-        'run semantic-release',
-        () => {},
-        () => setCommand(RELEASE_COMMAND)
-      );
+    command,
+    description: 'run semantic-release',
+    async setup() {
       const hasCustomConfig =
         (await hasFile('release.config.js')) ||
         (await hasFile('.releaserc')) ||
@@ -41,9 +36,6 @@ function semanticRelease(
           `Custom semantic-release config is not allowed, using ${defaultSemanticReleaseConfig} instead`
         );
       }
-    },
-    async skip() {
-      return getCommand() !== RELEASE_COMMAND;
     },
     async run({ options, cwd, logger }) {
       const { semanticReleaseArgs } = getState();

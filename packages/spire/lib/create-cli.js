@@ -1,5 +1,8 @@
 const yargs = require('yargs');
 
+/**
+ * @returns {import('yargs').Argv}
+ */
 function createCli() {
   return yargs
     .parserConfiguration({

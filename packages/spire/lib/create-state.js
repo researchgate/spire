@@ -1,10 +1,4 @@
-function createState(
-  initialState = {
-    stopped: false,
-    command: null,
-    linters: [],
-  }
-) {
+function createState(initialState = { linters: [] }) {
   let state = initialState;
   return {
     getState() {

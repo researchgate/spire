@@ -1,6 +1,7 @@
 const prettyFormat = require('pretty-format');
 
-function hook({ setCommand, getCommand, getState }) {
+function hook({ getState }) {
+  let hookToExecute;
   return {
     name: 'spire-hook-support',
     async setup({ cli }) {
@@ -20,22 +21,22 @@ function hook({ setCommand, getCommand, getState }) {
             type: 'string',
           });
         },
-        argv => setCommand(Symbol.for(argv.name))
+        argv => {
+          hookToExecute = argv.name;
+        }
       );
     },
     async teardown(context) {
-      const command = getCommand();
-      switch (command) {
-        case Symbol.for('preinstall'):
-        case Symbol.for('postinstall'):
-        case Symbol.for('preuninstall'):
-        case Symbol.for('precommit'):
-        case Symbol.for('postmerge'): {
-          const hook = Symbol.keyFor(command);
+      switch (hookToExecute) {
+        case 'preinstall':
+        case 'postinstall':
+        case 'preuninstall':
+        case 'precommit':
+        case 'postmerge': {
           for (const plugin of context.config.plugins) {
-            if (plugin[hook]) {
-              context.logger.debug(`Running ${plugin.name}.${hook}`);
-              await plugin[hook](context);
+            if (plugin[hookToExecute]) {
+              context.logger.debug(`Running ${plugin.name}.${hookToExecute}`);
+              await plugin[hookToExecute](context);
             }
           }
         }

@@ -12,7 +12,7 @@ jobs:
         - yarn test
     - stage: prerelease
       node_js: 10
-      if: branch = master
+      if: (NOT type IN (pull_request)) AND (branch = master)
       script:
         - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > .npmrc
         - yarn pre-release

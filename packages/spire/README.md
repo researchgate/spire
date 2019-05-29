@@ -5,7 +5,6 @@ Extensible JavaScript toolbox management.
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [Motivation](#motivation)
 - [Quick Start](#quick-start)
 - [Configuration](#configuration)
@@ -196,6 +195,9 @@ _Note: It is recommended to keep plugins scoped to a single feature or tool._
   - `options` \<[Object]\> User-provided plugin options.
 - returns: \<[Object]\>
   - `name` \<[string]\> Name of the plugin (recommended).
+  - `command` \<[string]\> Optional name of command. Leaving it empty will
+    ignore `run` hook completly.
+  - `description` \<[string]\> Optional human-readable command description.
   - `preinstall` \<[function]\([Context]\): [Promise]\> Executed before
     `yarn install` or `npm install`
   - `postinstall` \<[function]\([Context]\): [Promise]\> Executed after
@@ -205,9 +207,6 @@ _Note: It is recommended to keep plugins scoped to a single feature or tool._
   - `setup` \<[function]\([Context]\): [Promise]\> Executed before `run` hook.
     Use it to prepare arguments or config for your tools. If it fails, Spire
     stops futher hooks from being executed.
-  - `skip` \<[function]\([Context]\): [Promise]<[boolean]>\> Executed before
-    `run` hook. Returning `true` will prevent `run` hook from being executed.
-    Use this to check if the current command is the one you expect
   - `run` \<[function]\([Context]\): [Promise]\> Executed as the main logic of
     the plugin. Use this hook to run the CLI tool or process long-running task.
   - `teardown` \<[function]\([Context]\): [Promise]\> Executed after `run` hook,
@@ -223,17 +222,8 @@ module.exports = (spire, options) => {
   const MY_TOOL = Symbol.for('my-tool');
   return {
     name: 'my-awesome-tool',
-    async setup({ cli }) {
-      cli.command(
-        'my-tool',
-        'run my awesome tool',
-        () => {},
-        () => spire.setCommand(MY_TOOL)
-      );
-    },
-    async skip() {
-      return spire.getCommand() !== MY_TOOL;
-    },
+    command: 'my-tool',
+    description: 'run my awesome tool',
     async run({ logger }) {
       logger.log('Hi from my awesome tool!');
     },
@@ -318,15 +308,10 @@ plugins.
       recevies the previous state and returns an object. Usefull to avoid
       `getState()` calls.
   - `getState` \<[function]\(\): [Object]\> Returns current state.
-  - `setCommand` \<[function]\([Symbol]\)\> Sets or overrides current command.
-  - `getCommand` \<[function]\(\): [Symbol]\> Returns current command name if
-    any. Available only after `setup` hook.
   - `hasFile` \<[function]\([string]\): [Promise]\<[boolean]\>\> Checks if
     current projects contains specific file.
   - `hasPackageProp` \<[function]\([string]\): [Promise]\<[boolean]\>\> Check if
     current project's `package.json` contains specific prop.
-  - `stop` \<[function]\(\)\> Stops futher `run` hooks from being executed.
-    Works only in plugins.
 
 ### `context`
 

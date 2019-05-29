@@ -2,7 +2,7 @@ const execa = require('execa');
 const SpireError = require('spire/error');
 
 function eslint(
-  { setCommand, getCommand, setState, getState, hasFile, hasPackageProp },
+  { setState, getState, hasFile, hasPackageProp },
   {
     command = 'lint',
     config: defaultEslintConfig = require.resolve('spire-plugin-eslint/config'),
@@ -12,16 +12,11 @@ function eslint(
     glob = '*.js',
   }
 ) {
-  const LINT_COMMAND = Symbol.for(command);
   return {
     name: 'spire-plugin-eslint',
+    command,
+    description: 'lint files with ESLint',
     async setup({ cli, argv }) {
-      cli.command(
-        command,
-        'lint files with ESLint',
-        () => {},
-        () => setCommand(LINT_COMMAND)
-      );
       const hasCustomConfig =
         argv.includes('--config') ||
         (await hasFile('.eslintrc')) ||
@@ -63,9 +58,6 @@ function eslint(
           { [glob]: ['eslint', ...prev.eslintArgs, '--fix'] },
         ],
       }));
-    },
-    async skip() {
-      return getCommand() !== LINT_COMMAND;
     },
     async run({ options, logger, cwd }) {
       const { eslintArgs } = getState();
