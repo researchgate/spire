@@ -219,7 +219,6 @@ Example:
 
 ```js
 module.exports = (spire, options) => {
-  const MY_TOOL = Symbol.for('my-tool');
   return {
     name: 'my-awesome-tool',
     command: 'my-tool',
