@@ -1,6 +1,6 @@
 {
   "name": "spire-plugin-semantic-release",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "description": "semantic-release plugin for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",

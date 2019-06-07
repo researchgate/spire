@@ -1,6 +1,6 @@
 {
   "name": "spire-plugin-prettier",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "description": "Prettier plugin for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",
