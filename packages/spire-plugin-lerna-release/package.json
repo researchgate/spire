@@ -6,7 +6,7 @@
   "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
   "license": "MIT",
   "dependencies": {
-    "lerna": "^3.13.1"
+    "lerna": "^3.15.0"
   },
   "peerDependencies": {
     "spire": "^1.0.0"
