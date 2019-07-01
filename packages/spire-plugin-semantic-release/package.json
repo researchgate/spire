@@ -7,13 +7,13 @@
   "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
   "license": "MIT",
   "dependencies": {
-    "@semantic-release/changelog": "^3.0.1",
-    "@semantic-release/commit-analyzer": "^6.1.0",
-    "@semantic-release/git": "^7.0.5",
-    "@semantic-release/github": "^5.2.10",
-    "@semantic-release/release-notes-generator": "^7.1.4",
+    "@semantic-release/changelog": "^3.0.4",
+    "@semantic-release/commit-analyzer": "^6.2.0",
+    "@semantic-release/git": "^7.0.15",
+    "@semantic-release/github": "^5.4.0",
+    "@semantic-release/release-notes-generator": "^7.2.1",
     "execa": "^1.0.0",
-    "semantic-release": "^15.12.2"
+    "semantic-release": "^15.13.18"
   },
   "devDependencies": {
     "spire-test-utils": "^1.7.1"
