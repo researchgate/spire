@@ -19,7 +19,7 @@
   "dependencies": {
     "cosmiconfig": "^5.2.0",
     "fs-extra": "^8.1.0",
-    "import-from": "^2.1.0",
+    "import-from": "^3.0.0",
     "invariant": "^2.2.4",
     "pretty-format": "^24.7.0",
     "signale": "^1.4.0",
