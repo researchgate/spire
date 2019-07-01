@@ -7,7 +7,7 @@
   "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
   "license": "MIT",
   "dependencies": {
-    "lint-staged": "^8.1.5"
+    "lint-staged": "^8.2.1"
   },
   "devDependencies": {
     "spire-test-utils": "^1.7.1"
