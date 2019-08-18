@@ -15,5 +15,6 @@
       "spire-plugin-yarn",
       "spire-plugin-lerna-release"
     ]
-  }
+  },
+  "prettier": "spire-plugin-prettier/config"
 }

@@ -27,6 +27,13 @@
   - `allowCustomConfig` \<boolean\> Whether to allow user-provided config. If
     this option is `false` and there's custom prettier config found it will
     throw an error. Defaults to `true`.
+  - `autosetPrettierConfig` \<boolean\> Whether to automatically set Prettier
+    config in `package.json` on install or not. Defaults to `true`. _Note_: this
+    is essential step for eslint-plugin-prettier and IDE integrations. You can
+    also use `prettier.config.js` to re-export & modify target config, although
+    not recommended. Prefer
+    [`prettier` prop](https://prettier.io/docs/en/configuration.html#sharing-configurations)
+    when possible.
   - `prettierIgnore` \<string\> Path to default `.prettierignore`. Defaults to
     `.gitignore`
   - `allowCustomIgnore` \<boolean\> Whether to allow user-provided
