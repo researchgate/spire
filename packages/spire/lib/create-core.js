@@ -1,18 +1,30 @@
 const { join } = require('path');
-const { pathExists, readJson } = require('fs-extra');
+const { pathExists, readJson, writeJSON } = require('fs-extra');
 
 function createCore({ cwd }, { setState, getState }) {
+  async function hasFile(file) {
+    return await pathExists(join(cwd, file));
+  }
+  async function getPackageProp(prop) {
+    const pkgPath = join(cwd, 'package.json');
+    return await readJson(pkgPath)[prop];
+  }
+  async function hasPackageProp(prop) {
+    return (await getPackageProp(prop)) !== undefined;
+  }
+  async function setPackageProp(prop, value) {
+    const pkgPath = join(cwd, 'package.json');
+    const currentContents = await readJson(pkgPath);
+    const nextContents = { ...currentContents, [prop]: value };
+    await writeJSON(pkgPath, nextContents);
+  }
   return {
     setState,
     getState,
-    // Check if project contains specific file
-    async hasFile(file) {
-      return await pathExists(join(cwd, file));
-    },
-    // Check if project's package.json contains specific prop
-    async hasPackageProp(prop) {
-      return (await readJson(join(cwd, 'package.json'))).hasOwnProperty(prop);
-    },
+    hasFile,
+    getPackageProp,
+    hasPackageProp,
+    setPackageProp,
   };
 }
 

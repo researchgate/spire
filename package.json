@@ -20,5 +20,6 @@
         }
       ]
     ]
-  }
+  },
+  "prettier": "spire-plugin-prettier/config"
 }
