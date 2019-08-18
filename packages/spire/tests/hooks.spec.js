@@ -34,7 +34,7 @@ describe('spire', () => {
       'package.json': JSON.stringify({
         name: 'spire-test-hooks',
         spire: {
-          extends: '<rootDir>/spire-config.js',
+          extends: './spire-config.js',
         },
       }),
     });
