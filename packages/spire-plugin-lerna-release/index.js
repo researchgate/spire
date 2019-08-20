@@ -7,7 +7,7 @@ function lernaRelease(
     gitAuthorName = undefined,
     gitAuthorEmail = undefined,
     allowBranch = 'master',
-    githubRelease = true,
+    githubRelease = false,
     extraArgs = [],
   }
 ) {
@@ -23,7 +23,6 @@ function lernaRelease(
           allowBranch,
           '--github-release',
           githubRelease,
-          '--yes',
           ...extraArgs,
         ],
       });
