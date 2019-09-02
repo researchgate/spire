@@ -1,5 +1,22 @@
 # Change Log
 
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# [2.0.0](https://github.com/researchgate/spire/compare/v1.7.3...v2.0.0) (2019-09-02)
+
+
+### Bug Fixes
+
+* **deps:** update lint-staged to v8.2.1 ([032ebd7](https://github.com/researchgate/spire/commit/032ebd7))
+* **deps:** upgrade eslint dependecies ([0d66919](https://github.com/researchgate/spire/commit/0d66919))
+
+
+
+
+
+# Change Log
+
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 

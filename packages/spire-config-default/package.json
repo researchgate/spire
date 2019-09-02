@@ -1,19 +1,19 @@
 {
   "name": "spire-config-default",
-  "version": "1.7.3",
+  "version": "2.0.0",
   "description": "Default config preset for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",
   "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
   "license": "MIT",
   "dependencies": {
-    "spire-plugin-clean": "^1.7.3",
-    "spire-plugin-doctoc": "^1.7.1",
-    "spire-plugin-eslint": "^1.7.3",
-    "spire-plugin-jest": "^1.7.3",
-    "spire-plugin-lint-staged": "^1.7.2",
-    "spire-plugin-prettier": "^1.7.3",
-    "spire-plugin-semantic-release": "^1.7.3"
+    "spire-plugin-clean": "^2.0.0",
+    "spire-plugin-doctoc": "^2.0.0",
+    "spire-plugin-eslint": "^2.0.0",
+    "spire-plugin-jest": "^2.0.0",
+    "spire-plugin-lint-staged": "^2.0.0",
+    "spire-plugin-prettier": "^2.0.0",
+    "spire-plugin-semantic-release": "^2.0.0"
   },
   "peerDependencies": {
     "spire": "^1.0.0"

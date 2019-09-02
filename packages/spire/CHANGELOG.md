@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/researchgate/spire/compare/v1.7.3...v2.0.0) (2019-09-02)
+
+
+### Bug Fixes
+
+* **deps:** upgrade fs-extra to v8.0.1 ([21643aa](https://github.com/researchgate/spire/commit/21643aa))
+* **deps:** upgrade import-from to v3.0.0 ([06f3800](https://github.com/researchgate/spire/commit/06f3800))
+* set `rootDir` token to workspace root ([1d25fab](https://github.com/researchgate/spire/commit/1d25fab))
+
+
+
+
+
 ## [1.7.3](https://github.com/researchgate/spire/compare/v1.7.2...v1.7.3) (2019-06-07)
 
 

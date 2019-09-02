@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/researchgate/spire/compare/v1.7.3...v2.0.0) (2019-09-02)
+
+
+### Bug Fixes
+
+* **deps:** update jest to v24.8.0 ([02e08cc](https://github.com/researchgate/spire/commit/02e08cc))
+* **deps:** update lerna to v3.15.0 ([85dc893](https://github.com/researchgate/spire/commit/85dc893))
+* **deps:** update lint-staged to v8.2.1 ([032ebd7](https://github.com/researchgate/spire/commit/032ebd7))
+* **deps:** upgrade eslint dependecies ([0d66919](https://github.com/researchgate/spire/commit/0d66919))
+* **deps:** upgrade execa to v2.0.2 ([fbcfc9f](https://github.com/researchgate/spire/commit/fbcfc9f))
+* **deps:** upgrade fs-extra to v8.0.1 ([21643aa](https://github.com/researchgate/spire/commit/21643aa))
+* **deps:** upgrade import-from to v3.0.0 ([06f3800](https://github.com/researchgate/spire/commit/06f3800))
+* **deps:** upgrade semantic-release dependencies ([d78d52c](https://github.com/researchgate/spire/commit/d78d52c))
+* disable non-interactive mode and github-release by default ([8e4d789](https://github.com/researchgate/spire/commit/8e4d789))
+* set `rootDir` token to workspace root ([1d25fab](https://github.com/researchgate/spire/commit/1d25fab))
+
+
+### BREAKING CHANGES
+
+* The default configuration for githubRelease changed to `false` and publish is now run in interactive mode by default. If you want non-interactive mode again add `--yes` to `extraArgs` config.
+
+
+
+
+
 ## [1.7.3](https://github.com/researchgate/spire/compare/v1.7.2...v1.7.3) (2019-06-07)
 
 
