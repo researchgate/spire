@@ -13,7 +13,12 @@
     "extends": "spire-config-default",
     "plugins": [
       "spire-plugin-yarn",
-      "spire-plugin-lerna-release"
+      [
+        "spire-plugin-lerna-release",
+        {
+          "githubRelease": true
+        }
+      ]
     ]
   }
 }
