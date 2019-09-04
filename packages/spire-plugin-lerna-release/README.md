@@ -48,7 +48,7 @@ yarn add --dev spire-plugin-lerna-release
     `undefined`, which falls back to default value of [lerna].
   - `allowBranch` \<[string]\> Allowed branch to be released. Defaults to
     `master`.
-  - `githubRelease` \<[boolean]\> Whether to create a GitHub release or not.
+  - `createRelease` \<[false]|"github"|"gitlab"\> Whether to create a GitHub or GitLab release or not.
   - `extraArgs` \<[Array]\<[string]\>\> Array of extra argumnets to pass to
     `lerna publish`. Defaults to `[]`.
 
@@ -60,6 +60,8 @@ yarn add --dev spire-plugin-lerna-release
 MIT &copy; [ResearchGate](https://github.com/researchgate)
 
 [lerna]: https://github.com/lerna/lerna
+[false]:
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type
 [boolean]:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type
 [string]:

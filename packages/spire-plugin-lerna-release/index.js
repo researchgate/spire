@@ -7,7 +7,7 @@ function lernaRelease(
     gitAuthorName = undefined,
     gitAuthorEmail = undefined,
     allowBranch = 'master',
-    githubRelease = false,
+    createRelease = false,
     extraArgs = [],
   }
 ) {
@@ -16,15 +16,18 @@ function lernaRelease(
     command,
     description: 'run lerna publish',
     async setup() {
+      const publishArgs = [
+        '--conventional-commits',
+        '--allow-branch',
+        allowBranch,
+      ];
+
+      if (createRelease !== false) {
+        publishArgs.push('--create-release', createRelease);
+      }
+
       setState({
-        lernaPublishArgs: [
-          '--conventional-commits',
-          '--allow-branch',
-          allowBranch,
-          '--github-release',
-          githubRelease,
-          ...extraArgs,
-        ],
+        lernaPublishArgs: publishArgs.concat(extraArgs),
       });
     },
     async run({ options, cwd, logger }) {
