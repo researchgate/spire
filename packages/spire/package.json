@@ -24,9 +24,10 @@
     "pretty-format": "^24.7.0",
     "signale": "^1.4.0",
     "spire-config-default": "^1.7.3",
-    "yargs": "^13.2.4"
+    "yargs": "^14.0.0"
   },
   "devDependencies": {
     "spire-test-utils": "^1.7.1"
-  }
+  },
+  "prettier": "spire-plugin-prettier/config"
 }
