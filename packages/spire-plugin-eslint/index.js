@@ -21,6 +21,8 @@ function eslint(
         argv.includes('--config') ||
         (await hasFile('.eslintrc')) ||
         (await hasFile('.eslintrc.js')) ||
+        (await hasFile('.eslintrc.json')) ||
+        (await hasFile('.eslintrc.yaml')) ||
         (await hasPackageProp('eslintConfig'));
       const eslintConfig =
         allowCustomConfig && hasCustomConfig
