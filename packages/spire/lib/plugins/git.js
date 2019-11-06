@@ -40,7 +40,9 @@ function git(
             [
               'Project is not in a Git repository.',
               'Set `SKIP_PREFLIGHT_CHECK=true` to disable this check,',
-              'but be advised that some plugins may fail.',
+              'but be advised that some plugins may fail.\n',
+              'Caused by:\n',
+              reason.message
             ].join(' ')
           );
         }
