@@ -1,6 +1,6 @@
 {
   "name": "spire-plugin-clean",
-  "version": "1.7.3",
+  "version": "1.8.0",
   "description": "Clean plugin for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",
@@ -10,7 +10,7 @@
     "execa": "^2.0.2"
   },
   "devDependencies": {
-    "spire-test-utils": "^1.7.1"
+    "spire-test-utils": "^1.8.0"
   },
   "peerDependencies": {
     "spire": "^1.0.0"

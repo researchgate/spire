@@ -1,6 +1,6 @@
 {
   "name": "spire-plugin-jest",
-  "version": "1.7.3",
+  "version": "1.8.0",
   "description": "Jest plugin for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",
@@ -11,7 +11,7 @@
     "jest": "^24.8.0"
   },
   "devDependencies": {
-    "spire-test-utils": "^1.7.1"
+    "spire-test-utils": "^1.8.0"
   },
   "peerDependencies": {
     "spire": "^1.0.0"
