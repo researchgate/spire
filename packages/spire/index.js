@@ -21,6 +21,7 @@ async function spire({
   const context = { argv, cli, cwd, env, logger };
   const state = createState();
   const core = createCore(context, state);
+  const running = [];
   // Resolve and flattern config
   let config;
   try {
@@ -51,7 +52,9 @@ async function spire({
         // Call the plugin command
         try {
           logger.debug('Running %s.run', plugin.name);
-          await plugin.run({ options, ...context });
+          const promise = plugin.run({ options, ...context });
+          running.push(promise);
+          await promise;
         } catch (error) {
           errors.push(error);
         }
@@ -72,6 +75,8 @@ async function spire({
       return 1;
     }
   }
+  // Wait for commands to finish
+  await Promise.all(running).catch(() => { /* ignore errors, we already handle them above */});
   // Run teardown hooks
   for (const plugin of config.plugins) {
     if (plugin.teardown) {
