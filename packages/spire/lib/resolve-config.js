@@ -1,4 +1,4 @@
-const cosmiconfig = require('cosmiconfig');
+const { cosmiconfig } = require('cosmiconfig');
 const createResolver = require('./create-resolver');
 const hook = require('./plugins/hook');
 const git = require('./plugins/git');
