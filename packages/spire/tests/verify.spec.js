@@ -37,7 +37,7 @@ describe('spire', () => {
       }),
     });
     await expect(fixture.run('spire', ['nope'])).rejects.toMatchObject({
-      stderr: expect.stringMatching(/Unknown argument: nope/),
+      stderr: expect.stringMatching(/Unknown command: nope/),
     });
   });
 });
