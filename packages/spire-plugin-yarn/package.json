@@ -1,6 +1,6 @@
 {
   "name": "spire-plugin-yarn",
-  "version": "1.7.1",
+  "version": "1.8.0",
   "description": "Yarn plugin for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",
@@ -12,7 +12,7 @@
     "yarn-deduplicate": "^1.1.1"
   },
   "devDependencies": {
-    "spire-test-utils": "^1.7.1"
+    "spire-test-utils": "^1.8.0"
   },
   "peerDependencies": {
     "spire": "^1.0.0"

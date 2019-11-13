@@ -3,6 +3,34 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/researchgate/spire/compare/v1.7.3...v1.8.0) (2019-11-13)
+
+
+### Bug Fixes
+
+* Better error message if preflight check fails ([ff54966](https://github.com/researchgate/spire/commit/ff54966))
+* Correctly return error codes, by handling promise errors ([47d8c4b](https://github.com/researchgate/spire/commit/47d8c4b))
+* Do not do Promise.all on already resolved Promises ([7a658f9](https://github.com/researchgate/spire/commit/7a658f9))
+* set `rootDir` token to workspace root ([1806570](https://github.com/researchgate/spire/commit/1806570))
+* **deps:** update jest to v24.8.0 ([02e08cc](https://github.com/researchgate/spire/commit/02e08cc))
+* **deps:** update lerna to v3.15.0 ([85dc893](https://github.com/researchgate/spire/commit/85dc893))
+* **deps:** update lint-staged to v8.2.1 ([032ebd7](https://github.com/researchgate/spire/commit/032ebd7))
+* **deps:** upgrade eslint dependecies ([0d66919](https://github.com/researchgate/spire/commit/0d66919))
+* **deps:** upgrade execa to v2.0.2 ([fbcfc9f](https://github.com/researchgate/spire/commit/fbcfc9f))
+* **deps:** upgrade fs-extra to v8.0.1 ([21643aa](https://github.com/researchgate/spire/commit/21643aa))
+* **deps:** upgrade import-from to v3.0.0 ([06f3800](https://github.com/researchgate/spire/commit/06f3800))
+* **deps:** upgrade semantic-release dependencies ([d78d52c](https://github.com/researchgate/spire/commit/d78d52c))
+
+
+### Features
+
+* **eslint:** Support also json and yaml config files ([b0e5d98](https://github.com/researchgate/spire/commit/b0e5d98))
+* **plugin-prettier:** autoset prettier config for eslint & ide integrations ([407c2fa](https://github.com/researchgate/spire/commit/407c2fa))
+
+
+
+
+
 ## [1.7.3](https://github.com/researchgate/spire/compare/v1.7.2...v1.7.3) (2019-06-07)
 
 
