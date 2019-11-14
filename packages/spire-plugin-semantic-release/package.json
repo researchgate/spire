@@ -12,7 +12,7 @@
     "@semantic-release/git": "^7.0.15",
     "@semantic-release/github": "^5.4.0",
     "@semantic-release/release-notes-generator": "^7.2.1",
-    "execa": "^2.0.2",
+    "execa": "^3.0.0",
     "semantic-release": "^15.13.18"
   },
   "devDependencies": {

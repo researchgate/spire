@@ -7,7 +7,7 @@
   "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
   "license": "MIT",
   "dependencies": {
-    "execa": "^2.0.2",
+    "execa": "^3.0.0",
     "use-yarn": "^2.2.0",
     "yarn-deduplicate": "^1.1.1"
   },
