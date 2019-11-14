@@ -42,7 +42,7 @@ function git(
               'Set `SKIP_PREFLIGHT_CHECK=true` to disable this check,',
               'but be advised that some plugins may fail.\n',
               'Caused by:\n',
-              reason.message
+              reason.message,
             ].join(' ')
           );
         }
