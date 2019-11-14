@@ -48,6 +48,10 @@ function lintStaged(
     },
     async precommit({ cwd, logger }) {
       const { lintStagedArgs, linters: spireLinters } = getState();
+      if (!spireLinters || spireLinters.length === 0) {
+        logger.debug('Skipping lint-staged because no linters are defined');
+        return;
+      }
       const linters = spireLintersToLintStaged(spireLinters);
       logger.debug('Using lint-staged arguments: %s', lintStagedArgs.join(' '));
       const env = { SPIRE_LINTERS: JSON.stringify(linters) };
