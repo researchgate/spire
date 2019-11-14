@@ -28,9 +28,9 @@ function git(
     async setup({ cwd, env }) {
       try {
         setState({
-          root: await execa.stdout('git', ['rev-parse', '--show-toplevel'], {
+          root: (await execa('git', ['rev-parse', '--show-toplevel'], {
             cwd,
-          }),
+          })).stdout,
         });
       } catch (reason) {
         if (Boolean(env.SKIP_PREFLIGHT_CHECK)) {
