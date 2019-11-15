@@ -57,7 +57,7 @@ function prettier(
       const prettierConfig =
         allowCustomConfig && hasCustomConfig
           ? []
-          : ['--config', defaultPrettierConfig];
+          : ['--config', require.resolve(defaultPrettierConfig)];
       const hasCustomIgnore =
         argv.includes('--ignore-path') || (await hasFile('.prettierignore'));
       const prettierIgnore =
