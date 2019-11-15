@@ -1,6 +1,6 @@
 {
   "name": "spire-config-default",
-  "version": "1.8.2",
+  "version": "1.8.3",
   "description": "Default config preset for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",
@@ -12,7 +12,7 @@
     "spire-plugin-eslint": "^1.8.2",
     "spire-plugin-jest": "^1.8.2",
     "spire-plugin-lint-staged": "^1.8.2",
-    "spire-plugin-prettier": "^1.8.2",
+    "spire-plugin-prettier": "^1.8.3",
     "spire-plugin-semantic-release": "^1.8.2"
   },
   "peerDependencies": {

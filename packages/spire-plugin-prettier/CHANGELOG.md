@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.3](https://github.com/researchgate/spire/compare/v1.8.2...v1.8.3) (2019-11-15)
+
+
+### Bug Fixes
+
+* ensure config is resolved correctly before supplied to prettier ([3d5f242](https://github.com/researchgate/spire/commit/3d5f242))
+
+
+
+
+
 ## [1.8.2](https://github.com/researchgate/spire/compare/v1.8.1...v1.8.2) (2019-11-15)
 
 
