@@ -46,6 +46,7 @@ function lernaRelease(
         env,
         cwd,
         stdio: 'inherit',
+        preferLocal: true,
       });
     },
   };

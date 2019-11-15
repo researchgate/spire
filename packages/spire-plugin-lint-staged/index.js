@@ -55,6 +55,7 @@ function lintStaged(
         cwd,
         env,
         stdio: 'inherit',
+        preferLocal: true,
       });
     },
   };

@@ -59,6 +59,7 @@ function semanticRelease(
         env,
         cwd,
         stdio: 'inherit',
+        preferLocal: true,
       });
     },
   };

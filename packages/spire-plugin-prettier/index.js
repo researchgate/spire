@@ -36,7 +36,7 @@ function prettier(
     name: 'spire-plugin-prettier',
     command,
     description: 'format files with Prettier',
-    async postinstall({ logger }) {
+    async postinstall({ cwd, logger }) {
       if (autosetPrettierConfig) {
         const hasCustomConfig = await hasCustomPrettierConfig();
         if (hasCustomConfig) {
@@ -49,7 +49,7 @@ function prettier(
           }
         }
         await setPackageProp('prettier', defaultPrettierConfig);
-        await execa('prettier', ['--write', 'package.json']);
+        await execa('prettier', ['--write', 'package.json'], { cwd, preferLocal: true });
       }
     },
     async setup({ argv }) {
@@ -95,7 +95,7 @@ function prettier(
         ...(userProvidedArgs.length ? userProvidedArgs : [glob]),
       ];
       logger.debug('Using prettier arguments: %s', finalPrettierArgs.join(' '));
-      await execa('prettier', finalPrettierArgs, { cwd, stdio: 'inherit' });
+      await execa('prettier', finalPrettierArgs, { cwd, stdio: 'inherit', preferLocal: true });
     },
   };
 }

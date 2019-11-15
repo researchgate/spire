@@ -9,7 +9,7 @@ function yarn(
   return {
     name: 'spire-plugin-yarn',
     async preinstall({ cwd }) {
-      await execa('use-yarn', [], { cwd, stdio: 'inherit' });
+      await execa('use-yarn', [], { cwd, stdio: 'inherit', preferLocal: true });
     },
     async postinstall({ cwd, logger }) {
       const systemRoot = parse(cwd).root;
@@ -26,6 +26,7 @@ function yarn(
       await execa('yarn-deduplicate', ['--strategy', deduplicateStrategy], {
         cwd: yarnLockFileRoot,
         stdio: 'inherit',
+        preferLocal: true,
       });
     },
   };

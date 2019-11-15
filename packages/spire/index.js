@@ -76,7 +76,9 @@ async function spire({
     }
   }
   // Wait for commands to finish
-  await Promise.all(running).catch(() => { /* ignore errors, we already handle them above */});
+  await Promise.all(running).catch(() => {
+    /* ignore errors, we already handle them above */
+  });
   // Run teardown hooks
   for (const plugin of config.plugins) {
     if (plugin.teardown) {
