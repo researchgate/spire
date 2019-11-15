@@ -22,6 +22,7 @@ async function createFixture(
       return await remove(cwd);
     },
     async run(tool, args, options = {}) {
+      process.env.INIT_CWD = cwd;
       return await execa(tool, args, { cwd, ...options });
     },
   };
