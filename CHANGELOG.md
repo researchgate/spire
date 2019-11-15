@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.2](https://github.com/researchgate/spire/compare/v1.8.1...v1.8.2) (2019-11-15)
+
+
+### Bug Fixes
+
+* Ensure to set preferLocal to true to pick up local installed binaries ([aeb8df7](https://github.com/researchgate/spire/commit/aeb8df7))
+* Use INIT_CWD env variable everywhere to pick up the correct directories ([b7b3716](https://github.com/researchgate/spire/commit/b7b3716))
+
+
+
+
+
 ## [1.8.1](https://github.com/researchgate/spire/compare/v1.8.0...v1.8.1) (2019-11-13)
 
 

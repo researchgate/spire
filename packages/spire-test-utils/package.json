@@ -1,6 +1,6 @@
 {
   "name": "spire-test-utils",
-  "version": "1.8.0",
+  "version": "1.8.2",
   "description": "Test utilities for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",
