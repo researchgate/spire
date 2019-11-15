@@ -51,7 +51,12 @@ function jest(
       const finalJestArgs = [...jestArgs, ...userProvidedArgs];
       logger.debug('Using jest arguments: %s', finalJestArgs.join(' '));
       const env = { SPIRE_ROOT_DIR: cwd };
-      await execa('jest', finalJestArgs, { cwd, env, stdio: 'inherit' });
+      await execa('jest', finalJestArgs, {
+        cwd,
+        env,
+        stdio: 'inherit',
+        preferLocal: true,
+      });
     },
   };
 }

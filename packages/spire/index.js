@@ -9,7 +9,10 @@ const noop = () => {};
 
 async function spire({
   argv = process.argv.slice(2),
-  cwd = process.cwd(),
+  // `INIT_CWD` is set by both npm and yarn, which represent an actual path
+  // where the command was executed from. We'll use it if set to properly
+  // resolve workspace root.
+  cwd = process.env.INIT_CWD || process.cwd(),
   env = process.env,
   stdout = process.stdout,
   stderr = process.stderr,
@@ -76,7 +79,9 @@ async function spire({
     }
   }
   // Wait for commands to finish
-  await Promise.all(running).catch(() => { /* ignore errors, we already handle them above */});
+  await Promise.all(running).catch(() => {
+    /* ignore errors, we already handle them above */
+  });
   // Run teardown hooks
   for (const plugin of config.plugins) {
     if (plugin.teardown) {

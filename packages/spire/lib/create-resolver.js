@@ -9,13 +9,7 @@ function createResolver(context, core) {
       typeof entryPathOrFn === 'string'
         ? requireFrom(
             context.cwd,
-            entryPathOrFn.replace(
-              /<rootDir>/g,
-              // `INIT_CWD` is set by both npm and yarn, which represent an actual path
-              // where the command was executed from. We'll use it if set to properly
-              // resolve workspace root.
-              context.env.INIT_CWD || context.cwd
-            )
+            entryPathOrFn.replace(/<rootDir>/g, context.cwd)
           )
         : entryPathOrFn;
     validatePlugin(createEntry);

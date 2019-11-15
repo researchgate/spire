@@ -69,7 +69,11 @@ function eslint(
         ...(userProvidedArgs.length ? userProvidedArgs : ['.']),
       ];
       logger.debug('Using eslint arguments: %s', finalEslintArgs.join(' '));
-      await execa('eslint', finalEslintArgs, { cwd, stdio: 'inherit' });
+      await execa('eslint', finalEslintArgs, {
+        cwd,
+        stdio: 'inherit',
+        preferLocal: true,
+      });
     },
   };
 }

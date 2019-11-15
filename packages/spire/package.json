@@ -1,6 +1,6 @@
 {
   "name": "spire",
-  "version": "1.8.1",
+  "version": "1.8.3",
   "description": "Extensible CLI toolkit managment tool",
   "main": "index.js",
   "repository": "researchgate/spire",
@@ -23,11 +23,11 @@
     "invariant": "^2.2.4",
     "pretty-format": "^24.7.0",
     "signale": "^1.4.0",
-    "spire-config-default": "^1.8.0",
+    "spire-config-default": "^1.8.3",
     "yargs": "^14.2.0"
   },
   "devDependencies": {
-    "spire-test-utils": "^1.8.0"
+    "spire-test-utils": "^1.8.2"
   },
   "prettier": "spire-plugin-prettier/config"
 }
