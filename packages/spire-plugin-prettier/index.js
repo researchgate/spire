@@ -49,7 +49,10 @@ function prettier(
           }
         }
         await setPackageProp('prettier', defaultPrettierConfig);
-        await execa('prettier', ['--write', 'package.json'], { cwd, preferLocal: true });
+        await execa('prettier', ['--write', 'package.json'], {
+          cwd,
+          preferLocal: true,
+        });
       }
     },
     async setup({ argv }) {
@@ -95,7 +98,11 @@ function prettier(
         ...(userProvidedArgs.length ? userProvidedArgs : [glob]),
       ];
       logger.debug('Using prettier arguments: %s', finalPrettierArgs.join(' '));
-      await execa('prettier', finalPrettierArgs, { cwd, stdio: 'inherit', preferLocal: true });
+      await execa('prettier', finalPrettierArgs, {
+        cwd,
+        stdio: 'inherit',
+        preferLocal: true,
+      });
     },
   };
 }
