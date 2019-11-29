@@ -7,6 +7,7 @@ function createCli() {
   return yargs
     .parserConfiguration({
       'halt-at-non-option': true,
+      'unknown-options-as-args': true,
       'strip-dashed': true,
       'strip-aliased': true,
     })
