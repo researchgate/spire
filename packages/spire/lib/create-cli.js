@@ -19,11 +19,16 @@ function createCli() {
       default: false,
       group: 'Options',
     })
-    .command('*', '', () => {}, (argv) => {
-      yargs.showHelp();
-      console.error('\nUnknown command: ' + argv._[0]);
-      process.exit(1);
-    })
+    .command(
+      '*',
+      '',
+      () => {},
+      argv => {
+        yargs.showHelp();
+        console.error('\nUnknown command: ' + argv._[0]);
+        process.exit(1);
+      }
+    )
     .demandCommand(1, 'You need to specify at least one command')
     .exitProcess(false);
 }
