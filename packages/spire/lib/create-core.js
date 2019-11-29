@@ -1,5 +1,6 @@
 const { join } = require('path');
-const { pathExists, readJson, writeJSON } = require('fs-extra');
+const { pathExists, readJson, writeJSON, readFile } = require('fs-extra');
+const detectIndent = require('detect-indent');
 
 function createCore({ cwd }, { setState, getState }) {
   async function hasFile(file) {
@@ -14,9 +15,11 @@ function createCore({ cwd }, { setState, getState }) {
   }
   async function setPackageProp(prop, value) {
     const pkgPath = join(cwd, 'package.json');
-    const currentContents = await readJson(pkgPath);
+    const fileContents = await readFile(pkgPath, 'UTF-8');
+    const spaces = detectIndent(fileContents).indent;
+    const currentContents = JSON.parse(fileContents);
     const nextContents = { ...currentContents, [prop]: value };
-    await writeJSON(pkgPath, nextContents);
+    await writeJSON(pkgPath, nextContents, { spaces });
   }
   return {
     setState,
