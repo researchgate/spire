@@ -13,9 +13,7 @@ const configWithLintStagedPlugin = JSON.stringify({
 const configWithLintStagedPluginOnly = JSON.stringify({
   name: 'spire-plugin-lint-staged-test',
   spire: {
-    plugins: [
-      require.resolve('spire-plugin-lint-staged'),
-    ],
+    plugins: [require.resolve('spire-plugin-lint-staged')],
   },
 });
 
