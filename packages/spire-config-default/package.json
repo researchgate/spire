@@ -12,8 +12,7 @@
     "spire-plugin-eslint": "^1.8.2",
     "spire-plugin-jest": "^1.8.2",
     "spire-plugin-lint-staged": "^1.8.2",
-    "spire-plugin-prettier": "^1.8.3",
-    "spire-plugin-semantic-release": "^1.8.2"
+    "spire-plugin-prettier": "^1.8.3"
   },
   "peerDependencies": {
     "spire": "^1.0.0"
