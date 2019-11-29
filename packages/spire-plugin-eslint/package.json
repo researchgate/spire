@@ -15,7 +15,8 @@
     "eslint-config-prettier": "^6.0.0",
     "eslint-config-unobtrusive": "^1.2.3",
     "eslint-plugin-prettier": "^3.1.0",
-    "execa": "^4.0.0"
+    "execa": "^4.0.0",
+    "fs-extra": "^8.1.0"
   },
   "devDependencies": {
     "spire-test-utils": "^1.8.2"
