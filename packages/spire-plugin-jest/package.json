@@ -7,7 +7,7 @@
   "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
   "license": "MIT",
   "dependencies": {
-    "execa": "^3.0.0",
+    "execa": "^4.0.0",
     "jest": "^24.8.0"
   },
   "devDependencies": {
