@@ -73,7 +73,7 @@ async function spire({
       if (Boolean(help) || Boolean(version)) {
         return 0;
       }
-    } catch (error) {
+    } catch {
       // Intentionally do not report YError "Unknown argument" errors
       return 1;
     }
