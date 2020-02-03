@@ -8,7 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "execa": "^4.0.0",
-    "jest": "^24.8.0"
+    "jest": "^25.0.0"
   },
   "devDependencies": {
     "spire-test-utils": "^1.8.2"
