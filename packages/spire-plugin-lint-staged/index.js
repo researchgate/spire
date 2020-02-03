@@ -12,10 +12,7 @@ function spireLintersToLintStaged(/** @type Array<{}> */ linters) {
         : [command];
     }
   }
-  // Append `git add` at the end of each linter
-  for (const glob of Object.keys(result)) {
-    result[glob] = [...result[glob], 'git add'];
-  }
+
   return result;
 }
 
