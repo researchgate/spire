@@ -9575,10 +9575,10 @@ yargs@^8.0.2:
     y18n "^3.2.1"
     yargs-parser "^7.0.0"
 
-yarn-deduplicate@^1.1.1:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/yarn-deduplicate/-/yarn-deduplicate-1.2.0.tgz#65bb914f10f823ba0d14af56f1a8ad49a641e815"
-  integrity sha512-ZX47nmrUChuST4bKErCqUyVk9ScsduYfWuDV65hnQRkjVI5jS3uaBBsFGEW/GBjA1JCJFEBIcfXfJEa8vKH9Ig==
+yarn-deduplicate@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/yarn-deduplicate/-/yarn-deduplicate-2.0.0.tgz#c1197eec02f3a73e29d612adb3f6e9a318519564"
+  integrity sha512-DdydO5kmIj5QgiTpURWM4xsobIDS+UBs3UB1ySO9uawkMn0cnAqjVkRHmkI6oetNdoFmxe2FWjjekppaXMX9WA==
   dependencies:
     "@yarnpkg/lockfile" "^1.1.0"
     commander "^4.1.1"

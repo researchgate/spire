@@ -9,7 +9,7 @@
   "dependencies": {
     "execa": "^4.0.0",
     "use-yarn": "^2.2.0",
-    "yarn-deduplicate": "^1.1.1"
+    "yarn-deduplicate": "^2.0.0"
   },
   "devDependencies": {
     "spire-test-utils": "^1.8.2"
