@@ -19,7 +19,7 @@
   "dependencies": {
     "cosmiconfig": "^6.0.0",
     "detect-indent": "^6.0.0",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.0",
     "import-from": "^3.0.0",
     "invariant": "^2.2.4",
     "pretty-format": "^25.0.0",
