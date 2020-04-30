@@ -5,13 +5,19 @@ function semanticRelease(
   { setState, getState, hasFile, hasPackageProp },
   {
     command = 'release',
-    config: defaultSemanticReleaseConfig = 'spire-plugin-semantic-release/config',
+    provider = 'none',
+    config: defaultSemanticReleaseConfig,
     allowCustomConfig = true,
     changelogName = 'CHANGELOG.md',
     gitAuthorName = undefined,
     gitAuthorEmail = undefined,
   }
 ) {
+  if (!defaultSemanticReleaseConfig) {
+    const configName = provider === 'none' ? 'default' : provider;
+    defaultSemanticReleaseConfig = `spire-plugin-semantic-release/config/${configName}`;
+  }
+
   return {
     name: 'spire-plugin-semantic-release',
     command,
