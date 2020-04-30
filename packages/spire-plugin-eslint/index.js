@@ -3,6 +3,14 @@ const SpireError = require('spire/error');
 const { writeFile, readFile } = require('fs-extra');
 const { join } = require('path');
 
+const SUPPORTED_CONFIG_FILES = [
+  '.eslintrc',
+  '.eslintrc.js',
+  '.eslintrc.json',
+  '.eslintrc.yaml',
+  '.eslintrc.yml',
+];
+
 function eslint(
   { setState, getState, hasFile, hasPackageProp },
   {
@@ -16,14 +24,13 @@ function eslint(
   }
 ) {
   async function hasCustomEslintConfig() {
-    return (
-      (await hasFile('.eslintrc')) ||
-      (await hasFile('.eslintrc.js')) ||
-      (await hasFile('.eslintrc.json')) ||
-      (await hasFile('.eslintrc.yaml')) ||
-      (await hasFile('.eslintrc.yml')) ||
-      (await hasPackageProp('eslintConfig'))
-    );
+    for (const file of SUPPORTED_CONFIG_FILES) {
+      if (await hasFile(file)) {
+        return file;
+      }
+    }
+
+    return hasPackageProp('eslintConfig');
   }
   return {
     name: 'spire-plugin-eslint',
@@ -32,10 +39,9 @@ function eslint(
     async postinstall({ cwd, logger }) {
       if (autosetEslintConfig) {
         const hasCustomConfig = await hasCustomEslintConfig();
-        const configFile = join(cwd, '.eslintrc.js');
         if (hasCustomConfig) {
-          if (await hasFile('.eslintrc.js')) {
-            const currentContent = await readFile(configFile, 'UTF-8');
+          if (typeof hasCustomConfig === 'string') {
+            const currentContent = await readFile(hasCustomConfig, 'UTF-8');
             if (!currentContent.includes(defaultEslintConfig)) {
               return logger.warn(
                 'Attempted to set ESLint config but it already exists. ' +
@@ -46,7 +52,7 @@ function eslint(
           }
         }
         await writeFile(
-          configFile,
+          join(cwd, '.eslintrc.js'),
           '// This file was created by spire-plugin-eslint for editor support\n' +
             `module.exports = require('${defaultEslintConfig}');`
         );

@@ -11,7 +11,7 @@ const configWithEslintPlugin = (config) =>
   });
 
 describe('spire-plugin-eslint', () => {
-  it('adds lint command', async () => {
+  test('adds lint command', async () => {
     const fixture = await createFixture({
       'package.json': configWithEslintPlugin(),
     });
@@ -21,7 +21,7 @@ describe('spire-plugin-eslint', () => {
     await fixture.clean();
   });
 
-  it('adds eslint linter', async () => {
+  test('adds eslint linter', async () => {
     const fixture = await createFixture({
       'package.json': configWithEslintPlugin(),
     });
@@ -35,7 +35,7 @@ describe('spire-plugin-eslint', () => {
     await fixture.clean();
   });
 
-  it('passes custom arguments to eslint', async () => {
+  test('passes custom arguments to eslint', async () => {
     const fixture = await createFixture({
       'package.json': configWithEslintPlugin(),
     });
@@ -47,7 +47,7 @@ describe('spire-plugin-eslint', () => {
     await fixture.clean();
   });
 
-  it('creates default eslint config for editors', async () => {
+  test('creates default eslint config for editors', async () => {
     const fixture = await createFixture({
       'package.json': configWithEslintPlugin(),
     });
@@ -60,9 +60,7 @@ describe('spire-plugin-eslint', () => {
     await fixture.clean();
   });
 
-  it('creates custom eslint config for editors', async () => {
-    // Does not yet work, as spire is trying to resolve configs starting from the plugin
-    // folder. It should use require.resolve(x, { paths }) from node 8.9 to search in the cwd instead
+  test('creates custom eslint config for editors', async () => {
     const fixture = await createFixture({
       'node_modules/eslint-config-cool-test/package.json': JSON.stringify({
         name: 'eslint-config-cool-test',
@@ -78,6 +76,21 @@ describe('spire-plugin-eslint', () => {
     expect(readFile(eslintConfig, 'UTF-8')).resolves.toMatch(
       /eslint-config-cool-test/
     );
+    await fixture.clean();
+  });
+
+  test('warns about custom eslint config not extending default config', async () => {
+    const fixture = await createFixture({
+      'package.json': configWithEslintPlugin(),
+      '.eslintrc.json': '',
+    });
+    await expect(
+      fixture.run('spire', ['hook', 'postinstall'])
+    ).resolves.toMatchObject({
+      stdout: expect.stringMatching(
+        'Attempted to set ESLint config but it already exists. Please ensure existing config re-exports'
+      ),
+    });
     await fixture.clean();
   });
 });
