@@ -24,20 +24,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# 1.8.0 (2019-11-13)
-
-
-
-
-
 ## [1.8.2](https://github.com/researchgate/spire/compare/v1.8.1...v1.8.2) (2019-11-15)
 
 
 ### Bug Fixes
 
-* Ensure to set preferLocal to true to pick up local installed binaries ([aeb8df7](https://github.com/researchgate/spire/commit/aeb8df7))
-
-
+* Ensure to set preferLocal to true to pick up local installed binaries ([aeb8df7](https://github.com/researchgate/spire/commit/aeb8df71df50a84e1c972b1eb053c99b4fdb9326))
 
 
 
@@ -46,9 +38,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **deps:** upgrade execa to v2.0.2 ([fbcfc9f](https://github.com/researchgate/spire/commit/fbcfc9f))
-
-
+* **deps:** upgrade execa to v2.0.2 ([fbcfc9f](https://github.com/researchgate/spire/commit/fbcfc9fbc6ee96365b7b10a18b74aee891d8b812))
 
 
 
@@ -57,17 +47,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package spire-plugin-yarn
 
 
-
-
-
 # [1.7.0](https://github.com/researchgate/spire/compare/v1.4.1...v1.7.0) (2019-04-03)
 
 
 ### Features
 
-* introduce lerna-release plugin ([1e46acf](https://github.com/researchgate/spire/commit/1e46acf))
-
-
+* introduce lerna-release plugin ([1e46acf](https://github.com/researchgate/spire/commit/1e46acfe2b0070fb488899d22c61acf7a2782b15))
 
 
 
@@ -76,4 +61,4 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* introduce spire-plugin-yarn ([252a924](https://github.com/researchgate/spire/commit/252a924))
+* introduce spire-plugin-yarn ([252a924](https://github.com/researchgate/spire/commit/252a924ea7b0fbeb40b7ce72f7c589f73978445c))

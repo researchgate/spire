@@ -16,6 +16,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * **deps:** update jest monorepo to v25 ([76b7bed](https://github.com/researchgate/spire/commit/76b7bed4ac8e799939ac8463b91301ad2053c7fb))
 * **spire:** detect indentation when writing package.json file ([39521b5](https://github.com/researchgate/spire/commit/39521b5575831052fa4216ce85cc1a0cbe1b6dd2))
 * **yargs:** Correctly get unknown options as args ([f5ae588](https://github.com/researchgate/spire/commit/f5ae5884bfa71c47c6d1ff32c2f717594dae3e92))
+* Better error message if preflight check fails ([d6fe235](https://github.com/researchgate/spire/commit/d6fe2358113d83ce2316b6c5c3e8fef55d91ff6f))
+* Correctly return error codes, by handling promise errors ([c40971d](https://github.com/researchgate/spire/commit/c40971dfd2fc608798bf88df09515e5048cd536a))
+* Do not do Promise.all on already resolved Promises ([77c11a8](https://github.com/researchgate/spire/commit/77c11a801af4337f257957e45c097e40d8482ce0))
+* Make spire compatible with yargs 14 ([68f7ec8](https://github.com/researchgate/spire/commit/68f7ec8b9b081768f7e81098bf0937d91ad3e6fe))
+* set `rootDir` token to workspace root ([1d25fab](https://github.com/researchgate/spire/commit/1d25fab1378e1bf005c2524531a2c777a0db8874))
 
 
 ### chore
@@ -29,6 +34,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * Drop support for node 8 ([9fc4019](https://github.com/researchgate/spire/commit/9fc401958e59f21e12a4081482bcf81b5ec15a2e))
 * **deps:** Update dependency cosmiconfig to v6 ([#34](https://github.com/researchgate/spire/issues/34)) ([5b13399](https://github.com/researchgate/spire/commit/5b133997edb6f1fc4250e8859bf08737ea7dccbd))
 * **eslint:** Add prettier to default eslint config ([#38](https://github.com/researchgate/spire/issues/38)) ([ab75b4b](https://github.com/researchgate/spire/commit/ab75b4b1f375a4ce48d9630bc9972b60f65870df))
+* **plugin-prettier:** autoset prettier config for eslint & ide integrations ([1c29783](https://github.com/researchgate/spire/commit/1c2978366270783770357eec451e8305515912b4))
 
 
 ### BREAKING CHANGES
@@ -39,23 +45,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [1.8.0](https://github.com/researchgate/spire/compare/68f7ec8b9b081768f7e81098bf0937d91ad3e6fe...v1.8.0) (2019-11-13)
-
-
-### Bug Fixes
-
-* Make spire compatible with yargs 14 ([68f7ec8](https://github.com/researchgate/spire/commit/68f7ec8b9b081768f7e81098bf0937d91ad3e6fe))
-
-
-
-
-
 ## [1.8.3](https://github.com/researchgate/spire/compare/v1.8.2...v1.8.3) (2019-11-15)
 
 **Note:** Version bump only for package spire
-
-
-
 
 
 ## [1.8.2](https://github.com/researchgate/spire/compare/v1.8.1...v1.8.2) (2019-11-15)
@@ -63,10 +55,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* Ensure to set preferLocal to true to pick up local installed binaries ([aeb8df7](https://github.com/researchgate/spire/commit/aeb8df7))
-* Use INIT_CWD env variable everywhere to pick up the correct directories ([b7b3716](https://github.com/researchgate/spire/commit/b7b3716))
-
-
+* Ensure to set preferLocal to true to pick up local installed binaries ([aeb8df7](https://github.com/researchgate/spire/commit/aeb8df71df50a84e1c972b1eb053c99b4fdb9326))
+* Use INIT_CWD env variable everywhere to pick up the correct directories ([b7b3716](https://github.com/researchgate/spire/commit/b7b3716b43108b705c732b2c1cd9e79903465c8b))
 
 
 
@@ -75,9 +65,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* Correctly await reading package json file ([0cc65e4](https://github.com/researchgate/spire/commit/0cc65e4))
-
-
+* Correctly await reading package json file ([0cc65e4](https://github.com/researchgate/spire/commit/0cc65e48fbffd52b3609a7395c7bd4d8767e90fc))
 
 
 
@@ -86,19 +74,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* Better error message if preflight check fails ([ff54966](https://github.com/researchgate/spire/commit/ff54966))
-* Correctly return error codes, by handling promise errors ([47d8c4b](https://github.com/researchgate/spire/commit/47d8c4b))
-* Do not do Promise.all on already resolved Promises ([7a658f9](https://github.com/researchgate/spire/commit/7a658f9))
-* set `rootDir` token to workspace root ([1806570](https://github.com/researchgate/spire/commit/1806570))
-* **deps:** upgrade fs-extra to v8.0.1 ([21643aa](https://github.com/researchgate/spire/commit/21643aa))
-* **deps:** upgrade import-from to v3.0.0 ([06f3800](https://github.com/researchgate/spire/commit/06f3800))
+* Better error message if preflight check fails ([ff54966](https://github.com/researchgate/spire/commit/ff549666b0fe7bd0e8383f275a7a57b9c3ae6e90))
+* Correctly return error codes, by handling promise errors ([47d8c4b](https://github.com/researchgate/spire/commit/47d8c4bca4ccc003b829fbb45f2c007d5de81320))
+* Do not do Promise.all on already resolved Promises ([7a658f9](https://github.com/researchgate/spire/commit/7a658f948fc818c5b10e56e5259f090a7a99fef3))
+* set `rootDir` token to workspace root ([1806570](https://github.com/researchgate/spire/commit/180657071e92cac7f3c86ae6c5361615c00f3f71))
+* **deps:** upgrade fs-extra to v8.0.1 ([21643aa](https://github.com/researchgate/spire/commit/21643aa8a567665a4264ae7806993eedc1b7ba73))
+* **deps:** upgrade import-from to v3.0.0 ([06f3800](https://github.com/researchgate/spire/commit/06f38007181ccc6b20890bd59a96df277022f650))
 
 
 ### Features
 
-* **plugin-prettier:** autoset prettier config for eslint & ide integrations ([407c2fa](https://github.com/researchgate/spire/commit/407c2fa))
-
-
+* **plugin-prettier:** autoset prettier config for eslint & ide integrations ([407c2fa](https://github.com/researchgate/spire/commit/407c2fa0efba3188c4e368ecf6e547bf4600b968))
 
 
 
@@ -107,9 +93,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* rework commands api ([b9657e2](https://github.com/researchgate/spire/commit/b9657e2))
-
-
+* rework commands api ([b9657e2](https://github.com/researchgate/spire/commit/b9657e28024f5ef50a71cc261fea0a87f93294ef))
 
 
 
@@ -118,9 +102,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **cli:** fail on unknown command ([98c6149](https://github.com/researchgate/spire/commit/98c6149))
-
-
+* **cli:** fail on unknown command ([98c6149](https://github.com/researchgate/spire/commit/98c6149215678a79a57b1cbfd10cbefd89569c6a)), closes [#6](https://github.com/researchgate/spire/issues/6) [#5](https://github.com/researchgate/spire/issues/5)
 
 
 
@@ -129,9 +111,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-- allow to skip git check ([3237eb3](https://github.com/researchgate/spire/commit/3237eb3))
-
-
+* allow to skip git check ([3237eb3](https://github.com/researchgate/spire/commit/3237eb300ce90b014854456f9b7a552927e627f4))
 
 
 
@@ -140,9 +120,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* introduce lerna-release plugin ([1e46acf](https://github.com/researchgate/spire/commit/1e46acf))
-
-
+* introduce lerna-release plugin ([1e46acf](https://github.com/researchgate/spire/commit/1e46acfe2b0070fb488899d22c61acf7a2782b15))
 
 
 
@@ -151,9 +129,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* resolve config from project root with proper error reporting ([726fa49](https://github.com/researchgate/spire/commit/726fa49))
-
-
+* resolve config from project root with proper error reporting ([726fa49](https://github.com/researchgate/spire/commit/726fa493eff2420806dd824ce673f18d8ed900c7))
 
 
 
@@ -162,15 +138,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* introduce spire-plugin-yarn ([252a924](https://github.com/researchgate/spire/commit/252a924))
+* introduce spire-plugin-yarn ([252a924](https://github.com/researchgate/spire/commit/252a924ea7b0fbeb40b7ce72f7c589f73978445c))
 
 
 
-
-
-# 1.3.0 (2019-02-28)
+# [1.3.0](https://github.com/researchgate/spire/compare/cf8cad04d7af152781f3fb5abe02254c61946dc8...v1.3.0) (2019-02-28)
 
 
 ### Features
 
-* initial commit ([cf8cad0](https://github.com/researchgate/spire/commit/cf8cad0))
+* initial commit ([cf8cad0](https://github.com/researchgate/spire/commit/cf8cad04d7af152781f3fb5abe02254c61946dc8))

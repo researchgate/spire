@@ -25,20 +25,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# 1.8.0 (2019-11-13)
-
-
-
-
-
 ## [1.8.2](https://github.com/researchgate/spire/compare/v1.8.1...v1.8.2) (2019-11-15)
 
 
 ### Bug Fixes
 
-* Ensure to set preferLocal to true to pick up local installed binaries ([aeb8df7](https://github.com/researchgate/spire/commit/aeb8df7))
-
-
+* Ensure to set preferLocal to true to pick up local installed binaries ([aeb8df7](https://github.com/researchgate/spire/commit/aeb8df71df50a84e1c972b1eb053c99b4fdb9326))
 
 
 
@@ -47,10 +39,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **deps:** update jest to v24.8.0 ([02e08cc](https://github.com/researchgate/spire/commit/02e08cc))
-* **deps:** upgrade execa to v2.0.2 ([fbcfc9f](https://github.com/researchgate/spire/commit/fbcfc9f))
-
-
+* **deps:** update jest to v24.8.0 ([02e08cc](https://github.com/researchgate/spire/commit/02e08cc15fd7dd81a837cff5ef47d00e47bd680f))
+* **deps:** upgrade execa to v2.0.2 ([fbcfc9f](https://github.com/researchgate/spire/commit/fbcfc9fbc6ee96365b7b10a18b74aee891d8b812))
 
 
 
@@ -59,79 +49,53 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* rework commands api ([b9657e2](https://github.com/researchgate/spire/commit/b9657e2))
+* rework commands api ([b9657e2](https://github.com/researchgate/spire/commit/b9657e28024f5ef50a71cc261fea0a87f93294ef))
 
 
-
-
-
-# Change Log
-
-All notable changes to this project will be documented in this file. See
-[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## [1.7.2](https://github.com/researchgate/spire/compare/v1.7.1...v1.7.2) (2019-05-24)
 
+
 ### Bug Fixes
 
-- **cli:** fail on unknown command
-  ([98c6149](https://github.com/researchgate/spire/commit/98c6149)), closes
-  [#6](https://github.com/researchgate/spire/issues/6)
-  [#5](https://github.com/researchgate/spire/issues/5)
+* **cli:** fail on unknown command ([98c6149](https://github.com/researchgate/spire/commit/98c6149215678a79a57b1cbfd10cbefd89569c6a)), closes [#6](https://github.com/researchgate/spire/issues/6) [#5](https://github.com/researchgate/spire/issues/5)
 
-# Change Log
 
-All notable changes to this project will be documented in this file. See
-[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## [1.7.1](https://github.com/researchgate/spire/compare/v1.7.0...v1.7.1) (2019-04-23)
 
-**Note:** Version bump only for package spire-plugin-jest
 
-# Change Log
-
-All notable changes to this project will be documented in this file. See
-[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 # [1.7.0](https://github.com/researchgate/spire/compare/v1.4.1...v1.7.0) (2019-04-03)
 
+
 ### Features
 
-- introduce lerna-release plugin
-  ([1e46acf](https://github.com/researchgate/spire/commit/1e46acf))
+* introduce lerna-release plugin ([1e46acf](https://github.com/researchgate/spire/commit/1e46acfe2b0070fb488899d22c61acf7a2782b15))
 
-# Change Log
 
-All notable changes to this project will be documented in this file. See
-[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 ## [1.4.1](https://github.com/researchgate/spire/compare/v1.4.0...v1.4.1) (2019-03-29)
 
+
 ### Bug Fixes
 
-- resolve config from project root with proper error reporting
-  ([726fa49](https://github.com/researchgate/spire/commit/726fa49))
+* resolve config from project root with proper error reporting ([726fa49](https://github.com/researchgate/spire/commit/726fa493eff2420806dd824ce673f18d8ed900c7))
 
-# Change Log
 
-All notable changes to this project will be documented in this file. See
-[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
 # [1.4.0](https://github.com/researchgate/spire/compare/v1.3.0...v1.4.0) (2019-03-29)
 
-### Features
-
-- introduce spire-plugin-yarn
-  ([252a924](https://github.com/researchgate/spire/commit/252a924))
-
-# Change Log
-
-All notable changes to this project will be documented in this file. See
-[Conventional Commits](https://conventionalcommits.org) for commit guidelines.
-
-# 1.3.0 (2019-02-28)
 
 ### Features
 
-- initial commit
-  ([cf8cad0](https://github.com/researchgate/spire/commit/cf8cad0))
+* introduce spire-plugin-yarn ([252a924](https://github.com/researchgate/spire/commit/252a924ea7b0fbeb40b7ce72f7c589f73978445c))
+
+
+
+# [1.3.0](https://github.com/researchgate/spire/compare/cf8cad04d7af152781f3fb5abe02254c61946dc8...v1.3.0) (2019-02-28)
+
+
+### Features
+
+* initial commit ([cf8cad0](https://github.com/researchgate/spire/commit/cf8cad04d7af152781f3fb5abe02254c61946dc8))

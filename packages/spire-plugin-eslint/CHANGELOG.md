@@ -24,6 +24,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 * **eslint:** Add prettier to default eslint config ([#38](https://github.com/researchgate/spire/issues/38)) ([ab75b4b](https://github.com/researchgate/spire/commit/ab75b4b1f375a4ce48d9630bc9972b60f65870df))
 * **eslint:** Automatically create config for editor support ([e936e55](https://github.com/researchgate/spire/commit/e936e55dc38aab1c3dd7f16cd08daa38243cb081))
+* **eslint:** Support also json and yaml config files ([4f49f5c](https://github.com/researchgate/spire/commit/4f49f5ce425d37d6c18f621072aba675fa752986))
 * **eslint:** Use eslint:recommended instead of unobtrusive ([3df16cd](https://github.com/researchgate/spire/commit/3df16cd0f333f249833bab0933406320e6b91816))
 
 
@@ -34,20 +35,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# 1.8.0 (2019-11-13)
-
-
-
-
-
 ## [1.8.2](https://github.com/researchgate/spire/compare/v1.8.1...v1.8.2) (2019-11-15)
 
 
 ### Bug Fixes
 
-* Ensure to set preferLocal to true to pick up local installed binaries ([aeb8df7](https://github.com/researchgate/spire/commit/aeb8df7))
-
-
+* Ensure to set preferLocal to true to pick up local installed binaries ([aeb8df7](https://github.com/researchgate/spire/commit/aeb8df71df50a84e1c972b1eb053c99b4fdb9326))
 
 
 
@@ -56,15 +49,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **deps:** upgrade eslint dependecies ([0d66919](https://github.com/researchgate/spire/commit/0d66919))
-* **deps:** upgrade execa to v2.0.2 ([fbcfc9f](https://github.com/researchgate/spire/commit/fbcfc9f))
+* **deps:** upgrade eslint dependecies ([0d66919](https://github.com/researchgate/spire/commit/0d669197266d9b9318a74d9cbd27d0686eb82903))
+* **deps:** upgrade execa to v2.0.2 ([fbcfc9f](https://github.com/researchgate/spire/commit/fbcfc9fbc6ee96365b7b10a18b74aee891d8b812))
 
 
 ### Features
 
-* **eslint:** Support also json and yaml config files ([b0e5d98](https://github.com/researchgate/spire/commit/b0e5d98))
-
-
+* **eslint:** Support also json and yaml config files ([b0e5d98](https://github.com/researchgate/spire/commit/b0e5d983e40bcdfd127c69842480a310358a8dd9))
 
 
 
@@ -73,9 +64,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* rework commands api ([b9657e2](https://github.com/researchgate/spire/commit/b9657e2))
-
-
+* rework commands api ([b9657e2](https://github.com/researchgate/spire/commit/b9657e28024f5ef50a71cc261fea0a87f93294ef))
 
 
 
@@ -84,10 +73,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **cli:** fail on unknown command
-  ([98c6149](https://github.com/researchgate/spire/commit/98c6149))
-
-
+* **cli:** fail on unknown command ([98c6149](https://github.com/researchgate/spire/commit/98c6149215678a79a57b1cbfd10cbefd89569c6a)), closes [#6](https://github.com/researchgate/spire/issues/6) [#5](https://github.com/researchgate/spire/issues/5)
 
 
 
@@ -96,17 +82,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package spire-plugin-eslint
 
 
-
-
-
 # [1.7.0](https://github.com/researchgate/spire/compare/v1.4.1...v1.7.0) (2019-04-03)
 
 
 ### Features
 
-* introduce lerna-release plugin ([1e46acf](https://github.com/researchgate/spire/commit/1e46acf))
-
-
+* introduce lerna-release plugin ([1e46acf](https://github.com/researchgate/spire/commit/1e46acfe2b0070fb488899d22c61acf7a2782b15))
 
 
 
@@ -115,10 +96,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* resolve config from project root with proper error reporting
-  ([726fa49](https://github.com/researchgate/spire/commit/726fa49))
-
-
+* resolve config from project root with proper error reporting ([726fa49](https://github.com/researchgate/spire/commit/726fa493eff2420806dd824ce673f18d8ed900c7))
 
 
 
@@ -127,17 +105,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* introduce spire-plugin-yarn
-  ([252a924](https://github.com/researchgate/spire/commit/252a924))
+* introduce spire-plugin-yarn ([252a924](https://github.com/researchgate/spire/commit/252a924ea7b0fbeb40b7ce72f7c589f73978445c))
 
 
 
-
-
-# 1.3.0 (2019-02-28)
+# [1.3.0](https://github.com/researchgate/spire/compare/cf8cad04d7af152781f3fb5abe02254c61946dc8...v1.3.0) (2019-02-28)
 
 
 ### Features
 
-* initial commit
-  ([cf8cad0](https://github.com/researchgate/spire/commit/cf8cad0))
+* initial commit ([cf8cad0](https://github.com/researchgate/spire/commit/cf8cad04d7af152781f3fb5abe02254c61946dc8))

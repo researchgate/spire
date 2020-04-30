@@ -23,14 +23,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-
-
 ## [1.8.3](https://github.com/researchgate/spire/compare/v1.8.2...v1.8.3) (2019-11-15)
 
 **Note:** Version bump only for package spire-config-default
-
-
-
 
 
 ## [1.8.2](https://github.com/researchgate/spire/compare/v1.8.1...v1.8.2) (2019-11-15)
@@ -38,15 +33,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package spire-config-default
 
 
-
-
-
 # [1.8.0](https://github.com/researchgate/spire/compare/v1.7.3...v1.8.0) (2019-11-13)
 
 **Note:** Version bump only for package spire-config-default
-
-
-
 
 
 ## [1.7.3](https://github.com/researchgate/spire/compare/v1.7.2...v1.7.3) (2019-06-07)
@@ -54,15 +43,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package spire-config-default
 
 
-
-
-
 ## [1.7.2](https://github.com/researchgate/spire/compare/v1.7.1...v1.7.2) (2019-05-24)
 
 **Note:** Version bump only for package spire-config-default
-
-
-
 
 
 ## [1.7.1](https://github.com/researchgate/spire/compare/v1.7.0...v1.7.1) (2019-04-23)
@@ -70,17 +53,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package spire-config-default
 
 
-
-
-
 # [1.7.0](https://github.com/researchgate/spire/compare/v1.4.1...v1.7.0) (2019-04-03)
 
 
 ### Features
 
-* introduce lerna-release plugin ([1e46acf](https://github.com/researchgate/spire/commit/1e46acf))
-
-
+* introduce lerna-release plugin ([1e46acf](https://github.com/researchgate/spire/commit/1e46acfe2b0070fb488899d22c61acf7a2782b15))
 
 
 
@@ -89,20 +67,14 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package spire-config-default
 
 
-
-
-
 # [1.4.0](https://github.com/researchgate/spire/compare/v1.3.0...v1.4.0) (2019-03-29)
 
 **Note:** Version bump only for package spire-config-default
 
 
-
-
-
-# 1.3.0 (2019-02-28)
+# [1.3.0](https://github.com/researchgate/spire/compare/cf8cad04d7af152781f3fb5abe02254c61946dc8...v1.3.0) (2019-02-28)
 
 
 ### Features
 
-* initial commit ([cf8cad0](https://github.com/researchgate/spire/commit/cf8cad0))
+* initial commit ([cf8cad0](https://github.com/researchgate/spire/commit/cf8cad04d7af152781f3fb5abe02254c61946dc8))

@@ -22,16 +22,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-
-
 ## [1.8.2](https://github.com/researchgate/spire/compare/v1.8.1...v1.8.2) (2019-11-15)
 
 
 ### Bug Fixes
 
-* Use INIT_CWD env variable everywhere to pick up the correct directories ([b7b3716](https://github.com/researchgate/spire/commit/b7b3716))
-
-
+* Use INIT_CWD env variable everywhere to pick up the correct directories ([b7b3716](https://github.com/researchgate/spire/commit/b7b3716b43108b705c732b2c1cd9e79903465c8b))
 
 
 
@@ -40,9 +36,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **deps:** upgrade fs-extra to v8.0.1 ([21643aa](https://github.com/researchgate/spire/commit/21643aa))
-
-
+* **deps:** upgrade fs-extra to v8.0.1 ([21643aa](https://github.com/researchgate/spire/commit/21643aa8a567665a4264ae7806993eedc1b7ba73))
 
 
 
@@ -51,15 +45,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* allow to skip git check ([3237eb3](https://github.com/researchgate/spire/commit/3237eb3))
+* allow to skip git check ([3237eb3](https://github.com/researchgate/spire/commit/3237eb300ce90b014854456f9b7a552927e627f4))
 
 
 
-
-
-# 1.3.0 (2019-02-28)
+# [1.3.0](https://github.com/researchgate/spire/compare/cf8cad04d7af152781f3fb5abe02254c61946dc8...v1.3.0) (2019-02-28)
 
 
 ### Features
 
-* initial commit ([cf8cad0](https://github.com/researchgate/spire/commit/cf8cad0))
+* initial commit ([cf8cad0](https://github.com/researchgate/spire/commit/cf8cad04d7af152781f3fb5abe02254c61946dc8))

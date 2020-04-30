@@ -27,16 +27,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-
-
 ## [1.8.2](https://github.com/researchgate/spire/compare/v1.8.1...v1.8.2) (2019-11-15)
 
 
 ### Bug Fixes
 
-* Ensure to set preferLocal to true to pick up local installed binaries ([aeb8df7](https://github.com/researchgate/spire/commit/aeb8df7))
-
-
+* Ensure to set preferLocal to true to pick up local installed binaries ([aeb8df7](https://github.com/researchgate/spire/commit/aeb8df71df50a84e1c972b1eb053c99b4fdb9326))
 
 
 
@@ -45,10 +41,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **deps:** update lint-staged to v8.2.1 ([032ebd7](https://github.com/researchgate/spire/commit/032ebd7))
-* **deps:** upgrade eslint dependecies ([0d66919](https://github.com/researchgate/spire/commit/0d66919))
-
-
+* **deps:** update lint-staged to v8.2.1 ([032ebd7](https://github.com/researchgate/spire/commit/032ebd7b84a372c9161e705df1cfb7266d73841e))
+* **deps:** upgrade eslint dependecies ([0d66919](https://github.com/researchgate/spire/commit/0d669197266d9b9318a74d9cbd27d0686eb82903))
 
 
 
@@ -57,9 +51,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* **cli:** fail on unknown command ([98c6149](https://github.com/researchgate/spire/commit/98c6149))
-
-
+* **cli:** fail on unknown command ([98c6149](https://github.com/researchgate/spire/commit/98c6149215678a79a57b1cbfd10cbefd89569c6a)), closes [#6](https://github.com/researchgate/spire/issues/6) [#5](https://github.com/researchgate/spire/issues/5)
 
 
 
@@ -68,17 +60,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 **Note:** Version bump only for package spire-plugin-lint-staged
 
 
-
-
-
 ## [1.4.1](https://github.com/researchgate/spire/compare/v1.4.0...v1.4.1) (2019-03-29)
 
 
 ### Bug Fixes
 
-* resolve config from project root with proper error reporting ([726fa49](https://github.com/researchgate/spire/commit/726fa49))
-
-
+* resolve config from project root with proper error reporting ([726fa49](https://github.com/researchgate/spire/commit/726fa493eff2420806dd824ce673f18d8ed900c7))
 
 
 
@@ -87,15 +74,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* introduce spire-plugin-yarn ([252a924](https://github.com/researchgate/spire/commit/252a924))
+* introduce spire-plugin-yarn ([252a924](https://github.com/researchgate/spire/commit/252a924ea7b0fbeb40b7ce72f7c589f73978445c))
 
 
 
-
-
-# 1.3.0 (2019-02-28)
+# [1.3.0](https://github.com/researchgate/spire/compare/cf8cad04d7af152781f3fb5abe02254c61946dc8...v1.3.0) (2019-02-28)
 
 
 ### Features
 
-* initial commit ([cf8cad0](https://github.com/researchgate/spire/commit/cf8cad0))
+* initial commit ([cf8cad0](https://github.com/researchgate/spire/commit/cf8cad04d7af152781f3fb5abe02254c61946dc8))
