@@ -1,7 +1,5 @@
 const execa = require('execa');
 const SpireError = require('spire/error');
-const { writeFile, readFile } = require('fs-extra');
-const { join } = require('path');
 
 const SUPPORTED_CONFIG_FILES = [
   '.eslintrc',
@@ -12,7 +10,7 @@ const SUPPORTED_CONFIG_FILES = [
 ];
 
 function eslint(
-  { setState, getState, hasFile, hasPackageProp },
+  { setState, getState, hasFile, readFile, writeFile, hasPackageProp },
   {
     command = 'lint',
     config: defaultEslintConfig = 'spire-plugin-eslint/config',
@@ -36,23 +34,21 @@ function eslint(
     name: 'spire-plugin-eslint',
     command,
     description: 'lint files with ESLint',
-    async postinstall({ cwd, logger }) {
+    async postinstall({ logger }) {
       if (autosetEslintConfig) {
         const hasCustomConfig = await hasCustomEslintConfig();
-        if (hasCustomConfig) {
-          if (typeof hasCustomConfig === 'string') {
-            const currentContent = await readFile(hasCustomConfig, 'UTF-8');
-            if (!currentContent.includes(defaultEslintConfig)) {
-              return logger.warn(
-                'Attempted to set ESLint config but it already exists. ' +
-                  'Please ensure existing config re-exports `%s`.',
-                defaultEslintConfig
-              );
-            }
+        if (hasCustomConfig && typeof hasCustomConfig === 'string') {
+          const currentContent = await readFile(hasCustomConfig, 'UTF-8');
+          if (!currentContent.includes(defaultEslintConfig)) {
+            return logger.warn(
+              'Attempted to set ESLint config but it already exists. ' +
+                'Please ensure existing config re-exports `%s`.',
+              defaultEslintConfig
+            );
           }
         }
         await writeFile(
-          join(cwd, '.eslintrc.js'),
+          '.eslintrc.js',
           '// This file was created by spire-plugin-eslint for editor support\n' +
             `module.exports = require('${defaultEslintConfig}');`
         );
