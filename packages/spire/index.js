@@ -51,7 +51,7 @@ async function spire({
   for (const plugin of config.plugins) {
     if (plugin.command) {
       await validatePlugin(plugin.run);
-      cli.command(plugin.command, plugin.description, noop, async options => {
+      cli.command(plugin.command, plugin.description, noop, async (options) => {
         // Call the plugin command
         try {
           logger.debug('Running %s.run', plugin.name);

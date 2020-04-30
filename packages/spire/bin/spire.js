@@ -9,6 +9,6 @@ async function main() {
   }
 }
 
-main().then(code => {
+main().then((code) => {
   process.exitCode = code;
 });

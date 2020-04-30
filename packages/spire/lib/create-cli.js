@@ -24,7 +24,7 @@ function createCli() {
       '*',
       '',
       () => {},
-      argv => {
+      (argv) => {
         yargs.showHelp();
         console.error('\nUnknown command: ' + argv._[0]);
         process.exit(1);

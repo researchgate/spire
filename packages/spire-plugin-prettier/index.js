@@ -83,7 +83,7 @@ function prettier(
       }
     },
     async precommit() {
-      setState(prev => ({
+      setState((prev) => ({
         linters: [
           ...prev.linters,
           { [glob]: ['prettier', ...prev.prettierArgs] },
