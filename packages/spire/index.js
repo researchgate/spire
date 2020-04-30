@@ -21,7 +21,10 @@ async function spire({
   const errors = [];
   const logger = createLogger({ stdout, stderr, argv });
   const cli = createCli();
-  const context = { argv, cli, cwd, env, logger };
+  // Tries to resolve modules from the current directory (could be global install)
+  // or from the cwd
+  const resolve = id => require.resolve(id, { paths: [__dirname, cwd] });
+  const context = { argv, cli, cwd, env, logger, resolve };
   const state = createState();
   const core = createCore(context, state);
   const running = [];

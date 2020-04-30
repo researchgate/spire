@@ -1,13 +1,15 @@
 const execa = require('execa');
 const SpireError = require('spire/error');
 
+const hasOwnProp = Object.prototype.hasOwnProperty;
+
 function spireLintersToLintStaged(/** @type Array<{}> */ linters) {
   const result = {};
   // Merge array of linters into single lint-staged object
   for (const linter of linters) {
     for (const glob of Object.keys(linter)) {
       const command = linter[glob].join(' ');
-      result[glob] = result.hasOwnProperty(glob)
+      result[glob] = hasOwnProp.call(result, glob)
         ? [...result[glob], command]
         : [command];
     }

@@ -52,16 +52,13 @@ function eslint(
         );
       }
     },
-    async setup({ cli, argv, cwd }) {
+    async setup({ argv, resolve }) {
       const hasCustomConfig =
         argv.includes('--config') || (await hasCustomEslintConfig());
       const eslintConfig =
         allowCustomConfig && hasCustomConfig
           ? []
-          : [
-              '--config',
-              require.resolve(defaultEslintConfig, { paths: [__dirname, cwd] }),
-            ];
+          : ['--config', resolve(defaultEslintConfig)];
       const hasCustomIgnore =
         argv.includes('--ignore-path') ||
         (await hasFile('.eslintignore')) ||
