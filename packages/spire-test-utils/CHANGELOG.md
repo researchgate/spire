@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/researchgate/spire/compare/v1.8.3...v2.0.0) (2020-04-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency fs-extra to v9 ([68644ff](https://github.com/researchgate/spire/commit/68644ff10500ac23ac5983f14c22e3248cb231d0))
+
+
+### chore
+
+* require Node.js >=10.18 ([0a2f755](https://github.com/researchgate/spire/commit/0a2f75509d0df070a9c44e427fdefdaf85d05440))
+
+
+### BREAKING CHANGES
+
+* Require Node.js >= 10.18
+
+
+
+
+
 ## [1.8.2](https://github.com/researchgate/spire/compare/v1.8.1...v1.8.2) (2019-11-15)
 
 

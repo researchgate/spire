@@ -3,6 +3,71 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/researchgate/spire/compare/v1.8.3...v2.0.0) (2020-04-30)
+
+
+### Bug Fixes
+
+* **config-default:** Remove unused dependency spire-plugin-semantic-release ([669ac7c](https://github.com/researchgate/spire/commit/669ac7cd38a4f6deae3635c472a4464b2ddbdc0c))
+* **deps:** lock file maintenance ([975fde8](https://github.com/researchgate/spire/commit/975fde8cda8454bdb38c913519be498654fc3e25))
+* **deps:** pin dependencies ([7b23a2e](https://github.com/researchgate/spire/commit/7b23a2e1b31ada96275ea1b0607852facc354c24))
+* **deps:** update dependency execa to v3 ([#31](https://github.com/researchgate/spire/issues/31)) ([29ce452](https://github.com/researchgate/spire/commit/29ce452ddb145c42c44b5cddd33bf1d96a16fabf))
+* **deps:** update dependency execa to v4 ([ea9e466](https://github.com/researchgate/spire/commit/ea9e4661175ef269fad1893c4a93ee1134eb79f8))
+* **deps:** update dependency fs-extra to v9 ([68644ff](https://github.com/researchgate/spire/commit/68644ff10500ac23ac5983f14c22e3248cb231d0))
+* **deps:** update dependency lint-staged to v10 ([282732f](https://github.com/researchgate/spire/commit/282732f83fd5f942946930ccaf3f6a8ec5d072cd))
+* **deps:** update dependency lint-staged to v9 ([b84eb19](https://github.com/researchgate/spire/commit/b84eb19c4d9f6286d25e1a09409ab58038124d76))
+* **deps:** update dependency prettier to v2 ([bb3a61e](https://github.com/researchgate/spire/commit/bb3a61ea82d17d63268cae6323e3b73b53c641ce))
+* **deps:** update dependency yargs to v15 ([42a49e2](https://github.com/researchgate/spire/commit/42a49e242c3f59dc0659805be7ef4aec5d9b19da))
+* **deps:** update dependency yarn-deduplicate to v2 ([338726a](https://github.com/researchgate/spire/commit/338726a69a7da296a0c6310226b15001c319399e))
+* **deps:** update jest monorepo to v25 ([76b7bed](https://github.com/researchgate/spire/commit/76b7bed4ac8e799939ac8463b91301ad2053c7fb))
+* **deps:** update semantic-release monorepo ([b8c2f69](https://github.com/researchgate/spire/commit/b8c2f697363bf0becc8a1f1f53a8d380a73eff9e))
+* **eslint:** Check all files if the extend the correct config ([4b499e1](https://github.com/researchgate/spire/commit/4b499e13efb8fc76c3ed953d14e4eac258648830))
+* **eslint:** Correctly write and read eslint config files ([0a66686](https://github.com/researchgate/spire/commit/0a666868e8d87e5c184c931dcd089831d21b7713))
+* Use custom resolve method to resolve from current dir and spire install dir ([28743c1](https://github.com/researchgate/spire/commit/28743c1356a24e8a752acca129b58c92646e1631))
+* **lint-staged:** Do not append git add for version 10 ([e8af2bd](https://github.com/researchgate/spire/commit/e8af2bdebe4300997e7a004f38fbaee5bcf22330))
+* **lint-staged:** Use simple lint-staged API and do not run if there are no linters defined ([6e953db](https://github.com/researchgate/spire/commit/6e953db3ca033147da9ef79e22c00ef3d9f17415))
+* **spire:** detect indentation when writing package.json file ([39521b5](https://github.com/researchgate/spire/commit/39521b5575831052fa4216ce85cc1a0cbe1b6dd2))
+* **yargs:** Correctly get unknown options as args ([f5ae588](https://github.com/researchgate/spire/commit/f5ae5884bfa71c47c6d1ff32c2f717594dae3e92))
+
+
+### chore
+
+* require Node.js >=10.18 ([0a2f755](https://github.com/researchgate/spire/commit/0a2f75509d0df070a9c44e427fdefdaf85d05440))
+
+
+### Features
+
+* **deps:** Update dependency cosmiconfig to v6 ([#34](https://github.com/researchgate/spire/issues/34)) ([5b13399](https://github.com/researchgate/spire/commit/5b133997edb6f1fc4250e8859bf08737ea7dccbd))
+* **eslint:** Add prettier to default eslint config ([#38](https://github.com/researchgate/spire/issues/38)) ([ab75b4b](https://github.com/researchgate/spire/commit/ab75b4b1f375a4ce48d9630bc9972b60f65870df))
+* **eslint:** Automatically create config for editor support ([e936e55](https://github.com/researchgate/spire/commit/e936e55dc38aab1c3dd7f16cd08daa38243cb081))
+* **eslint:** Use eslint:recommended instead of unobtrusive ([3df16cd](https://github.com/researchgate/spire/commit/3df16cd0f333f249833bab0933406320e6b91816))
+* **semantic-release:** Allow different providers(github, gitlab, none) to be specified in config ([061ab3e](https://github.com/researchgate/spire/commit/061ab3ea9ba764a8ad25608ce93e1d970c2f12fc))
+* Drop support for node 8 ([9fc4019](https://github.com/researchgate/spire/commit/9fc401958e59f21e12a4081482bcf81b5ec15a2e))
+
+
+### BREAKING CHANGES
+
+* **semantic-release:** Default config does not include github steps
+* **semantic-release:** There are 3 default configs now (default, github, gitlab) and they all moved into the `config` subfolder
+* Require Node.js >= 10.18
+* Requires nodejs version 10 or newer.
+* **config-default:** `spire-plugin-semantic-release` is not installed anymore by 'spire-plugin-config-default'
+* **lint-staged:** spire-plugin-lint-staged no longer matches files case insensitive.
+* **eslint:** prettier is enabled in the default eslint config
+
+
+
+# [1.8.0](https://github.com/researchgate/spire/compare/68f7ec8b9b081768f7e81098bf0937d91ad3e6fe...v1.8.0) (2019-11-13)
+
+
+### Bug Fixes
+
+* Make spire compatible with yargs 14 ([68f7ec8](https://github.com/researchgate/spire/commit/68f7ec8b9b081768f7e81098bf0937d91ad3e6fe))
+
+
+
+
+
 ## [1.8.3](https://github.com/researchgate/spire/compare/v1.8.2...v1.8.3) (2019-11-15)
 
 

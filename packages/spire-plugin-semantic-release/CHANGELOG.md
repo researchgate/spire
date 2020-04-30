@@ -3,6 +3,41 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/researchgate/spire/compare/v1.8.3...v2.0.0) (2020-04-30)
+
+
+### Bug Fixes
+
+* Use custom resolve method to resolve from current dir and spire install dir ([28743c1](https://github.com/researchgate/spire/commit/28743c1356a24e8a752acca129b58c92646e1631))
+* **deps:** update dependency execa to v3 ([#31](https://github.com/researchgate/spire/issues/31)) ([29ce452](https://github.com/researchgate/spire/commit/29ce452ddb145c42c44b5cddd33bf1d96a16fabf))
+* **deps:** update dependency execa to v4 ([ea9e466](https://github.com/researchgate/spire/commit/ea9e4661175ef269fad1893c4a93ee1134eb79f8))
+* **deps:** update semantic-release monorepo ([b8c2f69](https://github.com/researchgate/spire/commit/b8c2f697363bf0becc8a1f1f53a8d380a73eff9e))
+
+
+### chore
+
+* require Node.js >=10.18 ([0a2f755](https://github.com/researchgate/spire/commit/0a2f75509d0df070a9c44e427fdefdaf85d05440))
+
+
+### Features
+
+* **semantic-release:** Allow different providers(github, gitlab, none) to be specified in config ([061ab3e](https://github.com/researchgate/spire/commit/061ab3ea9ba764a8ad25608ce93e1d970c2f12fc))
+
+
+### BREAKING CHANGES
+
+* **semantic-release:** Default config does not include github steps
+* **semantic-release:** There are 3 default configs now (default, github, gitlab) and they all moved into the `config` subfolder
+* Require Node.js >= 10.18
+
+
+
+# 1.8.0 (2019-11-13)
+
+
+
+
+
 ## [1.8.2](https://github.com/researchgate/spire/compare/v1.8.1...v1.8.2) (2019-11-15)
 
 

@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/researchgate/spire/compare/v1.8.3...v2.0.0) (2020-04-30)
+
+
+### chore
+
+* require Node.js >=10.18 ([0a2f755](https://github.com/researchgate/spire/commit/0a2f75509d0df070a9c44e427fdefdaf85d05440))
+
+
+### Features
+
+* **eslint:** Use eslint:recommended instead of unobtrusive ([3df16cd](https://github.com/researchgate/spire/commit/3df16cd0f333f249833bab0933406320e6b91816))
+
+
+### BREAKING CHANGES
+
+* Require Node.js >= 10.18
+
+
+
+
+
 ## [1.8.2](https://github.com/researchgate/spire/compare/v1.8.1...v1.8.2) (2019-11-15)
 
 **Note:** Version bump only for package spire-plugin-doctoc

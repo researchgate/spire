@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/researchgate/spire/compare/v1.8.3...v2.0.0) (2020-04-30)
+
+
+### Bug Fixes
+
+* **config-default:** Remove unused dependency spire-plugin-semantic-release ([669ac7c](https://github.com/researchgate/spire/commit/669ac7cd38a4f6deae3635c472a4464b2ddbdc0c))
+
+
+### chore
+
+* require Node.js >=10.18 ([0a2f755](https://github.com/researchgate/spire/commit/0a2f75509d0df070a9c44e427fdefdaf85d05440))
+
+
+### BREAKING CHANGES
+
+* Require Node.js >= 10.18
+* **config-default:** `spire-plugin-semantic-release` is not installed anymore by 'spire-plugin-config-default'
+
+
+
+
+
 ## [1.8.3](https://github.com/researchgate/spire/compare/v1.8.2...v1.8.3) (2019-11-15)
 
 **Note:** Version bump only for package spire-config-default
