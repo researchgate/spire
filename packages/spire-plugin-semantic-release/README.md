@@ -44,8 +44,9 @@ yarn add --dev spire-plugin-semantic-release
   - `config` \<[string]\> Default [semantic-release] configuration. Defaults to
     one of the configs in [`./config/`](./config/) based on the setting of
     provider.
-  - `provider` \<['none'|'github'|'gitlab']\> Provider where the repository is
-    hosted. Has no effect if `config` is set. Defaults to `none`.
+  - `provider` \<['auto'|'none'|'github'|'gitlab']\> Provider where the
+    repository is hosted. Has no effect if `config` is set. `auto` will try to
+    detect the provider based on the git remote url. Defaults to `auto`.
   - `allowCustomConfig` \<[boolean]\> Whether to allow user-provided config. If
     this option is `false` and there's custom semantic-release config found it
     will throw an error. Defaults to `true`.

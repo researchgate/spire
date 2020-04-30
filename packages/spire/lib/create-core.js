@@ -6,6 +6,7 @@ const {
   readFile,
   writeFile,
 } = require('fs-extra');
+const execa = require('execa');
 const detectIndent = require('detect-indent');
 
 function createCore({ cwd }, { setState, getState }) {
@@ -33,6 +34,24 @@ function createCore({ cwd }, { setState, getState }) {
     const nextContents = { ...currentContents, [prop]: value };
     await writeJSON(pkgPath, nextContents, { spaces });
   }
+  async function getProvider() {
+    const remoteUrl = await execa(
+      'git',
+      ['remote', 'get-url', '--push', 'origin'],
+      {
+        cwd,
+      }
+    );
+
+    if (remoteUrl.includes('github.com')) {
+      return 'github';
+    } else if (remoteUrl.includes('gitlab.com')) {
+      return 'gitlab';
+    }
+
+    return 'none';
+  }
+
   return {
     setState,
     getState,
@@ -42,6 +61,7 @@ function createCore({ cwd }, { setState, getState }) {
     getPackageProp,
     hasPackageProp,
     setPackageProp,
+    getProvider,
   };
 }
 

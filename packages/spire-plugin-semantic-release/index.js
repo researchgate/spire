@@ -2,10 +2,10 @@ const execa = require('execa');
 const SpireError = require('spire/error');
 
 function semanticRelease(
-  { setState, getState, hasFile, hasPackageProp },
+  { setState, getState, hasFile, hasPackageProp, getProvider },
   {
     command = 'release',
-    provider = 'none',
+    provider = 'auto',
     config: defaultSemanticReleaseConfig,
     allowCustomConfig = true,
     changelogName = 'CHANGELOG.md',
@@ -13,29 +13,40 @@ function semanticRelease(
     gitAuthorEmail = undefined,
   }
 ) {
-  if (!defaultSemanticReleaseConfig) {
-    const configName = provider === 'none' ? 'default' : provider;
-    defaultSemanticReleaseConfig = `spire-plugin-semantic-release/config/${configName}`;
-  }
+  const hasCustomConfig = async () =>
+    (await hasFile('release.config.js')) ||
+    (await hasFile('.releaserc')) ||
+    (await hasPackageProp('release'));
 
   return {
     name: 'spire-plugin-semantic-release',
     command,
     description: 'run semantic-release',
     async setup({ resolve }) {
-      const hasCustomConfig =
-        (await hasFile('release.config.js')) ||
-        (await hasFile('.releaserc')) ||
-        (await hasPackageProp('release'));
-      const semanticReleaseConfig =
-        allowCustomConfig && hasCustomConfig
-          ? []
-          : ['--extends', resolve(defaultSemanticReleaseConfig)];
+      let semanticReleaseArgs = [];
+      let semanticReleaseConfigFile = defaultSemanticReleaseConfig;
+      const customConfig = hasCustomConfig();
+
+      if (!customConfig || !allowCustomConfig) {
+        if (!semanticReleaseConfigFile) {
+          let actualProvider = provider;
+          if (actualProvider === 'auto') {
+            actualProvider = getProvider();
+          }
+          semanticReleaseConfigFile = `spire-plugin-semantic-release/config/${
+            actualProvider === 'none' ? 'default' : actualProvider
+          }`;
+        }
+
+        semanticReleaseArgs = ['--extends', resolve(semanticReleaseConfigFile)];
+      }
+
       setState({
-        semanticReleaseArgs: [...semanticReleaseConfig],
+        semanticReleaseArgs,
       });
+
       // Inform user about disallowed overrides
-      if (hasCustomConfig && !allowCustomConfig) {
+      if (customConfig && !allowCustomConfig) {
         throw new SpireError(
           `Custom semantic-release config is not allowed, using ${defaultSemanticReleaseConfig} instead`
         );
