@@ -36,7 +36,7 @@ function jest(
       }
     },
     async precommit() {
-      setState(state => ({
+      setState((state) => ({
         linters: [
           ...state.linters,
           {

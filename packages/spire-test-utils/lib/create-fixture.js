@@ -11,7 +11,7 @@ async function createFixture(
   const cwd = join(tmpdir(), identifier);
   const files = Object.keys(structure);
   await Promise.all(
-    files.map(file => outputFile(join(cwd, file), structure[file], 'utf8'))
+    files.map((file) => outputFile(join(cwd, file), structure[file], 'utf8'))
   );
   if (git) await execa('git', ['init'], { cwd });
   return {

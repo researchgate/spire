@@ -7,7 +7,7 @@ describe('spire', () => {
     'preinstall',
     'postinstall',
     'preuninstall',
-  ])('calls %s plugin hooks', async hook => {
+  ])('calls %s plugin hooks', async (hook) => {
     const fixture = await createFixture({
       'spire-config.js': configToString(() => ({
         plugins: [

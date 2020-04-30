@@ -2,7 +2,7 @@ const requireFrom = require('import-from');
 const validatePlugin = require('./validate-plugin');
 
 function createResolver(context, core) {
-  return entry => {
+  return (entry) => {
     const normalised = Array.isArray(entry) ? entry : [entry];
     const [entryPathOrFn, options = {}] = normalised;
     const createEntry =

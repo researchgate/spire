@@ -3,14 +3,14 @@ const { readFile } = require('fs-extra');
 const { join } = require('path');
 const createCore = require('../lib/create-core');
 
-const getCore = cwd => {
+const getCore = (cwd) => {
   return createCore({ cwd: cwd }, { setState: () => {}, getState: () => {} });
 };
 
 describe('spire', () => {
   test.each(['  ', '    ', '   ', '\t'])(
     'detects correct indent for "%s"',
-    async indent => {
+    async (indent) => {
       const fixture = await createFixture({
         'package.json': `{\n${indent}"name": "spire-test-hooks"\n}`,
       });

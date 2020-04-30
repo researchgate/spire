@@ -8,7 +8,7 @@ function hook({ getState }) {
       cli.command(
         'hook <name>',
         false,
-        yargs => {
+        (yargs) => {
           yargs.positional('name', {
             describe: 'Hook name',
             choices: [
@@ -21,7 +21,7 @@ function hook({ getState }) {
             type: 'string',
           });
         },
-        argv => {
+        (argv) => {
           hookToExecute = argv.name;
         }
       );

@@ -29,10 +29,10 @@ function merge(rawLeft, rawRight) {
 
 function createFlattener(context, core) {
   const resolve = createResolver(context, core);
-  return rootConfig => {
-    const traverse = config => {
+  return (rootConfig) => {
+    const traverse = (config) => {
       if (config.plugins) {
-        config.plugins = config.plugins.map(plugin => resolve(plugin));
+        config.plugins = config.plugins.map((plugin) => resolve(plugin));
       }
       if (config.extends) {
         return config.extends.reduce(

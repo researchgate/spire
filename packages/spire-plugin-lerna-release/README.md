@@ -48,7 +48,8 @@ yarn add --dev spire-plugin-lerna-release
     `undefined`, which falls back to default value of [lerna].
   - `allowBranch` \<[string]\> Allowed branch to be released. Defaults to
     `master`.
-  - `createRelease` \<[false]|"github"|"gitlab"\> Whether to create a GitHub or GitLab release or not.
+  - `createRelease` \<[false]|"github"|"gitlab"\> Whether to create a GitHub or
+    GitLab release or not.
   - `extraArgs` \<[Array]\<[string]\>\> Array of extra argumnets to pass to
     `lerna publish`. Defaults to `[]`.
 

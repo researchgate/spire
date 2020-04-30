@@ -17,12 +17,12 @@ module.exports = (
     ['spire-plugin-prettier', prettier],
     ['spire-plugin-lint-staged', lintStaged],
   ]
-    .filter(entry => {
+    .filter((entry) => {
       // Skip disabled plugins
       const [, options] = entry;
       return options === false ? false : true;
     })
-    .map(entry => {
+    .map((entry) => {
       // Expand string `'<value>'` to a `{ config: '<value>' }`
       const [plugin, options] = entry;
       return typeof options === 'string'

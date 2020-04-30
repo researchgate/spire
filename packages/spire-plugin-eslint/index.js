@@ -54,7 +54,7 @@ function eslint(
       }
     },
     async precommit() {
-      setState(prev => ({
+      setState((prev) => ({
         linters: [
           ...prev.linters,
           { [glob]: ['eslint', ...prev.eslintArgs, '--fix'] },

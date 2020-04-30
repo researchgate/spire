@@ -11,7 +11,7 @@ function doctoc(
       setState({ doctocArgs: defaultArgs });
     },
     async precommit() {
-      setState(state => ({
+      setState((state) => ({
         linters: [
           ...state.linters,
           { [glob]: ['doctoc', ...state.doctocArgs] },
