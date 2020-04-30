@@ -6,8 +6,7 @@
   "scripts": {
     "lint": "spire lint",
     "test": "spire test",
-    "release": "spire release",
-    "pre-release": "lerna publish --include-merged-tags --no-git-reset --no-git-tag-version --canary --preid next --pre-dist-tag next --yes"
+    "release": "spire release"
   },
   "spire": {
     "extends": "spire-config-default",
@@ -16,7 +15,7 @@
       [
         "spire-plugin-lerna-release",
         {
-          "githubRelease": true
+          "createRelease": "github"
         }
       ]
     ]
