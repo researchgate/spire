@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/researchgate/spire/compare/v2.0.2...v2.1.0) (2020-04-30)
+
+
+### Features
+
+* **semantic-release:** Detect provider if set to auto ([df9b216](https://github.com/researchgate/spire/commit/df9b216e6d33a0506d7a2625a9447777833c3ae4))
+
+
+
+
+
 ## [2.0.2](https://github.com/researchgate/spire/compare/v2.0.1...v2.0.2) (2020-04-30)
 
 
