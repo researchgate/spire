@@ -35,7 +35,7 @@ function git(
           ).stdout,
         });
       } catch (reason) {
-        if (Boolean(env.SKIP_PREFLIGHT_CHECK)) {
+        if (env.SKIP_PREFLIGHT_CHECK) {
           setState({ root: cwd });
         } else {
           throw new SpireError(
@@ -78,10 +78,7 @@ function git(
                 ].join(' ')
               );
             }
-            const hookCommand = gitHooks[hook].replace(
-              /\<spireBin\>/g,
-              spireBin
-            );
+            const hookCommand = gitHooks[hook].replace(/<spireBin>/g, spireBin);
             await outputFile(hookPath, hookToString(hookCommand), 'utf8');
             await chmod(hookPath, '744'); // a+x
           }

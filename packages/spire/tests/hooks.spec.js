@@ -44,7 +44,7 @@ describe('spire', () => {
       '--debug',
     ]);
     expect(stderr).toBe('');
-    expect(stdout).toMatch(new RegExp(`Running hooks\.${hook}`));
+    expect(stdout).toMatch(new RegExp(`Running hooks.${hook}`));
     await fixture.clean();
   });
 });

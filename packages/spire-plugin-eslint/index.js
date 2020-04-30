@@ -38,7 +38,8 @@ function eslint(
             const currentContent = await readFile(configFile, 'UTF-8');
             if (!currentContent.includes(defaultEslintConfig)) {
               return logger.warn(
-                'Attempted to set ESLint config but it already exists. Please ensure existing config re-exports `%s`.',
+                'Attempted to set ESLint config but it already exists. ' +
+                  'Please ensure existing config re-exports `%s`.',
                 defaultEslintConfig
               );
             }
@@ -46,8 +47,8 @@ function eslint(
         }
         await writeFile(
           configFile,
-          `// This file was created by spire-plugin-eslint for editor support
-module.exports = require('${defaultEslintConfig}');`
+          '// This file was created by spire-plugin-eslint for editor support\n' +
+            `module.exports = require('${defaultEslintConfig}');`
         );
       }
     },

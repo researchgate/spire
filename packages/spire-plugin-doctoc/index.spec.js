@@ -16,7 +16,7 @@ describe('spire-plugin-doctoc', () => {
       '--debug',
     ]);
     expect(stdout).toMatch(/Using linters:/);
-    expect(stdout).toMatch(/\{readme\,contributing\}\.md/);
+    expect(stdout).toMatch(/\{readme,contributing\}\.md/);
     await fixture.clean();
   });
 });
