@@ -20,8 +20,12 @@ jobs:
         - yarn lint
     - stage: release
       node_js: lts/*
+      script: skip
       deploy:
         provider: script
         skip_cleanup: true
         script:
-          - yarn release
+          - git checkout master
+          - git remote set-url origin https://$GH_TOKEN@github.com/${TRAVIS_REPO_SLUG}.git
+          - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+          - yarn release --yes
