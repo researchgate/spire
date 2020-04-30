@@ -12,6 +12,6 @@
     "lerna": "3.20.2"
   },
   "peerDependencies": {
-    "spire": "^1.0.0"
+    "spire": "^2.0.0"
   }
 }

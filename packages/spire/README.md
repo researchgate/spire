@@ -89,7 +89,7 @@ configs with [`plugins` property](#writing-a-config).
 {
   "name": "acme-project",
   "devDependencies": {
-    "spire": "^1.0.0",
+    "spire": "^2.0.0",
     "spire-config-acme": "^1.0.0"
   },
   "spire": {

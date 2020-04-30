@@ -6,6 +6,6 @@
     "lint": "spire lint"
   },
   "devDependencies": {
-    "spire": "^1.1.2"
+    "spire": "^2.0.0"
   }
 }
