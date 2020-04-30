@@ -55,12 +55,12 @@ function prettier(
         });
       }
     },
-    async setup({ argv }) {
+    async setup({ argv, resolve }) {
       const hasCustomConfig = await hasCustomPrettierConfig();
       const prettierConfig =
         allowCustomConfig && hasCustomConfig
           ? []
-          : ['--config', require.resolve(defaultPrettierConfig)];
+          : ['--config', resolve(defaultPrettierConfig)];
       const hasCustomIgnore =
         argv.includes('--ignore-path') || (await hasFile('.prettierignore'));
       const prettierIgnore =

@@ -5,9 +5,7 @@ function semanticRelease(
   { setState, getState, hasFile, hasPackageProp },
   {
     command = 'release',
-    config: defaultSemanticReleaseConfig = require.resolve(
-      'spire-plugin-semantic-release/config'
-    ),
+    config: defaultSemanticReleaseConfig = 'spire-plugin-semantic-release/config',
     allowCustomConfig = true,
     changelogName = 'CHANGELOG.md',
     gitAuthorName = undefined,
@@ -18,7 +16,7 @@ function semanticRelease(
     name: 'spire-plugin-semantic-release',
     command,
     description: 'run semantic-release',
-    async setup() {
+    async setup({ resolve }) {
       const hasCustomConfig =
         (await hasFile('release.config.js')) ||
         (await hasFile('.releaserc')) ||
@@ -26,7 +24,7 @@ function semanticRelease(
       const semanticReleaseConfig =
         allowCustomConfig && hasCustomConfig
           ? []
-          : ['--extends', defaultSemanticReleaseConfig];
+          : ['--extends', resolve(defaultSemanticReleaseConfig)];
       setState({
         semanticReleaseArgs: [...semanticReleaseConfig],
       });

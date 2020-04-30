@@ -56,9 +56,9 @@ function git(
         return true;
       }
     },
-    async run({ logger }) {
+    async run({ logger, resolve }) {
       const gitRoot = getState().root;
-      const spireDir = dirname(require.resolve('spire/package.json'));
+      const spireDir = dirname(resolve('spire/package.json'));
       const spireBin = join(relative(gitRoot, spireDir), 'bin/spire.js');
       logger.debug('Using spire bin for hooks: %s', spireBin);
       switch (getCommand()) {

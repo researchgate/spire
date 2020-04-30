@@ -5,9 +5,7 @@ function jest(
   { setState, getState, hasFile, hasPackageProp },
   {
     command = 'test',
-    config: defaultJestConfig = require.resolve(
-      'spire-plugin-jest/jest-preset'
-    ),
+    config: defaultJestConfig = 'spire-plugin-jest/jest-preset',
     allowCustomConfig = true,
     glob = '*.js',
   }
@@ -16,7 +14,7 @@ function jest(
     name: 'spire-plugin-jest',
     command,
     description: 'run tests with Jest',
-    async setup({ cli }) {
+    async setup({ resolve }) {
       const hasCustomConfig =
         (await hasFile('jest.config.js')) ||
         (await hasFile('jest.config.json')) ||
@@ -24,7 +22,7 @@ function jest(
       const jestConfig =
         allowCustomConfig && hasCustomConfig
           ? []
-          : ['--config', defaultJestConfig];
+          : ['--config', resolve(defaultJestConfig)];
       setState({
         jestArgs: [...jestConfig, '--passWithNoTests'],
       });
