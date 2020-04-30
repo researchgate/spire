@@ -6,6 +6,9 @@
   "repository": "researchgate/spire",
   "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
   "license": "MIT",
+  "engines": {
+    "node": ">=10.18.0"
+  },
   "dependencies": {
     "babel-eslint": "^10.0.2",
     "eslint": "^6.0.1",

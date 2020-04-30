@@ -6,6 +6,9 @@
   "repository": "researchgate/spire",
   "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
   "license": "MIT",
+  "engines": {
+    "node": ">=10.18.0"
+  },
   "dependencies": {
     "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/commit-analyzer": "^8.0.0",
