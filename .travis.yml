@@ -21,6 +21,8 @@ jobs:
     - stage: release
       node_js: lts/*
       script:
+        - git config --global user.email "31671894+researchgate-bot@users.noreply.github.com"
+        - git config --global user.name "ResearchGate Bot"
         - git checkout master
         - git remote set-url origin https://$GH_TOKEN@github.com/${TRAVIS_REPO_SLUG}.git
         - echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
