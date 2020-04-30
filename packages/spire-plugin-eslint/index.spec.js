@@ -2,7 +2,7 @@ const { createFixture } = require('spire-test-utils');
 const { stat, readFile } = require('fs-extra');
 const { join } = require('path');
 
-const configWithEslintPlugin = config =>
+const configWithEslintPlugin = (config) =>
   JSON.stringify({
     name: 'spire-plugin-eslint-test',
     spire: {
