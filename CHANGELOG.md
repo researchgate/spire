@@ -91,7 +91,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * **eslint:** Use eslint:recommended instead of unobtrusive ([3df16cd](https://github.com/researchgate/spire/commit/3df16cd0f333f249833bab0933406320e6b91816))
 * **semantic-release:** Allow different providers(github, gitlab, none) to be specified in config ([061ab3e](https://github.com/researchgate/spire/commit/061ab3ea9ba764a8ad25608ce93e1d970c2f12fc))
 * Drop support for node 8 ([9fc4019](https://github.com/researchgate/spire/commit/9fc401958e59f21e12a4081482bcf81b5ec15a2e))
-* Support latest lerne options for creating github and gitlab releases ([614570f](https://github.com/researchgate/spire/commit/614570f2dcd6427743cbb2846c991c4b2bc2911d))
+* **lerna-release:** Support latest lerna options for creating github and gitlab releases ([614570f](https://github.com/researchgate/spire/commit/614570f2dcd6427743cbb2846c991c4b2bc2911d))
 * **plugin-prettier:** autoset prettier config for eslint & ide integrations ([1c29783](https://github.com/researchgate/spire/commit/1c2978366270783770357eec451e8305515912b4))
 
 
@@ -104,8 +104,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * **config-default:** `spire-plugin-semantic-release` is not installed anymore by 'spire-plugin-config-default'
 * **lint-staged:** spire-plugin-lint-staged no longer matches files case insensitive.
 * **eslint:** prettier is enabled in the default eslint config
-* This removes the `githubRelease: true` option. To migrate change the option to `createRelease: "github"`
-* The default configuration for githubRelease changed to `false` and publish is now run in interactive mode by default. If you want non-interactive mode again add `--yes` to `extraArgs` config.
+* **lerna-release:** This removes the `githubRelease: true` option. To migrate change the option to `createRelease: "github"`
+* **lerna-release:** The default configuration for githubRelease changed to `false` and publish is now run in interactive mode by default. If you want non-interactive mode again add `--yes` to `extraArgs` config.
 
 
 
