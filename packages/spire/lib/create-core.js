@@ -9,7 +9,7 @@ const {
 const execa = require('execa');
 const detectIndent = require('detect-indent');
 
-function createCore({ cwd }, { setState, getState }) {
+function createCore({ cwd, logger }, { setState, getState }) {
   async function hasFile(file) {
     return pathExists(join(cwd, file));
   }
@@ -35,13 +35,20 @@ function createCore({ cwd }, { setState, getState }) {
     await writeJSON(pkgPath, nextContents, { spaces });
   }
   async function getProvider() {
-    const remoteUrl = await execa(
-      'git',
-      ['remote', 'get-url', '--push', 'origin'],
-      {
-        cwd,
-      }
-    );
+    let remoteUrl;
+    try {
+      remoteUrl = (
+        await execa('git', ['remote', 'get-url', '--push', 'origin'], {
+          cwd,
+        })
+      ).stdout;
+    } catch (error) {
+      logger.warn(
+        'Unable to determine git provider. Using "none" instead.',
+        error
+      );
+      return 'none';
+    }
 
     if (remoteUrl.includes('github.com')) {
       return 'github';
