@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://github.com/researchgate/spire/compare/v2.1.1...v2.1.2) (2020-05-05)
+
+
+### Bug Fixes
+
+* **deps:** update jest monorepo to v26 ([ac300a8](https://github.com/researchgate/spire/commit/ac300a85b43fa1b0c5133c7bcb99044dedbfaa1f))
+
+
+
+
+
 ## [2.1.1](https://github.com/researchgate/spire/compare/v2.1.0...v2.1.1) (2020-04-30)
 
 
