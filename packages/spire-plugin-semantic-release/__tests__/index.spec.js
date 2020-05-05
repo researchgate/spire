@@ -2,13 +2,16 @@ const { createFixture } = require('spire-test-utils');
 
 const configWithSemanticReleasePlugin = JSON.stringify({
   name: 'spire-plugin-semantic-release-test',
+  repository: 'researchgate/spire',
   spire: {
-    plugins: [require.resolve('spire-plugin-semantic-release')],
+    plugins: [
+      [require.resolve('spire-plugin-semantic-release'), { provider: 'none' }],
+    ],
   },
 });
 
 describe('spire-plugin-semantic-release', () => {
-  it('adds release command', async () => {
+  test('adds release command', async () => {
     const fixture = await createFixture({
       'package.json': configWithSemanticReleasePlugin,
     });
@@ -18,15 +21,15 @@ describe('spire-plugin-semantic-release', () => {
     await fixture.clean();
   });
 
-  it('passes custom arguments to semantic-release', async () => {
+  test('passes custom arguments to semantic-release', async () => {
     const fixture = await createFixture({
       'package.json': configWithSemanticReleasePlugin,
     });
     await expect(
-      fixture.run('spire', ['--debug', 'release', '--version'])
+      fixture.run('spire', ['--debug', 'release', '--dry-run'])
     ).resolves.toMatchObject({
-      stdout: /v\d\.\d\.\d/,
+      stdout: /Using semantic-release arguments: .*--dry-run.*/,
     });
     await fixture.clean();
-  });
+  }, 25000);
 });
