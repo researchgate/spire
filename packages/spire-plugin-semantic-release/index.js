@@ -25,13 +25,13 @@ function semanticRelease(
     async setup({ resolve }) {
       let semanticReleaseArgs = [];
       let semanticReleaseConfigFile = defaultSemanticReleaseConfig;
-      const customConfig = hasCustomConfig();
+      const customConfig = await hasCustomConfig();
 
       if (!customConfig || !allowCustomConfig) {
         if (!semanticReleaseConfigFile) {
           let actualProvider = provider;
           if (actualProvider === 'auto') {
-            actualProvider = getProvider();
+            actualProvider = await getProvider();
           }
           semanticReleaseConfigFile = `spire-plugin-semantic-release/config/${
             actualProvider === 'none' ? 'default' : actualProvider
