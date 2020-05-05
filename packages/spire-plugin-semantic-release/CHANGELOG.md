@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.4](https://github.com/researchgate/spire/compare/v2.1.3...v2.1.4) (2020-05-05)
+
+
+### Bug Fixes
+
+* Fix detection of git provider ([6061ef2](https://github.com/researchgate/spire/commit/6061ef28b1e6198931a006f53a365b253177e9b2))
+
+
+
+
+
 ## [2.1.3](https://github.com/researchgate/spire/compare/v2.1.2...v2.1.3) (2020-05-05)
 
 
