@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.3](https://github.com/researchgate/spire/compare/v2.1.2...v2.1.3) (2020-05-05)
+
+
+### Bug Fixes
+
+* **semantic-release:** Correctly await results of async functions ([f467fe6](https://github.com/researchgate/spire/commit/f467fe656ed82fbf2a1ae56947707a0f524c29b8))
+
+
+
+
+
 ## [2.1.2](https://github.com/researchgate/spire/compare/v2.1.1...v2.1.2) (2020-05-05)
 
 
