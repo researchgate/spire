@@ -2,7 +2,7 @@ const execa = require('execa');
 const SpireError = require('spire/error');
 
 function semanticRelease(
-  { setState, getState, hasFile, hasPackageProp, getProvider },
+  { hasFile, hasPackageProp, getProvider },
   {
     command = 'release',
     provider = 'auto',
@@ -22,7 +22,15 @@ function semanticRelease(
     name: 'spire-plugin-semantic-release',
     command,
     description: 'run semantic-release',
-    async setup({ resolve }) {
+    async setup() {
+      // Inform user about disallowed overrides
+      if ((await hasCustomConfig()) && !allowCustomConfig) {
+        throw new SpireError(
+          `Custom semantic-release config is not allowed, using ${defaultSemanticReleaseConfig} instead`
+        );
+      }
+    },
+    async run({ options, cwd, logger, resolve }) {
       let semanticReleaseArgs = [];
       let semanticReleaseConfigFile = defaultSemanticReleaseConfig;
       const customConfig = await hasCustomConfig();
@@ -41,19 +49,6 @@ function semanticRelease(
         semanticReleaseArgs = ['--extends', resolve(semanticReleaseConfigFile)];
       }
 
-      setState({
-        semanticReleaseArgs,
-      });
-
-      // Inform user about disallowed overrides
-      if (customConfig && !allowCustomConfig) {
-        throw new SpireError(
-          `Custom semantic-release config is not allowed, using ${defaultSemanticReleaseConfig} instead`
-        );
-      }
-    },
-    async run({ options, cwd, logger }) {
-      const { semanticReleaseArgs } = getState();
       const [, ...userProvidedArgs] = options._;
       const finalSemanticReleaseArgs = [
         ...semanticReleaseArgs,
