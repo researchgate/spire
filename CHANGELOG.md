@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.5](https://github.com/researchgate/spire/compare/v2.1.4...v2.1.5) (2020-05-12)
+
+
+### Bug Fixes
+
+* **semantic-release:** Move provider logic from setup to run ([dba578a](https://github.com/researchgate/spire/commit/dba578a2dc6f6f09e1425a95c835b0d44f001084))
+
+
+
+
+
 ## [2.1.4](https://github.com/researchgate/spire/compare/v2.1.3...v2.1.4) (2020-05-05)
 
 
