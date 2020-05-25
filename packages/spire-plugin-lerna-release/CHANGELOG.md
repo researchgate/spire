@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.7](https://github.com/researchgate/spire/compare/v2.1.6...v2.1.7) (2020-05-25)
+
+
+### Bug Fixes
+
+* **deps:** update dependency lerna to v3.22.0 ([07d850a](https://github.com/researchgate/spire/commit/07d850adc9ca72cad9ef6c5282542d105d1ff283))
+
+
+
+
+
 ## [2.1.6](https://github.com/researchgate/spire/compare/v2.1.5...v2.1.6) (2020-05-14)
 
 
