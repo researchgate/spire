@@ -9,7 +9,7 @@
     "node": ">=10.18.0"
   },
   "dependencies": {
-    "lerna": "3.21.0"
+    "lerna": "3.22.0"
   },
   "peerDependencies": {
     "spire": "^2.0.0"
