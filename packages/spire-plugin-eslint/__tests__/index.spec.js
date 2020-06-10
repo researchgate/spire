@@ -2,11 +2,11 @@ const { createFixture } = require('spire-test-utils');
 const { stat, readFile } = require('fs-extra');
 const { join } = require('path');
 
-const configWithEslintPlugin = (config) =>
+const configWithEslintPlugin = (options = {}) =>
   JSON.stringify({
     name: 'spire-plugin-eslint-test',
     spire: {
-      plugins: [[require.resolve('spire-plugin-eslint'), { config }]],
+      plugins: [[require.resolve('spire-plugin-eslint'), options]],
     },
   });
 
@@ -31,7 +31,7 @@ describe('spire-plugin-eslint', () => {
       '--debug',
     ]);
     expect(stdout).toMatch(/Using linters:/);
-    expect(stdout).toMatch(/\.js/);
+    expect(stdout).toMatch(/\*\.\(js\|jsx\|mjs\|ts\|tsx\)/);
     await fixture.clean();
   });
 
@@ -60,6 +60,20 @@ describe('spire-plugin-eslint', () => {
     await fixture.clean();
   });
 
+  test('prints deprecation warning for glob option', async () => {
+    const fixture = await createFixture({
+      'package.json': configWithEslintPlugin({ glob: 'abc' }),
+    });
+    await fixture.run('spire', ['hook', 'precommit']);
+
+    await expect(
+      fixture.run('spire', ['hook', 'precommit'])
+    ).resolves.toMatchObject({
+      stdout: /The glob option is deprecated\. Use the option `fileExtensions` instead\./,
+    });
+    await fixture.clean();
+  });
+
   test('creates custom eslint config for editors', async () => {
     const fixture = await createFixture({
       'node_modules/eslint-config-cool-test/package.json': JSON.stringify({
@@ -68,7 +82,9 @@ describe('spire-plugin-eslint', () => {
         main: 'index.js',
       }),
       'node_modules/eslint-config-cool-test/index.js': 'module.exports = {};',
-      'package.json': configWithEslintPlugin('eslint-config-cool-test'),
+      'package.json': configWithEslintPlugin({
+        config: 'eslint-config-cool-test',
+      }),
     });
     await fixture.run('spire', ['hook', 'postinstall']);
     const eslintConfig = join(fixture.cwd, '.eslintrc.js');

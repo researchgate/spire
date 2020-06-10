@@ -18,7 +18,9 @@ function eslint(
     allowCustomConfig = true,
     eslintIgnore: defaultEslintIgnore = '.gitignore',
     allowCustomIgnore = true,
-    glob = '*.js',
+    fileExtensions = ['.js', '.jsx', '.mjs', '.ts', '.tsx'],
+    /* @deprecated */
+    glob,
   }
 ) {
   async function hasCustomEslintConfig() {
@@ -71,8 +73,9 @@ function eslint(
           : (await hasFile(defaultEslintIgnore))
           ? ['--ignore-path', defaultEslintIgnore]
           : [];
+      const eslintExtensions = ['--ext', fileExtensions.join(',')];
       setState({
-        eslintArgs: [...eslintConfig, ...eslintIgnore],
+        eslintArgs: [...eslintConfig, ...eslintIgnore, ...eslintExtensions],
       });
       // Inform user about disallowed overrides
       if (hasCustomConfig && !allowCustomConfig) {
@@ -87,10 +90,22 @@ function eslint(
       }
     },
     async precommit() {
+      if (glob) {
+        console.warn(
+          'spire-plugin-eslint: The glob option is deprecated. Use the option `fileExtensions` instead.'
+        );
+      }
       setState((prev) => ({
         linters: [
           ...prev.linters,
-          { [glob]: ['eslint', ...prev.eslintArgs, '--fix'] },
+          {
+            [glob ||
+            `*.(${fileExtensions.map((ext) => ext.substr(1)).join('|')})`]: [
+              'eslint',
+              ...prev.eslintArgs,
+              '--fix',
+            ],
+          },
         ],
       }));
     },
