@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/researchgate/spire/compare/v2.1.8...v2.2.0) (2020-06-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint to v7 ([5936f7a](https://github.com/researchgate/spire/commit/5936f7a8ca554d59a79a0972c0f82f0c130080ef))
+* **eslint:** Ensure an empty line is added at generated eslintrc file ([e351155](https://github.com/researchgate/spire/commit/e351155f2db5edf2e3bfd19bacf89d017bdcb247))
+
+
+### Features
+
+* **eslint:** Add new option to specify file extensions and deprecate glob option ([5de25e7](https://github.com/researchgate/spire/commit/5de25e7576943ea7049ec487c4c6153b4aae21f9))
+
+
+
+
+
 ## [2.1.8](https://github.com/researchgate/spire/compare/v2.1.7...v2.1.8) (2020-06-09)
 
 
