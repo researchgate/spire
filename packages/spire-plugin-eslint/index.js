@@ -49,11 +49,13 @@ function eslint(
             );
           }
         }
-        await writeFile(
-          '.eslintrc.js',
-          '// This file was created by spire-plugin-eslint for editor support\n' +
-            `module.exports = require('${defaultEslintConfig}');\n`
-        );
+        if (!hasCustomConfig) {
+          await writeFile(
+            '.eslintrc.js',
+            '// This file was created by spire-plugin-eslint for editor support\n' +
+              `module.exports = require('${defaultEslintConfig}');\n`
+          );
+        }
       }
     },
     async setup({ argv, resolve }) {
