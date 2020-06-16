@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1](https://github.com/researchgate/spire/compare/v2.2.0...v2.2.1) (2020-06-16)
+
+
+### Bug Fixes
+
+* Only write eslint config if non exists already ([a521b2d](https://github.com/researchgate/spire/commit/a521b2d6d14f0d63eafc1eefad1fe8a9dab5dd0c))
+* Set 'use strict' in generated eslint config ([e7b2b46](https://github.com/researchgate/spire/commit/e7b2b46753d65faaa966c98adcfc69f5fa624141))
+
+
+
+
+
 # [2.2.0](https://github.com/researchgate/spire/compare/v2.1.8...v2.2.0) (2020-06-11)
 
 
