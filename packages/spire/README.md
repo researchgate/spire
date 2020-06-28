@@ -258,11 +258,10 @@ dependencies it replaces. At this point you're done!
 
 ### Using without Git
 
-At the moment Spire has a hard dependency on a Git repository to resolve
-monorepo project root. This most likely to be reviewed in the future, but
-meanwhile it is part of the core, you can export `SKIP_PREFLIGHT_CHECK=true`
-environment variable to disable this check. The idea and name of this flag is
-borrowed from [create-react-app].
+You do not need to have git installed to run spire itself. Be aware though that
+certain plugins might need to have git installed to work. For example the
+semantic-release and lerna-release plugin obviously need git because they create
+tags and commits.
 
 ### Using in monorepos
 
