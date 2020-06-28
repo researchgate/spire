@@ -6,8 +6,8 @@ const {
   readFile,
   writeFile,
 } = require('fs-extra');
-const execa = require('execa');
 const detectIndent = require('detect-indent');
+const gitRemoteOriginUrl = require('git-remote-origin-url');
 
 function createCore({ cwd, logger }, { setState, getState }) {
   async function hasFile(file) {
@@ -37,11 +37,7 @@ function createCore({ cwd, logger }, { setState, getState }) {
   async function getProvider() {
     let remoteUrl;
     try {
-      remoteUrl = (
-        await execa('git', ['remote', 'get-url', '--push', 'origin'], {
-          cwd,
-        })
-      ).stdout;
+      remoteUrl = await gitRemoteOriginUrl(cwd);
     } catch (error) {
       logger.warn(
         'Unable to determine git provider. Using "none" instead.',
