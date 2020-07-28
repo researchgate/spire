@@ -1,6 +1,6 @@
 {
   "name": "spire-plugin-doctoc",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "doctoc plugin for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",
@@ -13,7 +13,7 @@
     "doctoc": "^1.4.0"
   },
   "devDependencies": {
-    "spire-test-utils": "^2.0.1"
+    "spire-test-utils": "^3.0.0"
   },
   "peerDependencies": {
     "spire": "^2.0.0"

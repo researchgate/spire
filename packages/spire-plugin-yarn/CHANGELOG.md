@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/researchgate/spire/compare/v2.2.1...v3.0.0) (2020-07-28)
+
+**Note:** Version bump only for package spire-plugin-yarn
+
+
+
+
+
 ## [2.0.2](https://github.com/researchgate/spire/compare/v2.0.1...v2.0.2) (2020-04-30)
 
 

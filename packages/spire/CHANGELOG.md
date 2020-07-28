@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://github.com/researchgate/spire/compare/v2.2.1...v3.0.0) (2020-07-28)
+
+
+### Features
+
+* **spire:** Do not use git binary and enable installing git hooks again ([67cb751](https://github.com/researchgate/spire/commit/67cb7516d7f7a74dc44e797383fdcdcc147298f1))
+
+
+### BREAKING CHANGES
+
+* **spire:** Git hooks are now installed again.
+
+
+
+
+
 ## [2.2.1](https://github.com/researchgate/spire/compare/v2.2.0...v2.2.1) (2020-06-16)
 
 **Note:** Version bump only for package spire
