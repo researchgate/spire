@@ -18,6 +18,6 @@
     "node": ">=10.18.0"
   },
   "peerDependencies": {
-    "spire": "^2.0.0"
+    "spire": "^3.0.0"
   }
 }

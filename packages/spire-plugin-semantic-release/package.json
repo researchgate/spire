@@ -23,6 +23,6 @@
     "spire-test-utils": "^3.0.0"
   },
   "peerDependencies": {
-    "spire": "^2.1.4"
+    "spire": "^3.0.0"
   }
 }
