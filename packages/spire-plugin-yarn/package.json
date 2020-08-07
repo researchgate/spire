@@ -1,6 +1,6 @@
 {
   "name": "spire-plugin-yarn",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "description": "Yarn plugin for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",

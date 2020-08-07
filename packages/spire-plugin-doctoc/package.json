@@ -1,6 +1,6 @@
 {
   "name": "spire-plugin-doctoc",
-  "version": "3.0.0",
+  "version": "3.0.2",
   "description": "doctoc plugin for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",

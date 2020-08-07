@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://github.com/researchgate/spire/compare/v3.0.1...v3.0.2) (2020-08-07)
+
+
+### Bug Fixes
+
+* Fix peer dependency for all plugins ([938d5b9](https://github.com/researchgate/spire/commit/938d5b925a8cb0e8d269773bece4732802ea6470))
+
+
+
+
+
 # [3.0.0](https://github.com/researchgate/spire/compare/v2.2.1...v3.0.0) (2020-07-28)
 
 **Note:** Version bump only for package spire-plugin-semantic-release
