@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/researchgate/spire/compare/v3.0.0...v3.0.1) (2020-08-07)
+
+
+### Bug Fixes
+
+* **deps:** update dependency cosmiconfig to v7 ([b028667](https://github.com/researchgate/spire/commit/b0286674940750a6cb8f5144c45fd84fdf70995e))
+
+
+
+
+
 # [3.0.0](https://github.com/researchgate/spire/compare/v2.2.1...v3.0.0) (2020-07-28)
 
 

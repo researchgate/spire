@@ -1,6 +1,6 @@
 {
   "name": "spire",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Extensible CLI toolkit managment tool",
   "main": "index.js",
   "repository": "researchgate/spire",
