@@ -53,8 +53,8 @@ describe('spire-plugin-eslint', () => {
     });
     await fixture.run('spire', ['hook', 'postinstall']);
     const eslintConfig = join(fixture.cwd, '.eslintrc.js');
-    expect(stat(eslintConfig)).resolves.toBeTruthy();
-    expect(readFile(eslintConfig, 'UTF-8')).resolves.toMatch(
+    expect(await stat(eslintConfig)).toBeTruthy();
+    expect(await readFile(eslintConfig, 'UTF-8')).toMatch(
       /spire-plugin-eslint\/config/
     );
     await fixture.clean();
@@ -88,8 +88,8 @@ describe('spire-plugin-eslint', () => {
     });
     await fixture.run('spire', ['hook', 'postinstall']);
     const eslintConfig = join(fixture.cwd, '.eslintrc.js');
-    expect(stat(eslintConfig)).resolves.toBeTruthy();
-    expect(readFile(eslintConfig, 'UTF-8')).resolves.toMatch(
+    expect(await stat(eslintConfig)).toBeTruthy();
+    expect(await readFile(eslintConfig, 'UTF-8')).toMatch(
       /eslint-config-cool-test/
     );
     await fixture.clean();

@@ -30,6 +30,5 @@
   },
   "devDependencies": {
     "spire-test-utils": "^3.0.0"
-  },
-  "prettier": "spire-plugin-prettier/config"
+  }
 }
