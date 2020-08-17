@@ -1,6 +1,6 @@
 {
   "name": "spire-config-default",
-  "version": "3.0.2",
+  "version": "3.1.0",
   "description": "Default config preset for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",
@@ -9,7 +9,7 @@
   "dependencies": {
     "spire-plugin-clean": "^3.0.2",
     "spire-plugin-doctoc": "^3.0.2",
-    "spire-plugin-eslint": "^3.0.2",
+    "spire-plugin-eslint": "^3.1.0",
     "spire-plugin-jest": "^3.0.2",
     "spire-plugin-lint-staged": "^3.0.2",
     "spire-plugin-prettier": "^3.0.2"
