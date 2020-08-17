@@ -16,9 +16,7 @@ describe('spire', () => {
       });
       const { setPackageProp } = getCore(fixture.cwd);
       await setPackageProp('test', '123');
-      expect(
-        readFile(join(fixture.cwd, 'package.json'), 'UTF-8')
-      ).resolves.toBe(
+      expect(await readFile(join(fixture.cwd, 'package.json'), 'UTF-8')).toBe(
         `{\n${indent}"name": "spire-test-hooks",\n${indent}"test": "123"\n}\n`
       );
       await fixture.clean();
