@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/researchgate/spire/compare/v3.1.0...v3.1.1) (2020-08-31)
+
+
+### Bug Fixes
+
+* **deps:** update dependency yarn-deduplicate to v3 ([36e86b9](https://github.com/researchgate/spire/commit/36e86b97ce08cf198bada469e021ba068dec1c4b))
+
+
+
+
+
 ## [3.0.2](https://github.com/researchgate/spire/compare/v3.0.1...v3.0.2) (2020-08-07)
 
 
