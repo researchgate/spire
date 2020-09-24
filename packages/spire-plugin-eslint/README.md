@@ -24,6 +24,9 @@
   - `command` \<string\> Command name to run eslint on. Defaults to `lint`.
   - `eslintConfig` \<string\> Default [eslint] configuration. Defaults to
     [`./config.js`](./config.js).
+  - `autosetEslintConfig` \<boolean\> Decides if the plugin should automatically
+    create an `.eslintrc.js` file. It will only create the file if there isn't
+    already a config present. Defaults to `true`.
   - `allowCustomConfig` \<boolean\> Whether to allow user-provided config. If
     this option is `false` and there's custom eslint config found it will throw
     an error. Defaults to `true`.
@@ -32,7 +35,8 @@
   - `allowCustomIgnore` \<boolean\> Whether to allow user-provided
     `.eslintignore`. If this option is `false` and there's custom ignore file
     found it will throw an error. Defaults to `true`.
-  - `glob` \<string\> Linter glob to run on precommit. Defaults to `*.js`.
+  - `fileExtensions` \<string[]\> Extension of files eslint should scan.
+    Defaults to `['.js', '.jsx', '.mjs', '.ts', '.tsx']`.
 
 - CLI `npx spire lint [args]`
   - Passes all arguments as-is to eslint.
