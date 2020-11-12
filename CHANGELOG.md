@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/researchgate/spire/compare/v3.2.0...v3.2.1) (2020-11-12)
+
+
+### Bug Fixes
+
+* **lint-staged:** Set default NODE_ENV ([f35271a](https://github.com/researchgate/spire/commit/f35271af73c62d4c3b25f00d504926fb110ffbc8))
+
+
+
+
+
 # [3.2.0](https://github.com/researchgate/spire/compare/v3.1.2...v3.2.0) (2020-09-24)
 
 
