@@ -1,6 +1,6 @@
 {
   "name": "spire-plugin-eslint6",
-  "version": "3.2.0",
+  "version": "3.2.2",
   "description": "ESLint v6 plugin for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",

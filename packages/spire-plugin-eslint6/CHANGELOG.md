@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.2](https://github.com/researchgate/spire/compare/v3.2.1...v3.2.2) (2020-12-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency execa to v5 ([21d7222](https://github.com/researchgate/spire/commit/21d72221441d5e5a737170a88a066ea8199c34df))
+
+
+
+
+
 # [3.2.0](https://github.com/researchgate/spire/compare/v3.1.2...v3.2.0) (2020-09-24)
 
 
