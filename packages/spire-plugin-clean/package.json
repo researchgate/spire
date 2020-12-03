@@ -10,7 +10,7 @@
     "node": ">=10.18.0"
   },
   "dependencies": {
-    "execa": "^4.0.0"
+    "execa": "^5.0.0"
   },
   "devDependencies": {
     "spire-test-utils": "^3.0.0"
