@@ -13,7 +13,7 @@
     "doctoc": "^2.0.0"
   },
   "devDependencies": {
-    "spire-test-utils": "^3.0.0"
+    "spire-test-utils": "3.0.0"
   },
   "peerDependencies": {
     "spire": "^3.0.0"
