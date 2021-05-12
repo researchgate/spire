@@ -1,4 +1,4 @@
-# spire-plugin-lint-staged
+# spire-plugin-yarn
 
 [Yarn](https://github.com/yarnpkg/yarn) plugin for
 [Spire](https://github.com/researchgate/spire).
