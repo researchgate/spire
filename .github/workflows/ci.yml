@@ -77,10 +77,22 @@ jobs:
         if: steps.cache-nodemodules.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile --non-interactive
 
-      - name: Release
-        run: | 
-          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-          yarn release --yes
+      - name: Git Identity
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/$GITHUB_REPOSITORY
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Verify npm access
+        run:  | 
+          echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+          npm whoami #uses .npmrc from root and the env var
+        env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        
+      - name: Release
+        run: yarn release --yes --no-verify-access
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
