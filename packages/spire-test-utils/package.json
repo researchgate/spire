@@ -10,7 +10,7 @@
     "node": ">=10.18.0"
   },
   "dependencies": {
-    "fs-extra": "^9.0.0",
+    "fs-extra": "^10.0.0",
     "shortid": "^2.2.14"
   }
 }
