@@ -64,14 +64,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ NODE_VERSION }}
+          node-version: ${{ env.NODE_VERSION }}
 
       - name: Cache node_modules
         uses: actions/cache@v2
         id: cache-nodemodules
         with:
           path: node_modules
-          key: ${{ runner.os }}-${{ NODE_VERSION }}-nodemodules-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-${{ env.NODE_VERSION }}-nodemodules-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install dependencies
         if: steps.cache-nodemodules.outputs.cache-hit != 'true'
