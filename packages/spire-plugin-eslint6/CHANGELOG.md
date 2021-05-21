@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.1](https://github.com/researchgate/spire/compare/v4.0.0...v4.0.1) (2021-05-21)
+
+
+### Bug Fixes
+
+* **config:** Require peer spire v4.0.0 ([e51b22a](https://github.com/researchgate/spire/commit/e51b22a3c8cbefc49dc5e1760b13622918fcd264))
+
+
+
+
+
 # [4.0.0](https://github.com/researchgate/spire/compare/v3.2.4...v4.0.0) (2021-05-21)
 
 **Note:** Version bump only for package spire-plugin-eslint6

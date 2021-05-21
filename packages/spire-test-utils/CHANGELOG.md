@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.1](https://github.com/researchgate/spire/compare/v4.0.0...v4.0.1) (2021-05-21)
+
+
+### Bug Fixes
+
+* **config:** Require node v12+ ([4dba5b3](https://github.com/researchgate/spire/commit/4dba5b3968464f30500f8887cdc508e2d9c4de46))
+
+
+
+
+
 # [4.0.0](https://github.com/researchgate/spire/compare/v3.2.4...v4.0.0) (2021-05-21)
 
 
