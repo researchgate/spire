@@ -1,6 +1,6 @@
 {
   "name": "spire-plugin-lerna-release",
-  "version": "3.2.4",
+  "version": "4.0.0",
   "description": "Lerna publish plugin for Spire",
   "repository": "researchgate/spire",
   "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",

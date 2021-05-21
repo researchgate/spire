@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://github.com/researchgate/spire/compare/v3.2.4...v4.0.0) (2021-05-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency fs-extra to v10 (main) ([#104](https://github.com/researchgate/spire/issues/104)) ([3a43b01](https://github.com/researchgate/spire/commit/3a43b01ab4f3bf3dc18cad566ab0fef35ad8a689))
+
+
+### BREAKING CHANGES
+
+* **deps:** This release drops support for node 10.
+Please upgrade to the current LTS in order to use this version.
+
+* fix(deps): update dependency fs-extra to v10
+* build(ci): Drop node 10 support
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+Co-authored-by: Stefan Hoth <45467+stefanhoth@users.noreply.github.com>
+
+
+
+
+
 ## [3.2.4](https://github.com/researchgate/spire/compare/v3.2.3...v3.2.4) (2021-05-21)
 
 
