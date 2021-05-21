@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.3](https://github.com/researchgate/spire/compare/v3.2.2...v3.2.3) (2021-05-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency doctoc to v2 ([a11664f](https://github.com/researchgate/spire/commit/a11664f314ba6e6ab853be985655575850a2b19d))
+* **deps:** update dependency eslint-config-prettier to v7 ([14f8b3a](https://github.com/researchgate/spire/commit/14f8b3aab5a316f920347d8d16309d1543d203e4))
+
+
+### Reverts
+
+* Revert "build(ci): Add  secrets to tests for dry-run" ([84213e6](https://github.com/researchgate/spire/commit/84213e616beac9f2fbd0a77fbaa39e7de1636bd2))
+* Revert "fix(semantic-release):Add main to allowed branch" ([0061f3e](https://github.com/researchgate/spire/commit/0061f3e65a4fe0d887ada959b481365c8c83646c))
+
+
+
+
+
 ## [3.2.2](https://github.com/researchgate/spire/compare/v3.2.1...v3.2.2) (2020-12-03)
 
 

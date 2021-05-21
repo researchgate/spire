@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.3](https://github.com/researchgate/spire/compare/v3.2.2...v3.2.3) (2021-05-21)
+
+
+### Bug Fixes
+
+* **deps:** update dependency doctoc to v2 ([a11664f](https://github.com/researchgate/spire/commit/a11664f314ba6e6ab853be985655575850a2b19d))
+
+
+
+
+
 ## [3.0.2](https://github.com/researchgate/spire/compare/v3.0.1...v3.0.2) (2020-08-07)
 
 

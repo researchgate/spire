@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.3](https://github.com/researchgate/spire/compare/v3.2.2...v3.2.3) (2021-05-21)
+
+
+### Reverts
+
+* Revert "fix(semantic-release):Add main to allowed branch" ([0061f3e](https://github.com/researchgate/spire/commit/0061f3e65a4fe0d887ada959b481365c8c83646c))
+
+
+
+
+
 ## [3.2.2](https://github.com/researchgate/spire/compare/v3.2.1...v3.2.2) (2020-12-03)
 
 
