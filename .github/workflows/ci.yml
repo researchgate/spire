@@ -42,6 +42,9 @@ jobs:
 
     - name: Unit tests
       run: yarn test --coverage
+      env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
