@@ -20,5 +20,6 @@
   },
   "peerDependencies": {
     "spire": "^4.0.0"
-  }
+  },
+  "prettier": "spire-plugin-prettier/config"
 }
