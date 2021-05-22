@@ -26,7 +26,7 @@
     "pretty-format": "^26.0.0",
     "signale": "^1.4.0",
     "spire-config-default": "^4.0.1",
-    "yargs": "^16.0.0"
+    "yargs": "^17.0.0"
   },
   "devDependencies": {
     "spire-test-utils": "^4.0.1"
