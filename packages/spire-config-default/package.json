@@ -15,7 +15,7 @@
     "spire-plugin-prettier": "^4.0.1"
   },
   "engines": {
-    "node": ">=10.18.0"
+    "node": ">=12"
   },
   "peerDependencies": {
     "spire": "^4.0.0"
