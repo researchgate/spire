@@ -8,7 +8,8 @@ describe('spire', () => {
       }),
     });
     await expect(fixture.run('spire', ['--debug'])).rejects.toMatchObject({
-      stderr: /Project is not in a Git repository\. Set `SKIP_PREFLIGHT_CHECK=true` to disable this check, but be advised that some plugins may fail\./,
+      stderr:
+        /Project is not in a Git repository\. Set `SKIP_PREFLIGHT_CHECK=true` to disable this check, but be advised that some plugins may fail\./,
     });
     await fixture.clean();
   });

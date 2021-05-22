@@ -69,7 +69,8 @@ describe('spire-plugin-eslint6', () => {
     await expect(
       fixture.run('spire', ['hook', 'precommit'])
     ).resolves.toMatchObject({
-      stdout: /The glob option is deprecated\. Use the option `fileExtensions` instead\./,
+      stdout:
+        /The glob option is deprecated\. Use the option `fileExtensions` instead\./,
     });
     await fixture.clean();
   });
