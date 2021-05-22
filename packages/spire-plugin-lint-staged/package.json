@@ -7,15 +7,16 @@
   "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
   "license": "MIT",
   "engines": {
-    "node": ">=10.18.0"
+    "node": ">=12"
   },
   "dependencies": {
-    "lint-staged": "^10.0.0"
+    "lint-staged": "^11.0.0"
   },
   "devDependencies": {
     "spire-test-utils": "^4.0.1"
   },
   "peerDependencies": {
     "spire": "^4.0.0"
-  }
+  },
+  "prettier": "spire-plugin-prettier/config"
 }
