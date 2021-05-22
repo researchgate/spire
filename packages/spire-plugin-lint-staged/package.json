@@ -1,6 +1,6 @@
 {
   "name": "spire-plugin-lint-staged",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "lint-staged plugin for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",

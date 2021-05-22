@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://github.com/researchgate/spire/compare/v4.0.1...v4.1.0) (2021-05-22)
+
+
+### Features
+
+* **deps:** Update yargs to 17.0.0 ([d38e0b5](https://github.com/researchgate/spire/commit/d38e0b5b4e4d30f3fdecfd586a9c725751e9d8e4))
+
+
+
+
+
 ## [4.0.1](https://github.com/researchgate/spire/compare/v4.0.0...v4.0.1) (2021-05-21)
 
 **Note:** Version bump only for package spire
