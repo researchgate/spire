@@ -23,6 +23,6 @@
   },
   "prettier": "spire-plugin-prettier/config",
   "devDependencies": {
-    "prettier": "2.3.1"
+    "prettier": "2.3.2"
   }
 }
