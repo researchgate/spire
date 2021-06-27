@@ -21,7 +21,7 @@
     "detect-indent": "^6.0.0",
     "fs-extra": "^10.0.0",
     "git-remote-origin-url": "^3.1.0",
-    "import-from": "^3.0.0",
+    "import-from": "^4.0.0",
     "invariant": "^2.2.4",
     "pretty-format": "^26.0.0",
     "signale": "^1.4.0",
