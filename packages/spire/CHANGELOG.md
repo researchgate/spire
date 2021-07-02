@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.1](https://github.com/researchgate/spire/compare/v4.1.0...v4.1.1) (2021-07-02)
+
+
+### Bug Fixes
+
+* **deps:** update dependency import-from to v4 ([e137ace](https://github.com/researchgate/spire/commit/e137ace720b5ab1bffb9d1423b5d6c0525c770a5))
+
+
+
+
+
 # [4.1.0](https://github.com/researchgate/spire/compare/v4.0.1...v4.1.0) (2021-05-22)
 
 
