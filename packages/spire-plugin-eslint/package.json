@@ -12,7 +12,7 @@
   "dependencies": {
     "eslint": "^7.5.0",
     "eslint-config-prettier": "^8.0.0",
-    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "execa": "^5.0.0"
   },
   "devDependencies": {
