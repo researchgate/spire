@@ -17,7 +17,7 @@
     "preuninstall": "./bin/spire.js hook preuninstall"
   },
   "dependencies": {
-    "cosmiconfig": "7.0.0",
+    "cosmiconfig": "7.0.1",
     "detect-indent": "6.0.0",
     "fs-extra": "10.0.0",
     "git-remote-origin-url": "3.1.0",
