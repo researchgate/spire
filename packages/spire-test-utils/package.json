@@ -7,7 +7,7 @@
   "author": "Sergey Bekrin <sergey@bekrin.me> (https://bekrin.me)",
   "license": "MIT",
   "engines": {
-    "node": ">=12"
+    "node": ">=12.20"
   },
   "dependencies": {
     "fs-extra": "^10.0.0",

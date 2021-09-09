@@ -10,7 +10,7 @@
     "spire": "./bin/spire.js"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=12.20"
   },
   "scripts": {
     "postinstall": "./bin/spire.js hook postinstall",
