@@ -1,6 +1,6 @@
 {
   "name": "spire-plugin-lint-staged",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "lint-staged plugin for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",
@@ -13,7 +13,7 @@
     "lint-staged": "11.1.2"
   },
   "devDependencies": {
-    "spire-test-utils": "^5.0.0"
+    "spire-test-utils": "^5.0.1"
   },
   "peerDependencies": {
     "spire": "^4.0.0 || ^5.0.0"
