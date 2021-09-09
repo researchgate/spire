@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.2](https://github.com/researchgate/spire/compare/v4.1.1...v4.1.2) (2021-09-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-prettier to v4 ([2c989ce](https://github.com/researchgate/spire/commit/2c989ce168ee85e318021bc49cceb935a5ee9811))
+
+
+
+
+
 # [4.1.0](https://github.com/researchgate/spire/compare/v4.0.1...v4.1.0) (2021-05-22)
 
 **Note:** Version bump only for package spire-plugin-eslint6
