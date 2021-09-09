@@ -23,7 +23,7 @@
     "spire-test-utils": "^5.0.0"
   },
   "peerDependencies": {
-    "spire": "^4.0.0"
+    "spire": "^4.0.0 || ^5.0.0"
   },
   "prettier": "spire-plugin-prettier/config"
 }
