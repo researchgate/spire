@@ -1,6 +1,6 @@
 {
   "name": "spire-plugin-eslint6",
-  "version": "4.1.2",
+  "version": "5.0.0",
   "description": "ESLint v6 plugin for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",
@@ -16,7 +16,7 @@
     "execa": "5.0.0"
   },
   "devDependencies": {
-    "spire-test-utils": "4.0.1"
+    "spire-test-utils": "^5.0.0"
   },
   "peerDependencies": {
     "spire": "^4.0.0"

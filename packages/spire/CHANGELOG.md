@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/researchgate/spire/compare/v4.1.2...v5.0.0) (2021-09-09)
+
+
+### chore
+
+* **deps:** Raise node engine to  >=12.20 ([3916dd8](https://github.com/researchgate/spire/commit/3916dd8de2b63020341f87ae1b814695d5632096))
+
+
+### BREAKING CHANGES
+
+* **deps:** Needs at least node v12.20 to work
+
+
+
+
+
 ## [4.1.2](https://github.com/researchgate/spire/compare/v4.1.1...v4.1.2) (2021-09-09)
 
 **Note:** Version bump only for package spire
