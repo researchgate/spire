@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.2](https://github.com/researchgate/spire/compare/v5.0.1...v5.0.2) (2021-09-09)
+
+
+### Bug Fixes
+
+* **deps:** update dependency detect-indent to v6.1.0 ([c039b71](https://github.com/researchgate/spire/commit/c039b71fccc19d70f197e80f306762005397415c))
+
+
+
+
+
 ## [5.0.1](https://github.com/researchgate/spire/compare/v5.0.0...v5.0.1) (2021-09-09)
 
 **Note:** Version bump only for package spire
