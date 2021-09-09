@@ -1,4 +1,4 @@
-const prettyFormat = require('pretty-format');
+const { format: prettyFormat } = require('pretty-format');
 const resolveConfig = require('./lib/resolve-config');
 const createCli = require('./lib/create-cli');
 const createLogger = require('./lib/create-logger');

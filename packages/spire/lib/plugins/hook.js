@@ -1,4 +1,4 @@
-const prettyFormat = require('pretty-format');
+const { format: prettyFormat } = require('pretty-format');
 
 function hook({ getState }) {
   let hookToExecute;
