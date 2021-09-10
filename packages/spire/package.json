@@ -20,7 +20,7 @@
     "cosmiconfig": "7.0.1",
     "detect-indent": "6.1.0",
     "fs-extra": "10.0.0",
-    "git-remote-origin-url": "3.1.0",
+    "git-remote-origin-url": "4.0.0",
     "import-from": "4.0.0",
     "invariant": "2.2.4",
     "pretty-format": "27.1.1",
