@@ -4438,13 +4438,6 @@ is-negative-zero@^2.0.1:
   resolved "https://registry.yarnpkg.com/is-negative-zero/-/is-negative-zero-2.0.2.tgz#7bf6f03a28003b8b3965de3ac26f664d765f3150"
   integrity sha512-dqJvarLawXsFbNDeJW7zAz8ItJ9cd28YufuuFzh0G8pNHjJMnY08Dv7sYX2uF5UpQOwieAeOExEYAWWfu7ZZUA==
 
-is-npm-not-yarn@^2.0.3:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/is-npm-not-yarn/-/is-npm-not-yarn-2.0.5.tgz#9224ed134ec7e0bcc4548ec7578dea35363d3abb"
-  integrity sha512-FoFItIdLSj+AY6cNwZsnH03O8KZKRhNjk7obWVRdA5sQp5JemubYGfJp/Aq/EXYdPpc8J4QqgXhg4CazwH+9uw==
-  dependencies:
-    slash "^1.0.0"
-
 is-number-object@^1.0.4:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/is-number-object/-/is-number-object-1.0.6.tgz#6a7aaf838c7f0686a50b4553f7e54a96494e89f0"
@@ -7421,11 +7414,6 @@ sisteransi@^1.0.5:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.5.tgz#134d681297756437cc05ca01370d3a7a571075ed"
   integrity sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==
 
-slash@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
-  integrity sha1-xB8vbDn8FtHNF61LXYlhFK5HDVU=
-
 slash@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
@@ -8282,12 +8270,11 @@ url-join@^4.0.0:
   resolved "https://registry.yarnpkg.com/url-join/-/url-join-4.0.1.tgz#b642e21a2646808ffa178c4c5fda39844e12cde7"
   integrity sha512-jk1+QP6ZJqyOiuEI9AEWQfju/nB2Pw466kbA0LEZljHwKeMgd9WrAEgEGxjPDD2+TNbbb37rTyhEfrCXfuKXnA==
 
-use-yarn@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/use-yarn/-/use-yarn-2.2.0.tgz#355da1edf17acc56d7b243fcaa817bd92fd0be4a"
-  integrity sha1-NV2h7fF6zFbXskP8qoF72S/Qvko=
+use-yarn@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/use-yarn/-/use-yarn-2.4.0.tgz#551a8be65bb7c6fa820bbfaac53dd0792ad25bb0"
+  integrity sha512-35Llgpy6RnoRDEiYomXRNDky6qqOjiKX1Z7pspTpfqEod9jd3MHbCwxdEu8cNpu9/D673JE06WRC31Yzyk0lCA==
   dependencies:
-    is-npm-not-yarn "^2.0.3"
     minimist "^1.2.0"
 
 util-deprecate@^1.0.1, util-deprecate@~1.0.1:

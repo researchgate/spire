@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "execa": "5.1.1",
-    "use-yarn": "2.2.0",
+    "use-yarn": "2.4.0",
     "yarn-deduplicate": "3.1.0"
   },
   "devDependencies": {
