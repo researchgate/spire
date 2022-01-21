@@ -23,7 +23,7 @@
     "git-remote-origin-url": "3.1.0",
     "import-from": "4.0.0",
     "invariant": "2.2.4",
-    "pretty-format": "27.1.1",
+    "pretty-format": "27.4.6",
     "signale": "1.4.0",
     "spire-config-default": "^5.0.1",
     "yargs": "17.1.1"
