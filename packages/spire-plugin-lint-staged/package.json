@@ -10,7 +10,7 @@
     "node": ">=12.20"
   },
   "dependencies": {
-    "lint-staged": "11.1.2"
+    "lint-staged": "12.4.1"
   },
   "devDependencies": {
     "spire-test-utils": "^5.0.1"
