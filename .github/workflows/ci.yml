@@ -19,15 +19,15 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v2.4.2
 
     - name: Setup Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3.3.0
       with:
         node-version: ${{ matrix.node }}
 
     - name: Cache node_modules
-      uses: actions/cache@v2
+      uses: actions/cache@v3.0.3
       id: cache-nodemodules
       with:
         path: node_modules
@@ -44,7 +44,7 @@ jobs:
       run: yarn test --coverage
 
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v2
+      uses: codecov/codecov-action@v3.1.0
       with:
         files: ./coverage/coverage-final.json
         fail_ci_if_error: true
@@ -57,17 +57,17 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.4.2
         with:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3.3.0
         with:
           node-version: ${{ env.NODE_VERSION }}
 
       - name: Cache node_modules
-        uses: actions/cache@v2
+        uses: actions/cache@v3.0.3
         id: cache-nodemodules
         with:
           path: node_modules
