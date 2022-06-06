@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.4](https://github.com/researchgate/spire/compare/v5.0.3...v5.0.4) (2022-06-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency use-yarn to v2.4.0 ([2851f32](https://github.com/researchgate/spire/commit/2851f32023df632b90c7ba29af90c216c2e6f9d0))
+
+
+
+
+
 ## [5.0.1](https://github.com/researchgate/spire/compare/v5.0.0...v5.0.1) (2021-09-09)
 
 

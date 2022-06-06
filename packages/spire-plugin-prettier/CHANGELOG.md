@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.4](https://github.com/researchgate/spire/compare/v5.0.3...v5.0.4) (2022-06-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency prettier to v2.6.2 ([cbeb135](https://github.com/researchgate/spire/commit/cbeb13548d9407f02d318d7a453003d34edd6442))
+
+
+
+
+
 ## [5.0.1](https://github.com/researchgate/spire/compare/v5.0.0...v5.0.1) (2021-09-09)
 
 

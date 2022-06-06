@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.4](https://github.com/researchgate/spire/compare/v5.0.3...v5.0.4) (2022-06-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency lint-staged to v11.2.6 ([67e9e6d](https://github.com/researchgate/spire/commit/67e9e6d168921e70ee999517735087ab9b75921b))
+
+
+
+
+
 ## [5.0.1](https://github.com/researchgate/spire/compare/v5.0.0...v5.0.1) (2021-09-09)
 
 

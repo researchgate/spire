@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.4](https://github.com/researchgate/spire/compare/v5.0.3...v5.0.4) (2022-06-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency lint-staged to v11.2.6 ([67e9e6d](https://github.com/researchgate/spire/commit/67e9e6d168921e70ee999517735087ab9b75921b))
+* **deps:** update dependency prettier to v2.6.2 ([cbeb135](https://github.com/researchgate/spire/commit/cbeb13548d9407f02d318d7a453003d34edd6442))
+* **deps:** update dependency use-yarn to v2.4.0 ([2851f32](https://github.com/researchgate/spire/commit/2851f32023df632b90c7ba29af90c216c2e6f9d0))
+
+
+
+
+
 ## [5.0.3](https://github.com/researchgate/spire/compare/v5.0.2...v5.0.3) (2022-06-06)
 
 
