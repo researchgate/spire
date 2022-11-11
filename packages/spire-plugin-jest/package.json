@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "execa": "5.1.1",
-    "jest": "27.1.1"
+    "jest": "27.5.1"
   },
   "devDependencies": {
     "spire-test-utils": "^5.0.5"
