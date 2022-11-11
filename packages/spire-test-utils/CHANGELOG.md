@@ -1,5 +1,21 @@
 # Change Log
 
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [5.0.5](https://github.com/researchgate/spire/compare/v5.0.4...v5.0.5) (2022-11-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency fs-extra to v10.1.0 ([#184](https://github.com/researchgate/spire/issues/184)) ([3385540](https://github.com/researchgate/spire/commit/3385540a5963c6999b49a5343bc3ddb201a64890))
+
+
+
+
+
+# Change Log
+
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 

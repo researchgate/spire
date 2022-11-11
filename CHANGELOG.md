@@ -1,5 +1,23 @@
 # Change Log
 
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [5.0.5](https://github.com/researchgate/spire/compare/v5.0.4...v5.0.5) (2022-11-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-config-prettier to v8.5.0 ([#186](https://github.com/researchgate/spire/issues/186)) ([e184a96](https://github.com/researchgate/spire/commit/e184a9678fe5d0cc2a9e2c7deee6786daeb6acac))
+* **deps:** update dependency fs-extra to v10.1.0 ([#184](https://github.com/researchgate/spire/issues/184)) ([3385540](https://github.com/researchgate/spire/commit/3385540a5963c6999b49a5343bc3ddb201a64890))
+* **deps:** update dependency semantic-release to v19 [security] ([#192](https://github.com/researchgate/spire/issues/192)) ([1bcca71](https://github.com/researchgate/spire/commit/1bcca71682c9cd9e4c318c014febce2c96c071e2))
+
+
+
+
+
+# Change Log
+
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 

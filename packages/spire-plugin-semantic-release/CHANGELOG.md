@@ -1,5 +1,21 @@
 # Change Log
 
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [5.0.5](https://github.com/researchgate/spire/compare/v5.0.4...v5.0.5) (2022-11-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency semantic-release to v19 [security] ([#192](https://github.com/researchgate/spire/issues/192)) ([1bcca71](https://github.com/researchgate/spire/commit/1bcca71682c9cd9e4c318c014febce2c96c071e2))
+
+
+
+
+
+# Change Log
+
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
