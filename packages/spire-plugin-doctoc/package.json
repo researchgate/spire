@@ -10,7 +10,7 @@
     "node": ">=12.20"
   },
   "dependencies": {
-    "doctoc": "2.2.0"
+    "doctoc": "2.2.1"
   },
   "devDependencies": {
     "spire-test-utils": "^5.0.5"
