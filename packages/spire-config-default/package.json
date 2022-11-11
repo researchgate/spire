@@ -1,6 +1,6 @@
 {
   "name": "spire-config-default",
-  "version": "5.0.7",
+  "version": "5.0.8",
   "description": "Default config preset for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",
@@ -9,10 +9,10 @@
   "dependencies": {
     "spire-plugin-clean": "^5.0.5",
     "spire-plugin-doctoc": "^5.0.6",
-    "spire-plugin-eslint": "^5.0.5",
-    "spire-plugin-jest": "^5.0.5",
+    "spire-plugin-eslint": "^5.0.8",
+    "spire-plugin-jest": "^5.0.8",
     "spire-plugin-lint-staged": "^5.0.7",
-    "spire-plugin-prettier": "^5.0.5"
+    "spire-plugin-prettier": "^5.0.8"
   },
   "engines": {
     "node": ">=12.20"

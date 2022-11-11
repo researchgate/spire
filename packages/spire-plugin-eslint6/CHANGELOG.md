@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.8](https://github.com/researchgate/spire/compare/v5.0.7...v5.0.8) (2022-11-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency eslint-plugin-prettier to v4.2.1 ([#199](https://github.com/researchgate/spire/issues/199)) ([7ccca40](https://github.com/researchgate/spire/commit/7ccca40c7cdb6e29b581ff32fb4e9b6829eabf87))
+
+
+
+
+
 ## [5.0.5](https://github.com/researchgate/spire/compare/v5.0.4...v5.0.5) (2022-11-11)
 
 

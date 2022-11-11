@@ -1,7 +1,7 @@
 {
   "useWorkspaces": true,
   "npmClient": "yarn",
-  "version": "5.0.7",
+  "version": "5.0.8",
   "ignoreChanges": [
     "**/*.md"
   ]

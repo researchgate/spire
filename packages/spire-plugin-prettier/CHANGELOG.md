@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.8](https://github.com/researchgate/spire/compare/v5.0.7...v5.0.8) (2022-11-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency prettier to v2.7.1 ([#200](https://github.com/researchgate/spire/issues/200)) ([137fb35](https://github.com/researchgate/spire/commit/137fb358ef7534ce656b34f0cf6a5fba6feb39ce))
+
+
+
+
+
 ## [5.0.5](https://github.com/researchgate/spire/compare/v5.0.4...v5.0.5) (2022-11-11)
 
 **Note:** Version bump only for package spire-plugin-prettier

@@ -1,6 +1,6 @@
 {
   "name": "spire-plugin-jest",
-  "version": "5.0.5",
+  "version": "5.0.8",
   "description": "Jest plugin for Spire",
   "main": "index.js",
   "repository": "researchgate/spire",
