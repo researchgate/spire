@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.9](https://github.com/researchgate/spire/compare/v5.0.8...v5.0.9) (2022-11-11)
+
+
+### Bug Fixes
+
+* **deps:** update semantic-release monorepo ([#180](https://github.com/researchgate/spire/issues/180)) ([9f9fbdc](https://github.com/researchgate/spire/commit/9f9fbdcd100458bb406cd7038d93a82ce5b4277f))
+
+
+
+
+
 ## [5.0.5](https://github.com/researchgate/spire/compare/v5.0.4...v5.0.5) (2022-11-11)
 
 
