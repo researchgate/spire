@@ -5,6 +5,7 @@
   ],
   "scripts": {
     "lint": "spire lint",
+    "format": "spire format",
     "test": "spire test",
     "release": "spire release"
   },
