@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.7](https://github.com/researchgate/spire/compare/v5.0.6...v5.0.7) (2022-11-11)
+
+**Note:** Version bump only for package spire
+
+
+
+
+
 ## [5.0.6](https://github.com/researchgate/spire/compare/v5.0.5...v5.0.6) (2022-11-11)
 
 **Note:** Version bump only for package spire
