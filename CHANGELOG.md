@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.6](https://github.com/researchgate/spire/compare/v5.0.5...v5.0.6) (2022-11-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency doctoc to v2.2.1 ([#198](https://github.com/researchgate/spire/issues/198)) ([e753cba](https://github.com/researchgate/spire/commit/e753cba356762720afeb772d5f5a35f8312f5ed3))
+
+
+
+
+
 ## [5.0.5](https://github.com/researchgate/spire/compare/v5.0.4...v5.0.5) (2022-11-11)
 
 
