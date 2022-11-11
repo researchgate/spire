@@ -13,7 +13,7 @@
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.2.1",
-    "execa": "5.1.1"
+    "execa": "6.1.0"
   },
   "devDependencies": {
     "spire-test-utils": "^5.0.5"

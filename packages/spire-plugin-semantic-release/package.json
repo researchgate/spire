@@ -16,7 +16,7 @@
     "@semantic-release/github": "8.0.6",
     "@semantic-release/gitlab": "9.5.0",
     "@semantic-release/release-notes-generator": "10.0.3",
-    "execa": "5.1.1",
+    "execa": "6.1.0",
     "semantic-release": "19.0.3"
   },
   "devDependencies": {
