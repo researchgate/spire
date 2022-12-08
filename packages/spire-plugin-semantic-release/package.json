@@ -10,14 +10,14 @@
     "node": ">=12.20"
   },
   "dependencies": {
-    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/changelog": "6.0.2",
     "@semantic-release/commit-analyzer": "9.0.2",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "8.0.6",
-    "@semantic-release/gitlab": "9.5.0",
+    "@semantic-release/github": "8.0.7",
+    "@semantic-release/gitlab": "9.5.1",
     "@semantic-release/release-notes-generator": "10.0.3",
     "execa": "5.1.1",
-    "semantic-release": "19.0.3"
+    "semantic-release": "19.0.5"
   },
   "devDependencies": {
     "spire-test-utils": "^5.0.5"
