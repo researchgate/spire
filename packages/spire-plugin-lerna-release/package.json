@@ -9,7 +9,7 @@
     "node": ">=12.20"
   },
   "dependencies": {
-    "lerna": "4.0.0"
+    "lerna": "6.4.1"
   },
   "peerDependencies": {
     "spire": "^4.0.0 || ^5.0.0"
